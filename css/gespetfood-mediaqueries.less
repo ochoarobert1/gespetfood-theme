@@ -5,11 +5,19 @@ MEDIAQUERIES LG/MD - LAYOUTS BIGGER THAN 992px
 
 @media (max-width: 1680px) {}
 
-@media (max-width: 1600px) {}
+@media (max-width: 1600px) {
+    .gpf-privacy-policy-accept {
+        max-width: 70vw;
+    }
+}
 
 @media (max-width: 1440px) {}
 
-@media (max-width: 1366px) {}
+@media (max-width: 1366px) {
+    .gpf-privacy-policy-accept {
+        max-width: 80vw;
+    }
+}
 
 @media (max-width: 1280px) {}
 
@@ -60,6 +68,10 @@ MEDIAQUERIES LG/MD - LAYOUTS BIGGER THAN 992px
         adding: .5rem 1.5rem;
         font-size: 1rem;
     }
+
+    .gpf-privacy-policy-accept {
+        max-width: 92vw;
+    }
 }
 
 @media (max-width: 1024px) {}
@@ -100,18 +112,53 @@ MEDIAQUERIES SM - LAYOUTS BIGGER THAN 768px
         padding: 0.6rem 0.4rem;
         font-size: 0.85rem;
     }
+
+    .the-benefits .benefits-item-wrapper {
+        min-height: 330px;
+        padding: 1.5rem .5rem;
+    }
 }
 
-@media (max-width: 800px) {}
+@media (max-width: 800px) {
+    .the-benefits .benefits-item-wrapper img {
+        margin-bottom: 0.9rem;
+    }
 
-@media (max-width: 768px) {}
+    .the-benefits {
+        padding: 3rem 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .the-benefits .benefits-item-wrapper {
+        font-size: .9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .gpf-privacy-policy-accept {
+        font-size: 1.1rem;
+        line-height: 1.7rem;
+    }
+}
 
 /* --------------------------------------------------------------
 MEDIAQUERIES XS - LAYOUTS LESS THAN 768px
 -------------------------------------------------------------- */
 @media (max-width: 600px) {
+    .gpf-privacy-policy-accept {
+        padding: 1rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        right: 0;
+        max-width: 100vw;
+    }
+
     .ifs-contact-container {
         margin-bottom: 2rem;
+    }
+
+    .single-product .main-shop-container {
+        padding-top: 4rem;
     }
 
     .the-about {
@@ -182,6 +229,15 @@ MEDIAQUERIES XS - LAYOUTS LESS THAN 768px
     .navbar-mobile .navbar-elements .navbar-mobile-info a {
         font-size: 0.8rem;
         margin-left: 5px;
+    }
+
+    .the-team {
+        padding: 1rem;
+    }
+
+    .gpf-privacy-policy-accept {
+        font-size: 1rem;
+        line-height: 1.5rem;
     }
 }
 

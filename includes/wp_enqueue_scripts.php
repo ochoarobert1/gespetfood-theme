@@ -136,9 +136,27 @@ function gespetfood_load_js() {
 
         }
 
+        /*- JQUERY COOKIE -*/
+        wp_enqueue_script( 'jquery-cookie', 'https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js', [ 'jquery' ], '1.0.3', true );
+
         /*- MAIN FUNCTIONS -*/
         wp_register_script('main-functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), $version_remove, true);
         wp_enqueue_script('main-functions');
+
+        /* LOCALIZE MAIN SHORTCODE SCRIPT */
+        wp_localize_script( 'main-functions', 'admin_url', array(
+            'ajax_custom_url' => admin_url('admin-ajax.php'),
+            'error_name' => __('Error: El nombre no puede estar vacio', 'gespetfood'),
+            'invalid_name' => __('Error: El nombre debe ser válido', 'gespetfood'),
+            'error_email' => __('Error: El correo no puede estar vacio', 'gespetfood'),
+            'invalid_email' => __('Error: El correo tiene un formato inválido', 'gespetfood'),
+            'error_subject' => __('Error: El asunto no puede estar vacio', 'gespetfood'),
+            'invalid_subject' => __('Error: El asunto debe ser válido', 'gespetfood'),
+            'error_message' => __('Error: El mensaje no puede estar vacio', 'gespetfood'),
+            'success_form' => __('Gracias por su mensaje, en breve le atenderemos.', 'gespetfood'),
+            'error_form' => __('Error: Intente de nuevo mas tarde.', 'gespetfood')
+        ));
+
 
         if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
             wp_enqueue_script( 'comment-reply' );

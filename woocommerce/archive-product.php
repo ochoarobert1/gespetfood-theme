@@ -31,12 +31,7 @@ get_header( 'shop' );
         <div class="main-shop-container col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
             <div class="container">
                 <div class="row">
-                    <div class="shop-ifs-container col-12">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/ifs_food_Logo.png" alt="" class="img-fluid">
-                        <h3>Productos hechos para mascotas medianas y grandes.<br />
-                            Cantidad miníma de 5 huesos o packs, sumando 10€<br>
-                            <em>Los precios pueden variar en función de la variación del mercado.</em></h3>
-                    </div>
+
                     <div class="main-shop-content col-12">
                         <?php 
                         /**
@@ -117,6 +112,27 @@ get_header( 'shop' );
                             ?>
                         </div>
                     </div>
+                    <div class="shop-ifs-container col-12">
+                        <?php $shop_info = get_post_meta($shop_id, 'gpf_shop_info', true); ?>
+                        <?php echo apply_filters('the_content', $shop_info); ?>
+                    </div>
+                    <section class="shop-logo-first col-xl-10 offset-xl-1 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <?php $awards_group = get_post_meta($shop_id, 'gpf_shop_logo1_list', true); ?>
+                        <?php if ((!empty($awards_group)) || ($awards_group != '')) { ?>
+                        <?php foreach ( $awards_group as $test_item ) { ?>
+                        <?php $url = $test_item['url']; ?>
+                        <a <?php if ($url != '') { ?> href="<?php echo $test_item['url']; ?>" target="_blank" <?php } ?>><img src="<?php echo $test_item['bg_image']; ?>" alt=""></a>
+                        <?php } ?>
+                        <?php } ?>
+                    </section>
+                    <section class="shop-logo-second col-xl-10 offset-xl-1 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <?php $awards_group = get_post_meta($shop_id, 'gpf_shop_logo2_list', true); ?>
+                        <?php if ((!empty($awards_group)) || ($awards_group != '')) { ?>
+                        <?php foreach ( (array) $awards_group as $attachment_id => $attachment_url ) { ?>
+                        <?php echo wp_get_attachment_image( $attachment_id, 'medium', array('class' => 'img-fluid') ); ?>
+                        <?php } ?>
+                        <?php } ?>
+                    </section>
                 </div>
             </div>
         </div>

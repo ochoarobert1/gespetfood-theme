@@ -22,7 +22,7 @@ global $post;
 $heading = apply_filters( 'woocommerce_product_description_heading', __( 'Description', 'woocommerce' ) );
 
 ?>
-
+<?php $shop_id = get_option( 'woocommerce_shop_page_id' );  ?>
 <?php if ( $heading ) : ?>
 <h2><?php echo esc_html( $heading ); ?></h2>
 <?php endif; ?>
@@ -36,6 +36,14 @@ $heading = apply_filters( 'woocommerce_product_description_heading', __( 'Descri
         </div>
         <div class="custom-description-content-info custom-ingredients col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
             <?php echo apply_filters('the_content', get_post_meta(get_the_ID(), 'gpf_product_table2', true)); ?>
+            <section class="shop-logo-second col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <?php $awards_group = get_post_meta($shop_id, 'gpf_shop_logo2_list', true); ?>
+                <?php if ((!empty($awards_group)) || ($awards_group != '')) { ?>
+                <?php foreach ( (array) $awards_group as $attachment_id => $attachment_url ) { ?>
+                <?php echo wp_get_attachment_image( $attachment_id, 'medium', array('class' => 'img-fluid') ); ?>
+                <?php } ?>
+                <?php } ?>
+            </section>
         </div>
     </div>
 </div>

@@ -43,6 +43,7 @@ function woocommerce_custom_rating_handler() {
     <i class="fa fa-star"></i>
     <i class="fa fa-star"></i>
     <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
 </div>
 <?php 
     $content = ob_get_clean();
@@ -50,7 +51,21 @@ function woocommerce_custom_rating_handler() {
 }
 
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10);
+add_action('woocommerce_single_product_summary', 'woocommerce_custom_rating_handler', 10);
 
+
+add_action('woocommerce_single_product_summary', 'woocommerce_custom_shipping_button', 40);
+
+function woocommerce_custom_shipping_button() {
+    $shop_id = get_option( 'woocommerce_shop_page_id' );
+    $shipping_btn_url = get_post_meta($shop_id, 'gpf_shop_shipping', true); 
+?>
+<a href="<?php echo $shipping_btn_url; ?>" class="btn btn-md btn-shipping"><?php _e('Costos de Envios', 'gespetfood'); ?></a>
+<a href="<?php echo get_permalink($shop_id); ?>" class="btn btn-md btn-back-shop"><?php _e('Volver a Tienda', 'gespetfood'); ?></a>
+<?php 
+}
 
 add_action('woocommerce_cart_coupon', 'themeprefix_back_to_store');
 
@@ -59,4 +74,24 @@ function themeprefix_back_to_store() { ?>
 <?php
                                      }
 
+add_action('woocommerce_after_single_product_summary', 'custom_woocommerce_single_info', 18);
 
+function custom_woocommerce_single_info() {
+    $shop_id = get_option( 'woocommerce_shop_page_id' );
+?>
+
+<section class="shop-logo-first col-xl-10 offset-xl-1 col-lg-12 col-md-12 col-sm-12 col-12">
+    <?php $awards_group = get_post_meta($shop_id, 'gpf_shop_logo1_list', true); ?>
+    <?php if ((!empty($awards_group)) || ($awards_group != '')) { ?>
+    <?php foreach ( $awards_group as $test_item ) { ?>
+    <?php $url = $test_item['url']; ?>
+    <a <?php if ($url != '') { ?> href="<?php echo $test_item['url']; ?>" target="_blank" <?php } ?>><img src="<?php echo $test_item['bg_image']; ?>" alt=""></a>
+    <?php } ?>
+    <?php } ?>
+</section>
+<div class="shop-ifs-container col-12">
+    <?php $shop_info = get_post_meta($shop_id, 'gpf_shop_info', true); ?>
+    <?php echo apply_filters('the_content', $shop_info); ?>
+</div>
+<?php 
+}

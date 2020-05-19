@@ -30,6 +30,7 @@
         <meta name="ICBM" content="40.267636,-3.811355" />
         <meta name="geo.region" content="ES" />
         <meta name="geo.placename" content="Sauce #2, 28970 Humanes de Madrid (Madrid), España" />
+        <meta name="keywords" content="Perro, Comida mascota, Premio perro, Hueso, Hueso de jamón, Tienda de mascotas, Mascotas, Perro amazon, dog snacks, dog shop, Snacks shop, Dog food, Dog store, Ham bone, dog store" />
         <meta name="DC.title" content="<?php if (is_home()) { echo get_bloginfo('name') . ' | ' . get_bloginfo('description'); } else { echo get_the_title() . ' | ' . get_bloginfo('name'); } ?>" />
         <?php /* MAIN TITLE - CALL HEADER MAIN FUNCTIONS */ ?>
         <?php wp_title('|', false, 'right'); ?>
@@ -52,6 +53,7 @@
         <div id="fb-root"></div>
         <?php $header_options = get_option('gpf_header_settings'); ?>
         <?php $social_options = get_option('gpf_social_settings'); ?>
+        <?php $network_url = network_home_url(); ?>
         <header class="container-fluid p-0" role="banner" itemscope itemtype="http://schema.org/WPHeader">
             <div class="row no-gutters">
                 <div class="top-header col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 d-xl-block d-lg-block d-md-block d-sm-none d-none">
@@ -72,7 +74,7 @@
                                 <?php $amount = $woocommerce->cart->get_cart_total(); ?>
                                 <a href="<?php echo $cart_url; ?>" title="<?php _e('Ver Carrito de Compras', 'gespetfood'); ?>"><i class="fa fa-shopping-cart"></i>  <?php echo $amount; ?></a>
                                 <div class="lang-container">
-                                    <a href="#" title="<?php _e('Ir al sitio en Inglés', 'gespetfood'); ?>">ENG</a><span>/</span><a href="#" title="<?php _e('Ir al sitio en Español', 'gespetfood'); ?>">ESP</a>
+                                    <a href="<?php echo $network_url . 'en'; ?>" title="<?php _e('Ir al sitio en Inglés', 'gespetfood'); ?>">ENG</a><span>/</span><a href="<?php echo $network_url; ?>" title="<?php _e('Ir al sitio en Español', 'gespetfood'); ?>">ESP</a>
                                 </div>
                             </div>
                         </div>
@@ -95,7 +97,7 @@
                                 </a>
                             </div>
                             <div class="header-right col-xl-4 col-lg-5 col-md-5 col-sm-5 col-5">
-                                <a href="https://www.amazon.com/" target="_blank" title="<?php _e('Visita nuestra tienda en Amazon.com', 'gespetfood'); ?>" title="<?php _e('Volver al Inicio', 'gespetfood'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/amazon.png" alt="amazon" class="img-fluid" /></a>
+                                <a href=" https://www.amazon.es/dp/B088M57DRG/ref=cm_sw_r_wa_awdo_t1_sKsVEb251BF6B" target="_blank" title="<?php _e('Visita nuestra tienda en Amazon.com', 'gespetfood'); ?>" title="<?php _e('Volver al Inicio', 'gespetfood'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/amazon.png" alt="amazon" class="img-fluid" /></a>
                             </div>
                         </div>
                     </div>
@@ -143,10 +145,10 @@
                                     <div class="navbar-mobile-info navbar-additional-elements col-12">
                                         <div class="row">
                                             <div class="navbar-mobile-elements col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 d-xl-block d-lg-block d-md-block d-sm-none d-none">
-                                                <a href=""><img src="<?php echo get_template_directory_uri(); ?>/images/amazon.png" alt="amazon" class="img-fluid" /></a>
+                                                <a href=" https://www.amazon.es/dp/B088M57DRG/ref=cm_sw_r_wa_awdo_t1_sKsVEb251BF6B" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/amazon.png" alt="amazon" class="img-fluid" /></a>
                                                 <a href=""><i class="fa fa-shopping-cart"></i></a>
                                                 <div class="lang-container">
-                                                    <a href="">ENG</a><span>/</span><a href="">ESP</a>
+                                                    <a href="<?php echo $network_url . 'en'; ?>" title="<?php _e('Ir al sitio en Inglés', 'gespetfood'); ?>">ENG</a><span>/</span><a href="<?php echo $network_url; ?>" title="<?php _e('Ir al sitio en Español', 'gespetfood'); ?>">ESP</a>
                                                 </div>
                                             </div>
                                             <div class="account-box col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -185,7 +187,7 @@
                         </div>
 
                         <div class="mobile-amazon-link">
-                            <a href=""><img src="<?php echo get_template_directory_uri(); ?>/images/amazon.png" alt="amazon" class="img-fluid" /></a>
+                            <a href=" https://www.amazon.es/dp/B088M57DRG/ref=cm_sw_r_wa_awdo_t1_sKsVEb251BF6B" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/amazon.png" alt="amazon" class="img-fluid" /></a>
                         </div>
 
                         <div class="mobile-catalog-container">
@@ -193,7 +195,7 @@
                         </div>
 
                         <div class="lang-container">
-                            <a href="">ENG</a><span>/</span><a href="">ESP</a>
+                            <a href="<?php echo $network_url . 'en'; ?>" title="<?php _e('Ir al sitio en Inglés', 'gespetfood'); ?>">ENG</a><span>/</span><a href="<?php echo $network_url; ?>" title="<?php _e('Ir al sitio en Español', 'gespetfood'); ?>">ESP</a>
                         </div>
 
 

@@ -32,12 +32,7 @@ get_header( 'shop' ); ?>
         <div class="main-shop-container col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
             <div class="container">
                 <div class="row">
-                    <div class="shop-ifs-container col-12">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/ifs_food_Logo.png" alt="" class="img-fluid">
-                        <h3>Productos hechos para mascotas medianas y grandes.<br />
-                            Cantidad miníma de 5 huesos o packs, sumando 10€<br>
-                            <em>Los precios pueden variar en función de la variación del mercado.</em></h3>
-                    </div>
+                   
                     <div class="main-shop-content col-12">
                         <?php
                         /**

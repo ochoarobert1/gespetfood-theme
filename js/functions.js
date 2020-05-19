@@ -89,4 +89,26 @@ jQuery(document).ready(function ($) {
         anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 
     });
+    
+    jQuery(document).ready(function () {
+        if (Cookies.get('cookie_consent') != undefined) {
+            // cookie is set
+            jQuery('.gpf-privacy-policy-accept').addClass('hidden-policy');
+        } else {
+            // cookie is not set
+            jQuery('.gpf-privacy-policy-accept').removeClass('hidden-policy');
+        }
+    });
+
+    jQuery(document).on('touchstart click', '#privacy-policy-accept-btn', function (event) {
+        if (event.handled === false) return
+        event.stopPropagation();
+        event.preventDefault();
+        event.handled = true;
+        console.log('clicked');
+        Cookies.set('cookie_consent', 'cookie_consent', {
+            expires: 7
+        });
+        jQuery('.gpf-privacy-policy-accept').addClass('hidden-policy');
+    });
 }); /* end of as page load scripts */

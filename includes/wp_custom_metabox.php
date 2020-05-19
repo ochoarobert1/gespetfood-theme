@@ -147,9 +147,86 @@ function gespetfood_register_custom_metabox() {
         'default'          => '',
         'options'          => $array_sliders
     ) );    
-    
-    
-     /* SHOP SLIDER */
+
+    $cmb_product_slider->add_field( array(
+        'id'   => $prefix . 'shop_shipping',
+        'name'      => esc_html__( 'Brochure de Precios de Transporte del Producto', 'gespetfood' ),
+        'desc'      => esc_html__( 'Este pdf saldra en todos los productos', 'gespetfood' ),
+        'type'    => 'text_url',
+    ) );
+
+    $cmb_product_slider->add_field( array(
+        'id'         => $prefix . 'shop_info',
+        'name'       => esc_html__( 'Tienda: Información Adicional', 'gespetfood' ),
+        'desc'       => esc_html__( 'Ingrese aqui la información que va justo arriba de la tienda', 'gespetfood' ),
+        'type'    => 'wysiwyg',
+        'options' => array(
+            'textarea_rows' => get_option('default_post_edit_rows', 4),
+            'teeny' => false
+        )
+    ) ); 
+
+    $group_field_id = $cmb_product_slider->add_field( array(
+        'id'          => $prefix . 'shop_logo1_list',
+        'type'        => 'group',
+        'description' => __( 'Slides inside this Slider', 'maxicon' ),
+        'options'     => array(
+            'group_title'       => __( 'Logo {#}', 'maxicon' ),
+            'add_button'        => __( 'Add other Logo', 'maxicon' ),
+            'remove_button'     => __( 'Remove Logo', 'maxicon' ),
+            'sortable'          => true,
+            'closed'         => true,
+            'remove_confirm' => esc_html__( 'Are you sure to remove this slide?', 'maxicon' )
+        )
+    ) );
+
+    $cmb_product_slider->add_group_field( $group_field_id, array(
+        'id'   => 'bg_image',
+        'name'      => esc_html__( 'Logo Image', 'maxicon' ),
+        'desc'      => esc_html__( 'Upload a Logo', 'maxicon' ),
+        'type'    => 'file',
+
+        'options' => array(
+            'url' => false
+        ),
+        'text'    => array(
+            'add_upload_file_text' => esc_html__( 'Upload Background', 'maxicon' ),
+        ),
+        'query_args' => array(
+            'type' => array(
+                'image/gif',
+                'image/jpeg',
+                'image/png'
+            )
+        ),
+        'preview_size' => 'medium'
+    ) );
+
+    $cmb_product_slider->add_group_field( $group_field_id, array(
+        'id'   => 'url',
+        'name'      => esc_html__( 'Logo URL', 'maxicon' ),
+        'desc'      => esc_html__( 'Enter a descriptive title for all slides', 'maxicon' ),
+        'type' => 'text_url'
+    ) );
+
+    $cmb_product_slider->add_field( array(
+        'id'      => $prefix . 'shop_logo2_list',
+        'name'      => esc_html__( 'Segunda Fila de logos', 'gespetfood' ),
+        'desc'      => esc_html__( 'Inserte los logos para la sección', 'gespetfood' ),
+        'type'    => 'file_list',
+        'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
+        'query_args' => array( 'type' => 'image' ), // Only images attachment
+        'text' => array(
+            'add_upload_files_text' => 'Replacement', // default: "Add or Upload Files"
+            'remove_image_text' => 'Replacement', // default: "Remove Image"
+            'file_text' => 'Replacement', // default: "File:"
+            'file_download_text' => 'Replacement', // default: "Download"
+            'remove_text' => 'Replacement', // default: "Remove"
+        ),
+    ) );
+
+
+    /* SHOP SLIDER */
     $cmb_product_info = new_cmb2_box( array(
         'id'            => $prefix . 'product_info_metabox',
         'title'         => esc_html__( 'Producto: Tabla nutricional', 'gespetfood' ),
@@ -170,7 +247,7 @@ function gespetfood_register_custom_metabox() {
             'teeny' => false
         )
     ) );    
-    
+
     $cmb_product_info->add_field( array(
         'id'         => $prefix . 'product_table2',
         'name'       => esc_html__( 'Producto: Ingredientes', 'gespetfood' ),

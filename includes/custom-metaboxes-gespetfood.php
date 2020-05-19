@@ -88,7 +88,7 @@ $cmb_gespetfood_benefits = new_cmb2_box( array(
 $group_field_id = $cmb_gespetfood_benefits->add_field( array(
     'id'          => $prefix . 'benefits_group',
     'type'        => 'group',
-    'description' => __( 'Beneficios"', 'autols' ),
+    'description' => __( 'Beneficios', 'autols' ),
     'options'     => array(
         'group_title'       => __( 'Beneficio {#}', 'autols' ),
         'add_button'        => __( 'Agregar Beneficio', 'autols' ),
@@ -151,6 +151,8 @@ $cmb_gespetfood_team->add_field( array(
     )
 ) );
 
+
+
 $cmb_gespetfood_team->add_field( array(
     'id'      => $prefix . 'gespetfood_team_img',
     'name'      => esc_html__( 'Imagen de Sección', 'gespetfood' ),
@@ -170,4 +172,47 @@ $cmb_gespetfood_team->add_field( array(
         )
     ),
     'preview_size' => 'medium'
+) );
+
+$group_field_id = $cmb_gespetfood_team->add_field( array(
+    'id'          => $prefix . 'gespetfood_logo_list',
+    'type'        => 'group',
+    'description' => __( 'Slides inside this Slider', 'maxicon' ),
+    'options'     => array(
+        'group_title'       => __( 'Logo {#}', 'maxicon' ),
+        'add_button'        => __( 'Add other Logo', 'maxicon' ),
+        'remove_button'     => __( 'Remove Logo', 'maxicon' ),
+        'sortable'          => true,
+        'closed'         => true,
+        'remove_confirm' => esc_html__( 'Are you sure to remove this slide?', 'maxicon' )
+    )
+) );
+
+$cmb_gespetfood_team->add_group_field( $group_field_id, array(
+    'id'   => 'bg_image',
+    'name'      => esc_html__( 'Logo Image', 'maxicon' ),
+    'desc'      => esc_html__( 'Upload a Logo', 'maxicon' ),
+    'type'    => 'file',
+
+    'options' => array(
+        'url' => false
+    ),
+    'text'    => array(
+        'add_upload_file_text' => esc_html__( 'Upload Background', 'maxicon' ),
+    ),
+    'query_args' => array(
+        'type' => array(
+            'image/gif',
+            'image/jpeg',
+            'image/png'
+        )
+    ),
+    'preview_size' => 'medium'
+) );
+
+$cmb_gespetfood_team->add_group_field( $group_field_id, array(
+    'id'   => 'url',
+    'name'      => esc_html__( 'Logo URL', 'maxicon' ),
+    'desc'      => esc_html__( 'Enter a descriptive title for all slides', 'maxicon' ),
+    'type' => 'text_url'
 ) );

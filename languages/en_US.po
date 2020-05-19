@@ -1,293 +1,846 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: gespetfood\n"
-"POT-Creation-Date: 2017-02-25 22:26-0400\n"
-"PO-Revision-Date: 2017-02-25 22:29-0400\n"
-"Last-Translator: \n"
+"Project-Id-Version: Gespetfood\n"
+"POT-Creation-Date: 2020-04-21 16:05-0400\n"
+"PO-Revision-Date: 2020-04-21 16:06-0400\n"
+"Last-Translator: Robert Ochoa <ochoa.robert1@gmail.com>\n"
 "Language-Team: Robert Ochoa <contacto@robertochoa.com.ve>\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.11\n"
-"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_x:2c,1;_ex:2c,1\n"
-"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: js\n"
 
-#: ../404.php:12
+#: 404.php:12
 msgid "Error 404"
 msgstr "Error 404"
 
-#: ../404.php:14
+#: 404.php:14
 msgid "No podemos encontrar la página que buscas. Dirígete nuevamente al"
-msgstr "Sorry, but we can't seem to find the page you are looking for. Go back to"
+msgstr ""
+"Sorry, but we can't seem to find the page you are looking for. Go back to"
 
-#: ../404.php:14 ../archive.php:43 ../author.php:49 ../category.php:43
-#: ../index.php:43 ../search.php:43 ../tag.php:43
+#: 404.php:14 archive.php:53 author.php:52 category.php:53 header.php:90
+#: header.php:94 header.php:99 index.php:53 search.php:53 tag.php:53
 msgid "Volver al Inicio"
 msgstr "Back to Home"
 
-#: ../404.php:14 ../archive.php:43 ../author.php:49 ../category.php:43
-#: ../index.php:43 ../search.php:43 ../tag.php:43
+#: 404.php:14 archive.php:53 author.php:52 category.php:53 index.php:53
+#: search.php:53 tag.php:53
 msgid "inicio"
 msgstr "home"
 
-#: ../archive.php:42 ../author.php:48 ../category.php:42 ../index.php:42
-#: ../search.php:42 ../tag.php:42
+#: archive.php:34 category.php:34 index.php:34 search.php:34 tag.php:34
+msgid "Publicado por:"
+msgstr "Published by:"
+
+#: archive.php:37 category.php:37 index.php:37 search.php:37 tag.php:37
+msgid "Leer Más"
+msgstr "Read More"
+
+#: archive.php:52 author.php:51 category.php:52 index.php:52 search.php:52
+#: tag.php:52
 msgid "Disculpe, su busqueda no arrojo ningun resultado"
 msgstr "Sorry, your search doesn't threw any result"
 
-#: ../archive.php:43 ../author.php:49 ../category.php:43 ../index.php:43
-#: ../search.php:43 ../tag.php:43
+#: archive.php:53 author.php:52 category.php:53 index.php:53 search.php:53
+#: tag.php:53
 msgid "Dirígete nuevamente al"
 msgstr "Go back to"
 
-#: ../functions.php:87
+#: footer.php:42
+msgid "Todos los derechos reservados"
+msgstr "All rights reserved"
+
+#: footer.php:42 header.php:62 header.php:139
+#: templates/templates-contact.php:59
+msgid "Haz clic aquí para dejar tu mensaje en nuestro correo electrónico"
+msgstr "Click here to leave your message in our email"
+
+#: footer.php:42 header.php:63 header.php:140
+#: templates/templates-contact.php:60
+msgid "Haz clic aquí para llamar directamente a nuestro Master"
+msgstr "Click here to call our Master directly"
+
+#: footer.php:51
+msgid "aquí"
+msgstr "here"
+
+#: footer.php:53
+msgid "Acepto"
+msgstr "Agree"
+
+#: functions.php:110
 msgid "Menu Header - Principal"
 msgstr "Menu Header - Main"
 
-#: ../functions.php:88
+#: functions.php:111
 msgid "Menu Footer - Principal"
 msgstr "Menu Footer - Main"
 
-#: ../functions.php:98
-msgid "Main Sidebar"
+#: functions.php:121
+msgid "Sidebar Principal"
 msgstr "Main Sidebar"
 
-#: ../functions.php:100
-msgid "Estos widgets seran vistos en posts y pages"
-msgstr "These widgets will be seen in posts and pages"
+#: functions.php:123
+msgid "Estos widgets seran vistos en las entradas y páginas del sitio"
+msgstr "These widgets will be seen on posts and pages on site"
 
-#: ../functions.php:108
-msgid "Shop Sidebar"
-msgstr "Shop Sidebar"
+#: functions.php:131
+#, php-format
+msgid "Footer Section %d"
+msgstr "Footer Section %d"
 
-#: ../functions.php:110
-msgid "Estos widgets seran vistos en Tienda y Categorias de Producto"
-msgstr "These widgets will be seen in shop and product categories"
+#: functions.php:133
+msgid "Footer Section"
+msgstr "Footer Section"
 
-#: ../functions.php:133
-msgid "Gracias por crear con"
-msgstr "Thank you for using"
+#: functions.php:156
+msgid "Gracias por crear con "
+msgstr "Thank you for creating with "
 
-#: ../functions.php:135
-msgid "Tema desarrollado por"
-msgstr "Theme Developed By"
+#: functions.php:158
+msgid "Tema desarrollado por "
+msgstr "Theme Developed By "
 
-#: ../includes/wp_bootstrap_navwalker.php:197
-msgid "Agrega un Menu"
-msgstr "Add a Menu"
+#: header.php:64 header.php:65 header.php:141 header.php:142
+#: templates/templates-contact.php:55 templates/templates-contact.php:56
+msgid "Haz clic aquí para visitar nuestro perfil"
+msgstr "Click here to visit our profile"
 
-#: ../includes/wp_custom_functions.php:7
-msgid "año"
-msgstr "year"
+#: header.php:70
+msgid "Ingresar a su cuenta"
+msgstr "Login into your account"
 
-#: ../includes/wp_custom_functions.php:7
-msgid "años"
-msgstr "years"
+#: header.php:70
+msgid "Iniciar Sesión"
+msgstr "Log In"
 
-#: ../includes/wp_custom_functions.php:8
-msgid "mes"
-msgstr "month"
+#: header.php:74
+msgid "Ver Carrito de Compras"
+msgstr "View Cart"
 
-#: ../includes/wp_custom_functions.php:8
-msgid "meses"
-msgstr "months"
+#: header.php:76 header.php:150 header.php:197
+msgid "Ir al sitio en Inglés"
+msgstr "Go to English Site"
 
-#: ../includes/wp_custom_functions.php:9
-msgid "semana"
-msgstr "week"
+#: header.php:76 header.php:150 header.php:197
+msgid "Ir al sitio en Español"
+msgstr "Go to Spanish site"
 
-#: ../includes/wp_custom_functions.php:9
-msgid "semanas"
-msgstr "weeks"
+#: header.php:99
+msgid "Visita nuestra tienda en Amazon.com"
+msgstr "Visit our store on Amazon.com"
 
-#: ../includes/wp_custom_functions.php:10
-msgid "dia"
-msgstr "day"
+#: header.php:193 templates/templates-gespetfood.php:36
+msgid "Descargar catálogo de productos"
+msgstr "Download product catalog"
 
-#: ../includes/wp_custom_functions.php:10
-msgid "dias"
-msgstr "days"
+#: includes/class-required-plugins.php:76
+#: includes/class-tgm-plugin-activation.php:334
+msgid "Install Required Plugins"
+msgstr "Install Required Plugins"
 
-#: ../includes/wp_custom_functions.php:11
-msgid "hora"
-msgstr "hour"
+#: includes/class-required-plugins.php:77
+#: includes/class-tgm-plugin-activation.php:335
+msgid "Install Plugins"
+msgstr "Install Plugins"
 
-#: ../includes/wp_custom_functions.php:11
-msgid "horas"
-msgstr "hours"
+#: includes/class-required-plugins.php:78
+#: includes/class-tgm-plugin-activation.php:337
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr "Installing Plugin: %s"
 
-#: ../includes/wp_custom_functions.php:12
-msgid "minuto"
-msgstr "minute"
+#: includes/class-required-plugins.php:79
+#: includes/class-tgm-plugin-activation.php:339
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr "Updating Plugin: %s"
 
-#: ../includes/wp_custom_functions.php:12
-msgid "minutos"
-msgstr "minutes"
+#: includes/class-required-plugins.php:80
+#: includes/class-tgm-plugin-activation.php:340
+msgid "Something went wrong with the plugin API."
+msgstr "Something went wrong with the plugin API."
 
-#: ../includes/wp_custom_functions.php:13
-msgid "segundo"
-msgstr "second"
+#: includes/class-required-plugins.php:126
+#: includes/class-tgm-plugin-activation.php:392
+msgid "Return to Required Plugins Installer"
+msgstr "Return to Required Plugins Installer"
 
-#: ../includes/wp_custom_functions.php:13
-#: ../includes/wp_custom_functions.php:32
-msgid "segundos"
-msgstr "seconds"
+#: includes/class-required-plugins.php:127
+#: includes/class-tgm-plugin-activation.php:394
+#: includes/class-tgm-plugin-activation.php:3252
+msgid "Plugin activated successfully."
+msgstr "Plugin activated successfully."
 
-#: ../includes/wp_custom_functions.php:24
-msgid " un momento"
-msgstr "a momento ago"
+#: includes/class-required-plugins.php:128
+#: includes/class-tgm-plugin-activation.php:395
+msgid "The following plugin was activated successfully:"
+msgstr "The following plugin was activated successfully:"
 
-#: ../includes/wp_custom_functions.php:57
-msgid "Inicio"
-msgstr "Home"
+#: includes/class-required-plugins.php:129
+#: includes/class-tgm-plugin-activation.php:397
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr "No action taken. Plugin %1$s was already active."
 
-#: ../includes/wp_custom_post_type.php:6
+#: includes/class-required-plugins.php:130
+#: includes/class-tgm-plugin-activation.php:399
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+
+#: includes/class-required-plugins.php:131
+#: includes/class-tgm-plugin-activation.php:401
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "All plugins installed and activated successfully. %1$s"
+
+#: includes/class-required-plugins.php:132
+#: includes/class-tgm-plugin-activation.php:402
+msgid "Dismiss this notice"
+msgstr "Dismiss this notice"
+
+#: includes/class-required-plugins.php:133
+#: includes/class-tgm-plugin-activation.php:403
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+
+#: includes/class-required-plugins.php:134
+#: includes/class-tgm-plugin-activation.php:404
+msgid "Please contact the administrator of this site for help."
+msgstr "Please contact the administrator of this site for help."
+
+#: includes/class-tgm-plugin-activation.php:393
+msgid "Return to the Dashboard"
+msgstr "Return to the Dashboard"
+
+#: includes/class-tgm-plugin-activation.php:2075
+#, php-format
+msgid "TGMPA v%s"
+msgstr "TGMPA v%s"
+
+#: includes/class-tgm-plugin-activation.php:2366
+msgid "Required"
+msgstr "Required"
+
+#: includes/class-tgm-plugin-activation.php:2369
+msgid "Recommended"
+msgstr "Recommended"
+
+#: includes/class-tgm-plugin-activation.php:2385
+msgid "WordPress Repository"
+msgstr "WordPress Repository"
+
+#: includes/class-tgm-plugin-activation.php:2388
+msgid "External Source"
+msgstr "External Source"
+
+#: includes/class-tgm-plugin-activation.php:2391
+msgid "Pre-Packaged"
+msgstr "Pre-Packaged"
+
+#: includes/class-tgm-plugin-activation.php:2408
+msgid "Not Installed"
+msgstr "Not Installed"
+
+#: includes/class-tgm-plugin-activation.php:2412
+msgid "Installed But Not Activated"
+msgstr "Installed But Not Activated"
+
+#: includes/class-tgm-plugin-activation.php:2414
+msgid "Active"
+msgstr "Active"
+
+#: includes/class-tgm-plugin-activation.php:2420
+msgid "Required Update not Available"
+msgstr "Required Update not Available"
+
+#: includes/class-tgm-plugin-activation.php:2423
+msgid "Requires Update"
+msgstr "Requires Update"
+
+#: includes/class-tgm-plugin-activation.php:2426
+msgid "Update recommended"
+msgstr "Update recommended"
+
+#: includes/class-tgm-plugin-activation.php:2435
+#, php-format
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr "%1$s, %2$s"
+
+#: includes/class-tgm-plugin-activation.php:2575
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr "unknown"
+
+#: includes/class-tgm-plugin-activation.php:2583
+msgid "Installed version:"
+msgstr "Installed version:"
+
+#: includes/class-tgm-plugin-activation.php:2591
+msgid "Minimum required version:"
+msgstr "Minimum required version:"
+
+#: includes/class-tgm-plugin-activation.php:2603
+msgid "Available version:"
+msgstr "Available version:"
+
+#: includes/class-tgm-plugin-activation.php:2640
+msgid "Plugin"
+msgstr "Plugin"
+
+#: includes/class-tgm-plugin-activation.php:2641
+msgid "Source"
+msgstr "Source"
+
+#: includes/class-tgm-plugin-activation.php:2642
+msgid "Type"
+msgstr "Type"
+
+#: includes/class-tgm-plugin-activation.php:2646
+msgid "Version"
+msgstr "Version"
+
+#: includes/class-tgm-plugin-activation.php:2647
+msgid "Status"
+msgstr "Status"
+
+#: includes/class-tgm-plugin-activation.php:2696
+#, php-format
+msgid "Install %2$s"
+msgstr "Install %2$s"
+
+#: includes/class-tgm-plugin-activation.php:2701
+#, php-format
+msgid "Update %2$s"
+msgstr "Update %2$s"
+
+#: includes/class-tgm-plugin-activation.php:2707
+#, php-format
+msgid "Activate %2$s"
+msgstr "Activate %2$s"
+
+#: includes/class-tgm-plugin-activation.php:2810
+msgid "Install"
+msgstr "Install"
+
+#: includes/class-tgm-plugin-activation.php:2816
+msgid "Update"
+msgstr "Update"
+
+#: includes/class-tgm-plugin-activation.php:2819
+msgid "Activate"
+msgstr "Activate"
+
+#: includes/class-tgm-plugin-activation.php:2850
+msgid "No plugins were selected to be installed. No action taken."
+msgstr "No plugins were selected to be installed. No action taken."
+
+#: includes/class-tgm-plugin-activation.php:2852
+msgid "No plugins were selected to be updated. No action taken."
+msgstr "No plugins were selected to be updated. No action taken."
+
+#: includes/class-tgm-plugin-activation.php:2893
+msgid "No plugins are available to be installed at this time."
+msgstr "No plugins are available to be installed at this time."
+
+#: includes/class-tgm-plugin-activation.php:2895
+msgid "No plugins are available to be updated at this time."
+msgstr "No plugins are available to be updated at this time."
+
+#: includes/class-tgm-plugin-activation.php:3251
+msgid "Plugin activation failed."
+msgstr "Plugin activation failed."
+
+#: includes/class-tgm-plugin-activation.php:3591
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr "Updating Plugin %1$s (%2$d/%3$d)"
+
+#: includes/class-tgm-plugin-activation.php:3594
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr "An error occurred while installing %1$s: <strong>%2$s</strong>."
+
+#: includes/class-tgm-plugin-activation.php:3596
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr "The installation of %1$s failed."
+
+#: includes/class-tgm-plugin-activation.php:3600
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+
+#: includes/class-tgm-plugin-activation.php:3602
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr "%1$s installed and activated successfully."
+
+#: includes/class-tgm-plugin-activation.php:3603
+msgid "All installations and activations have been completed."
+msgstr "All installations and activations have been completed."
+
+#: includes/class-tgm-plugin-activation.php:3605
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+
+#: includes/class-tgm-plugin-activation.php:3608
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+
+#: includes/class-tgm-plugin-activation.php:3611
+msgid "All installations have been completed."
+msgstr "All installations have been completed."
+
+#: includes/class-tgm-plugin-activation.php:3613
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr "Installing Plugin %1$s (%2$d/%3$d)"
+
+#: includes/custom-metaboxes-gespetfood.php:91
+msgid "Beneficios"
+msgstr "Beneficios"
+
+#: includes/custom-metaboxes-gespetfood.php:93
+msgid "Beneficio {#}"
+msgstr "Beneficio {#}"
+
+#: includes/custom-metaboxes-gespetfood.php:94
+msgid "Agregar Beneficio"
+msgstr "Agregar Beneficio"
+
+#: includes/custom-metaboxes-gespetfood.php:95
+msgid "Remover Beneficio"
+msgstr "Remover Beneficio"
+
+#: includes/wp_custom_post_type.php:6
 msgctxt "Post Type General Name"
 msgid "Portafolios"
 msgstr "Portfolios"
 
-#: ../includes/wp_custom_post_type.php:7
+#: includes/wp_custom_post_type.php:7
 msgctxt "Post Type Singular Name"
 msgid "Portafolio"
 msgstr "Portfolio"
 
-#: ../includes/wp_custom_post_type.php:8 ../includes/wp_custom_post_type.php:9
-#: ../includes/wp_custom_post_type.php:35
+#: includes/wp_custom_post_type.php:8 includes/wp_custom_post_type.php:9
+#: includes/wp_custom_post_type.php:35
 msgid "Portafolio"
 msgstr "Portfolio"
 
-#: ../includes/wp_custom_post_type.php:10
+#: includes/wp_custom_post_type.php:10
 msgid "Archivo de Portafolio"
 msgstr "Portfolio Archive"
 
-#: ../includes/wp_custom_post_type.php:11
+#: includes/wp_custom_post_type.php:11
 msgid "Atributos de Portafolio"
 msgstr "Portfolio Attributes"
 
-#: ../includes/wp_custom_post_type.php:12
+#: includes/wp_custom_post_type.php:12
 msgid "Portafolio Padre:"
 msgstr "Parent Portfolio:"
 
-#: ../includes/wp_custom_post_type.php:13
+#: includes/wp_custom_post_type.php:13
 msgid "Todos los Items"
 msgstr "All Items"
 
-#: ../includes/wp_custom_post_type.php:14
+#: includes/wp_custom_post_type.php:14
 msgid "Agregar Nuevo Item"
 msgstr "Add New Item"
 
-#: ../includes/wp_custom_post_type.php:15
+#: includes/wp_custom_post_type.php:15
 msgid "Agregar Nuevo"
 msgstr "Add New"
 
-#: ../includes/wp_custom_post_type.php:16
+#: includes/wp_custom_post_type.php:16
 msgid "Nuevo Item"
 msgstr "New Item"
 
-#: ../includes/wp_custom_post_type.php:17
+#: includes/wp_custom_post_type.php:17
 msgid "Editar Item"
 msgstr "Edit Item"
 
-#: ../includes/wp_custom_post_type.php:18
+#: includes/wp_custom_post_type.php:18
 msgid "Actualizar Item"
 msgstr "Update Item"
 
-#: ../includes/wp_custom_post_type.php:19
+#: includes/wp_custom_post_type.php:19
 msgid "Ver Item"
 msgstr "View Item"
 
-#: ../includes/wp_custom_post_type.php:20
+#: includes/wp_custom_post_type.php:20
 msgid "Ver Portafolio"
 msgstr "View Portfolio"
 
-#: ../includes/wp_custom_post_type.php:21
+#: includes/wp_custom_post_type.php:21
 msgid "Buscar en Portafolio"
 msgstr "Search in Portfolio"
 
-#: ../includes/wp_custom_post_type.php:22
+#: includes/wp_custom_post_type.php:22
 msgid "No hay Resultados"
 msgstr "No Items"
 
-#: ../includes/wp_custom_post_type.php:23
+#: includes/wp_custom_post_type.php:23
 msgid "No hay Resultados en la Papelera"
 msgstr "No Items in Trash"
 
-#: ../includes/wp_custom_post_type.php:24
+#: includes/wp_custom_post_type.php:24
 msgid "Imagen Destacada"
 msgstr "Featured Image"
 
-#: ../includes/wp_custom_post_type.php:25
+#: includes/wp_custom_post_type.php:25
 msgid "Colocar Imagen Destacada"
 msgstr "Set Featured Image"
 
-#: ../includes/wp_custom_post_type.php:26
+#: includes/wp_custom_post_type.php:26
 msgid "Remover Imagen Destacada"
 msgstr "Remove Featured Image"
 
-#: ../includes/wp_custom_post_type.php:27
+#: includes/wp_custom_post_type.php:27
 msgid "Usar como Imagen Destacada"
 msgstr "Use as Featured Image"
 
-#: ../includes/wp_custom_post_type.php:28
+#: includes/wp_custom_post_type.php:28
 msgid "Insertar dentro de Item"
 msgstr "Insert Into Item"
 
-#: ../includes/wp_custom_post_type.php:29
+#: includes/wp_custom_post_type.php:29
 msgid "Cargado a este item"
 msgstr "Uploaded to this Item"
 
-#: ../includes/wp_custom_post_type.php:30
+#: includes/wp_custom_post_type.php:30
 msgid "Listado del Portafolio"
 msgstr "Portfolio Lists"
 
-#: ../includes/wp_custom_post_type.php:31
+#: includes/wp_custom_post_type.php:31
 msgid "Navegación de Listado del Portafolio"
 msgstr "Portfolio Lists Navigation"
 
-#: ../includes/wp_custom_post_type.php:32
+#: includes/wp_custom_post_type.php:32
 msgid "Filtro de Listado del Portafolio"
 msgstr "Filter Portfolio Lists"
 
-#: ../includes/wp_custom_post_type.php:36
+#: includes/wp_custom_post_type.php:36
 msgid "Portafolio de Desarrollos"
 msgstr "Development Portfolios"
 
-#: ../index.php:5
-msgid "Ultimas Entradas"
-msgstr "Last Entries"
+#: includes/wp_custom_theme_control.php:11
+msgid "Cabecera"
+msgstr "Cabecera"
 
-#: ../post-formats/format-aside.php:12 ../post-formats/format-audio.php:11
-#: ../post-formats/format-chat.php:12 ../post-formats/format-gallery.php:11
-#: ../post-formats/format-image.php:11 ../post-formats/format-link.php:11
-#: ../post-formats/format-quote.php:11 ../post-formats/format-status.php:11
-#: ../post-formats/format-video.php:11 ../post-formats/format.php:12
+#: includes/wp_custom_theme_control.php:12
+msgid "Opciones para los elementos de la cabecera"
+msgstr "Opciones para los elementos de la cabecera"
+
+#: includes/wp_custom_theme_control.php:25
+msgid "Número Telefónico"
+msgstr "Número Telefónico"
+
+#: includes/wp_custom_theme_control.php:26
+msgid "Agregar número telefonico con formato para el link"
+msgstr "Agregar número telefonico con formato para el link"
+
+#: includes/wp_custom_theme_control.php:40
+msgid "Número Telefónico [Visible]"
+msgstr "Número Telefónico [Visible]"
+
+#: includes/wp_custom_theme_control.php:41
+msgid "Agregar número telefónico en un formato visible para el público"
+msgstr "Agregar número telefónico en un formato visible para el público"
+
+#: includes/wp_custom_theme_control.php:56
+msgid "Correo Electrónico"
+msgstr "Correo Electrónico"
+
+#: includes/wp_custom_theme_control.php:57
+msgid "Agregar direccion de Correo Electrónico"
+msgstr "Agregar direccion de Correo Electrónico"
+
+#: includes/wp_custom_theme_control.php:64
+msgid "Redes Sociales"
+msgstr "Redes Sociales"
+
+#: includes/wp_custom_theme_control.php:65
+msgid "Agregue aqui las redes sociales de la página, serán usadas globalmente"
+msgstr "Agregue aqui las redes sociales de la página, serán usadas globalmente"
+
+#: includes/wp_custom_theme_control.php:81
+msgid "Facebook"
+msgstr "Facebook"
+
+#: includes/wp_custom_theme_control.php:96
+msgid "Twitter"
+msgstr "Twitter"
+
+#: includes/wp_custom_theme_control.php:111
+msgid "Instagram"
+msgstr "Instagram"
+
+#: includes/wp_custom_theme_control.php:126
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: includes/wp_custom_theme_control.php:141
+msgid "YouTube"
+msgstr "YouTube"
+
+#: includes/wp_custom_theme_control.php:156
+msgid "Yelp"
+msgstr "Yelp"
+
+#: includes/wp_custom_theme_control.php:161
+msgid "Cookies"
+msgstr "Cookies"
+
+#: includes/wp_custom_theme_control.php:162
+msgid "Opciones de Cookies"
+msgstr "Opciones de Cookies"
+
+#: includes/wp_custom_theme_control.php:176
+msgid "Cookie consent"
+msgstr "Cookie consent"
+
+#: includes/wp_custom_theme_control.php:177
+msgid "Texto del Cookie consent."
+msgstr "Texto del Cookie consent."
+
+#: includes/wp_custom_theme_control.php:194
+msgid "Link de Cookies"
+msgstr "Link de Cookies"
+
+#: includes/wp_enqueue_scripts.php:149
+msgid "Error: El nombre no puede estar vacio"
+msgstr "Error: The name cannot be empty"
+
+#: includes/wp_enqueue_scripts.php:150
+msgid "Error: El nombre debe ser válido"
+msgstr "Error: Name must be valid"
+
+#: includes/wp_enqueue_scripts.php:151
+msgid "Error: El correo no puede estar vacio"
+msgstr "Error: Mail cannot be empty"
+
+#: includes/wp_enqueue_scripts.php:152
+msgid "Error: El correo tiene un formato inválido"
+msgstr "Error: Mail has an invalid format"
+
+#: includes/wp_enqueue_scripts.php:153
+msgid "Error: El asunto no puede estar vacio"
+msgstr "Error: The subject cannot be empty"
+
+#: includes/wp_enqueue_scripts.php:154
+msgid "Error: El asunto debe ser válido"
+msgstr "Error: Subject must be valid"
+
+#: includes/wp_enqueue_scripts.php:155
+msgid "Error: El mensaje no puede estar vacio"
+msgstr "Error: Message cannot be empty"
+
+#: includes/wp_enqueue_scripts.php:156
+msgid "Gracias por su mensaje, en breve le atenderemos."
+msgstr "Thank you for your message, we will be with you shortly."
+
+#: includes/wp_enqueue_scripts.php:157
+msgid "Error: Intente de nuevo mas tarde."
+msgstr "Error: Try again later."
+
+#: includes/wp_woocommerce_functions.php:58
+msgid "Return to shop"
+msgstr "Return to shop"
+
+#: includes/wp_woocommerce_functions.php:90
+msgid "To access checkout, you need first to be logged in"
+msgstr "To access checkout, you need first to be logged in"
+
+#: includes/wp_woocommerce_functions.php:91
+msgid "Login area"
+msgstr "Login area"
+
+#: index.php:8
+msgid "Blog"
+msgstr "Blog"
+
+#: post-formats/format-aside.php:12 post-formats/format-audio.php:11
+#: post-formats/format-chat.php:11 post-formats/format-gallery.php:11
+#: post-formats/format-image.php:11 post-formats/format-link.php:11
+#: post-formats/format-quote.php:11 post-formats/format-status.php:11
+#: post-formats/format-video.php:11 post-formats/format.php:11
 msgid "Tags: "
 msgstr "Tags: "
 
-#: ../post-formats/format-aside.php:17 ../post-formats/format-audio.php:16
-#: ../post-formats/format-chat.php:17 ../post-formats/format-gallery.php:16
-#: ../post-formats/format-image.php:16 ../post-formats/format-link.php:16
-#: ../post-formats/format-quote.php:16 ../post-formats/format-status.php:16
-#: ../post-formats/format-video.php:16 ../post-formats/format.php:17
+#: post-formats/format-aside.php:17 post-formats/format-audio.php:16
+#: post-formats/format-chat.php:16 post-formats/format-gallery.php:16
+#: post-formats/format-image.php:16 post-formats/format-link.php:16
+#: post-formats/format-quote.php:16 post-formats/format-status.php:16
+#: post-formats/format-video.php:16 post-formats/format.php:16
 msgid "Pages:"
 msgstr "Pages:"
 
-#: ../search.php:5
+#: search.php:8
 #, php-format
 msgid "%s Search Results for "
 msgstr "%s Search Results for "
 
-#: ../searchform.php:3
-msgid "Buscar por Términos:"
-msgstr "Search Terms"
+#: searchform.php:10
+msgid "Buscar Productos:"
+msgstr "Search Products:"
 
-#: ../searchform.php:6
-msgid "Buscar"
-msgstr "Buscar"
+#: templates/contact-form.php:5
+msgid "E-mail (*)"
+msgstr "E-mail (*)"
+
+#: templates/contact-form.php:9
+msgid "Nombre (*)"
+msgstr "Name (*)"
+
+#: templates/contact-form.php:13
+msgid "Apellido (*)"
+msgstr "Last Name (*)"
+
+#: templates/contact-form.php:17
+msgid "Compañía"
+msgstr "Company"
+
+#: templates/contact-form.php:21
+msgid "Pais (*)"
+msgstr "Country (*)"
+
+#: templates/contact-form.php:25
+msgid "Mensaje (*)"
+msgstr "Message (*)"
+
+#: templates/contact-form.php:29
+msgid "(*) Campos Obligatorios"
+msgstr "(*) Required Fields"
+
+#: templates/contact-form.php:32
+msgid "Enviar"
+msgstr "Send Message"
+
+#: templates/templates-contact.php:75
+msgid "contáctanos"
+msgstr "contact us"
+
+#: templates/templates-gespetfood.php:45
+msgid "GESPETFOOD asegura:"
+msgstr "GESPETFOOD ensures:"
+
+#: templates/templates-gespetfood.php:78
+msgid "Equipo"
+msgstr "Team"
+
+#: woocommerce/single-product-reviews.php:89
+msgid "Name"
+msgstr "Name"
+
+#: woocommerce/single-product-reviews.php:95
+msgid "Email"
+msgstr "Email"
+
+#: woocommerce/single-product/tabs/description.php:22
+msgid "Description"
+msgstr "Description"
+
+#~ msgid "Main Sidebar"
+#~ msgstr "Main Sidebar"
+
+#~ msgid "Estos widgets seran vistos en posts y pages"
+#~ msgstr "These widgets will be seen in posts and pages"
+
+#~ msgid "Shop Sidebar"
+#~ msgstr "Shop Sidebar"
+
+#~ msgid "Gracias por crear con"
+#~ msgstr "Thank you for using"
+
+#~ msgid "Tema desarrollado por"
+#~ msgstr "Theme Developed By"
+
+#~ msgid "Agrega un Menu"
+#~ msgstr "Add a Menu"
+
+#~ msgid "año"
+#~ msgstr "year"
+
+#~ msgid "años"
+#~ msgstr "years"
+
+#~ msgid "mes"
+#~ msgstr "month"
+
+#~ msgid "meses"
+#~ msgstr "months"
+
+#~ msgid "semana"
+#~ msgstr "week"
+
+#~ msgid "semanas"
+#~ msgstr "weeks"
+
+#~ msgid "dia"
+#~ msgstr "day"
+
+#~ msgid "dias"
+#~ msgstr "days"
+
+#~ msgid "hora"
+#~ msgstr "hour"
+
+#~ msgid "horas"
+#~ msgstr "hours"
+
+#~ msgid "minuto"
+#~ msgstr "minute"
+
+#~ msgid "minutos"
+#~ msgstr "minutes"
+
+#~ msgid "segundo"
+#~ msgstr "second"
+
+#~ msgid "segundos"
+#~ msgstr "seconds"
+
+#~ msgid " un momento"
+#~ msgstr "a momento ago"
+
+#~ msgid "Inicio"
+#~ msgstr "Home"
+
+#~ msgid "Ultimas Entradas"
+#~ msgstr "Last Entries"
+
+#~ msgid "Buscar por Términos:"
+#~ msgstr "Search Terms"
+
+#~ msgid "Buscar"
+#~ msgstr "Buscar"
 
 #~ msgctxt "Post Type General Name"
 #~ msgid "Portafolio"
@@ -321,9 +874,6 @@ msgstr "Buscar"
 #~ msgid "Trabajos realizados"
 #~ msgstr "Jobs performed"
 
-#~ msgid "Menu Header Principal"
-#~ msgstr "Main Menu Header"
-
 #~ msgid "Menu Footer"
 #~ msgstr "Menu Footer"
 
@@ -333,18 +883,18 @@ msgstr "Buscar"
 #~ msgid "Widgets seran vistos en Tienda y Categorias de Producto"
 #~ msgstr "Widgets will be seen in shop and product categories"
 
-#~ msgid "Gracias por crear con "
-#~ msgstr "Thank you for creating with"
-
-#~ msgid "Tema desarrollado por "
-#~ msgstr "Theme Developed By"
-
 #~ msgid "Page %s"
 #~ msgstr "Page %s"
 
 #, fuzzy
-#~ msgid "<span id=\"footer-thankyou\">Gracias por crear con <a href=\"http://wordpress.org/\" >WordPress.</a> - Tema desarrollado por <a href=\"http://robertochoa.com.ve/\" >Robert Ochoa</a></span>"
-#~ msgstr "<span id=\"footer-thankyou\">Gracias por crear con <a href=\"http://wordpress.org/\">WordPress.</a> - Tema desarrollado por <a href=\"http://robertochoa.com.ve/\">Roberto Ochoa</a></span>"
+#~ msgid ""
+#~ "<span id=\"footer-thankyou\">Gracias por crear con <a href=\"http://"
+#~ "wordpress.org/\" >WordPress.</a> - Tema desarrollado por <a href=\"http://"
+#~ "robertochoa.com.ve/\" >Robert Ochoa</a></span>"
+#~ msgstr ""
+#~ "<span id=\"footer-thankyou\">Gracias por crear con <a href=\"http://"
+#~ "wordpress.org/\">WordPress.</a> - Tema desarrollado por <a href=\"http://"
+#~ "robertochoa.com.ve/\">Roberto Ochoa</a></span>"
 
 #~ msgid "Home"
 #~ msgstr "Inicio"
@@ -377,9 +927,6 @@ msgstr "Buscar"
 
 #~ msgid "Edit Slide"
 #~ msgstr "Editar Diapositiva"
-
-#~ msgid "Update Slide"
-#~ msgstr "Actualizar Diapositiva"
 
 #~ msgid "View Slide"
 #~ msgstr "Ver Diapositiva"
@@ -427,9 +974,6 @@ msgstr "Buscar"
 
 #~ msgid "Edit Service"
 #~ msgstr "Editar Servicio"
-
-#~ msgid "Update Service"
-#~ msgstr "Actualizar Servicio"
 
 #~ msgid "View Service"
 #~ msgstr "Ver Servicio"
@@ -502,17 +1046,11 @@ msgstr "Buscar"
 #~ msgid "About Us"
 #~ msgstr "¿Quiénes Somos?"
 
-#~ msgid "Blog"
-#~ msgstr "Blog"
-
 #~ msgid "Legal"
 #~ msgstr "Legal"
 
 #~ msgid "Affiliates"
 #~ msgstr "Afiliados"
-
-#~ msgid "Cookie Policy"
-#~ msgstr "Política de Cookies"
 
 #~ msgid "Calling Guide"
 #~ msgstr "Guía Telefónica"
@@ -534,9 +1072,6 @@ msgstr "Buscar"
 
 #~ msgid "Windows Phone App"
 #~ msgstr "Windows Phone App"
-
-#~ msgid "Facebook App"
-#~ msgstr "Facebook App"
 
 #, fuzzy
 #~ msgid "Search Item"

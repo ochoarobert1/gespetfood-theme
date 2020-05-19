@@ -32,8 +32,7 @@
             <div class="container">
                 <div class="row">
                     <div class="about-brochure col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/cat-sprite.png" alt="brochure" class="img-fluid" />
-                        <a href="<?php echo get_post_meta(get_the_ID(), 'gpf_gespetfood_about_brochure', true); ?>"><?php _e('Descargar catálogo de productos', 'gespetfood'); ?></a>
+                        <a href="<?php echo get_post_meta(get_the_ID(), 'gpf_gespetfood_about_brochure', true); ?>" target="_blank"><?php _e('Descargar catálogo de productos', 'gespetfood'); ?></a>
                     </div>
                 </div>
             </div>
@@ -81,6 +80,15 @@
                     </div>
                 </div>
             </div>
+        </section>
+        <section class="the-logo-about col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <?php $awards_group = get_post_meta(get_the_ID(), 'gpf_gespetfood_logo_list', true); ?>
+            <?php if ((!empty($awards_group)) || ($awards_group != '')) { ?>
+            <?php foreach ( $awards_group as $test_item ) { ?>
+            <?php $url = $test_item['url']; ?>
+            <a <?php if ($url != '') { ?> href="<?php echo $test_item['url']; ?>" target="_blank" <?php } ?>><img src="<?php echo $test_item['bg_image']; ?>" alt=""></a>
+            <?php } ?>
+            <?php } ?>
         </section>
     </div>
 </main>

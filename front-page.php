@@ -16,9 +16,8 @@
                         <?php the_content(); ?>
                     </div>
                     <div class="ifs-contact-container col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/ifs_food_Logo.png" alt="" class="img-fluid" />
-                        <div class="w-100"></div>
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/sellos.png" alt="" class="img-fluid" />
+                        <?php $logo_content = get_post_meta(get_the_ID(), 'gpf_home_logos_content', true); ?>
+                        <?php echo apply_filters('the_content', $logo_content); ?>
                     </div>
                 </div>
             </div>

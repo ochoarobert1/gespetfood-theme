@@ -35,17 +35,6 @@
                 </div>
             </div>
         </section>
-        <section class="contact-embed-map col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" data-aos="fade">
-            <div class="container">
-                <div class="row align-items-center justify-content-center">
-                    <div class="contact-embed-map-content col-xl-8 col-lg-8 col-md-10 col-sm-12 col-12">
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <?php echo get_post_meta(get_the_ID(), 'gpf_contact_embed_map', true); ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <section class="contact-extra-info col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" data-aos="fade">
             <div class="container">
                 <div class="row align-items-center justify-content-center">
@@ -60,13 +49,25 @@
                                 <a href="<?php echo $header_options['formatted_phone_number']; ?>" title="<?php _e('Haz clic aquí para llamar directamente a nuestro Master', 'gespetfood'); ?>"><?php echo $header_options['phone_number']; ?></a>
                             </div>
                             <div class="contact-extra-info-item col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
-                                <a href=""><img src="<?php echo get_template_directory_uri(); ?>/images/amazon.png" alt="amazon" class="img-fluid" /></a>
+                                 <a href=" https://www.amazon.es/dp/B088M57DRG/ref=cm_sw_r_wa_awdo_t1_sKsVEb251BF6B" target="_blank" title="<?php _e('Visita nuestra tienda en Amazon.com', 'gespetfood'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/amazon.png" alt="amazon" class="img-fluid" /></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <section class="contact-embed-map col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" data-aos="fade">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="contact-embed-map-content col-xl-8 col-lg-8 col-md-10 col-sm-12 col-12">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <?php echo get_post_meta(get_the_ID(), 'gpf_contact_embed_map', true); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <section class="contact-embed-form col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" data-aos="fade">
             <div class="container">
                 <div class="row justify-content-center">
