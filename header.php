@@ -97,7 +97,7 @@
                                 </a>
                             </div>
                             <div class="header-right col-xl-4 col-lg-5 col-md-5 col-sm-5 col-5">
-                                <a href=" https://www.amazon.es/dp/B088M57DRG/ref=cm_sw_r_wa_awdo_t1_sKsVEb251BF6B" target="_blank" title="<?php _e('Visita nuestra tienda en Amazon.com', 'gespetfood'); ?>" title="<?php _e('Volver al Inicio', 'gespetfood'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/amazon.png" alt="amazon" class="img-fluid" /></a>
+                                <a href=" https://www.amazon.es/s?k=GesPetFood&i=pets&rh=p_6%3AAGU4JNL7MI9BE&s=date-desc-rank&dc&qid=1589916349&rnid=831275031&ref=sr_nr_p_6_1" target="_blank" title="<?php _e('Visita nuestra tienda en Amazon.com', 'gespetfood'); ?>" title="<?php _e('Volver al Inicio', 'gespetfood'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/amazon.png" alt="amazon" class="img-fluid" /></a>
                             </div>
                         </div>
                     </div>
@@ -145,7 +145,7 @@
                                     <div class="navbar-mobile-info navbar-additional-elements col-12">
                                         <div class="row">
                                             <div class="navbar-mobile-elements col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 d-xl-block d-lg-block d-md-block d-sm-none d-none">
-                                                <a href=" https://www.amazon.es/dp/B088M57DRG/ref=cm_sw_r_wa_awdo_t1_sKsVEb251BF6B" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/amazon.png" alt="amazon" class="img-fluid" /></a>
+                                                <a href=" https://www.amazon.es/s?k=GesPetFood&i=pets&rh=p_6%3AAGU4JNL7MI9BE&s=date-desc-rank&dc&qid=1589916349&rnid=831275031&ref=sr_nr_p_6_1" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/amazon.png" alt="amazon" class="img-fluid" /></a>
                                                 <a href=""><i class="fa fa-shopping-cart"></i></a>
                                                 <div class="lang-container">
                                                     <a href="<?php echo $network_url . 'en'; ?>" title="<?php _e('Ir al sitio en Inglés', 'gespetfood'); ?>">ENG</a><span>/</span><a href="<?php echo $network_url; ?>" title="<?php _e('Ir al sitio en Español', 'gespetfood'); ?>">ESP</a>
@@ -187,7 +187,7 @@
                         </div>
 
                         <div class="mobile-amazon-link">
-                            <a href=" https://www.amazon.es/dp/B088M57DRG/ref=cm_sw_r_wa_awdo_t1_sKsVEb251BF6B" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/amazon.png" alt="amazon" class="img-fluid" /></a>
+                            <a href=" https://www.amazon.es/s?k=GesPetFood&i=pets&rh=p_6%3AAGU4JNL7MI9BE&s=date-desc-rank&dc&qid=1589916349&rnid=831275031&ref=sr_nr_p_6_1" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/amazon.png" alt="amazon" class="img-fluid" /></a>
                         </div>
 
                         <div class="mobile-catalog-container">

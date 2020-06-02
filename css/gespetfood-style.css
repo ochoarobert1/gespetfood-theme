@@ -475,6 +475,9 @@ a:hover {
   font-weight: 600;
   text-decoration: underline;
 }
+.the-about .about-info a:hover {
+  color: #E59E36;
+}
 .the-brochure .about-brochure {
   text-align: center;
 }
@@ -495,6 +498,7 @@ a:hover {
   background: none transparent;
 }
 .the-brochure .about-brochure img {
+  max-width: 70px;
   margin: 0 auto;
   display: block;
   margin-bottom: 2rem;
@@ -734,7 +738,7 @@ a:hover {
 .shop-ifs-container {
   z-index: 100;
   text-align: center;
-  padding-bottom: 5rem;
+  padding-bottom: 1.5rem;
 }
 .shop-ifs-container img {
   -webkit-filter: invert(0.8);
@@ -850,14 +854,14 @@ a:hover {
   padding: 0;
   color: #E59E36;
   font-weight: 800;
-  font-size: 2.9rem !important;
+  font-size: 2.3rem !important;
   margin-bottom: 1rem !important;
 }
 .woocommerce div.product p.price,
 .woocommerce div.product span.price {
   color: #E59E36;
   font-weight: 700;
-  font-size: 1.8em;
+  font-size: 1.5em;
 }
 .woocommerce-product-details__short-description {
   font-size: 1.1rem;
@@ -1069,12 +1073,12 @@ a:hover {
 }
 .the-logo-about img {
   margin: 0 1.5rem;
-  max-width: 250px;
-  height: auto;
+  max-width: 230px;
+  max-height: 100px;
 }
 .shop-ifs-container h4 {
-  font-size: 1.5rem;
-  line-height: 2.5rem;
+  font-size: 1.3rem;
+  line-height: 2.2rem;
   font-weight: 400;
 }
 .shop-logo-first {
@@ -1091,6 +1095,7 @@ a:hover {
 .shop-logo-first img {
   margin: 0;
   max-width: 200px;
+  max-height: 100px;
 }
 .shop-logo-second {
   text-align: center;
@@ -1107,7 +1112,7 @@ a:hover {
 .shop-logo-second img {
   flex: 0 0 15%;
   max-width: 15%;
-  margin: 0.5rem;
+  margin: 0rem;
   height: auto;
 }
 .custom-description-content-info .shop-logo-second img {
@@ -1128,7 +1133,29 @@ a:hover {
   margin-top: 1rem;
 }
 .btn-shipping {
+  position: absolute;
+  top: 0;
+  left: 85px;
+  background: url(../images/car-sprite.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 90px;
+  display: block;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.btn-shipping:hover {
+  -webkit-filter: grayscale(1) invert(1);
+  -moz-filter: grayscale(1) invert(1);
+  -ms-filter: grayscale(1) invert(1);
+  filter: grayscale(1) invert(1);
+}
+.btn-back-shop {
   background: black;
+  border: 1px solid black;
   color: white;
   border-radius: 0;
   padding: 0.7rem;
@@ -1142,31 +1169,12 @@ a:hover {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.btn-shipping:hover {
-  background: none;
-  color: black;
-}
-.btn-back-shop {
-  background: black;
-  border: 1px solid black;
-  color: white;
-  border-radius: 0;
-  padding: 0.7rem;
-  display: block;
-  max-width: 300px;
-  font-weight: 500;
-  font-size: 1.1rem;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
 .btn-back-shop:hover {
   background: none;
   color: black;
 }
 .entry-summary .custom-star-container {
-  font-size: 2rem;
+  font-size: 1.3rem;
   margin-bottom: 1.5rem;
   border-bottom: 1px solid #d5d5d5;
   padding-bottom: 1.5rem;
@@ -1177,5 +1185,18 @@ a:hover {
   border-top: 1px solid #d5d5d5;
 }
 .woocommerce div.product form.cart {
+  position: relative;
   margin-bottom: 1em;
+}
+.cart_totals td {
+  background: white !important;
+  color: black !important;
+}
+.woocommerce-checkout-review-order-table td {
+  background: white !important;
+  color: black !important;
+}
+#calc_shipping_state_field span:first-of-type {
+  display: block !important;
+  width: 100% !important;
 }

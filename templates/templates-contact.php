@@ -49,7 +49,7 @@
                                 <a href="<?php echo $header_options['formatted_phone_number']; ?>" title="<?php _e('Haz clic aquí para llamar directamente a nuestro Master', 'gespetfood'); ?>"><?php echo $header_options['phone_number']; ?></a>
                             </div>
                             <div class="contact-extra-info-item col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
-                                 <a href=" https://www.amazon.es/dp/B088M57DRG/ref=cm_sw_r_wa_awdo_t1_sKsVEb251BF6B" target="_blank" title="<?php _e('Visita nuestra tienda en Amazon.com', 'gespetfood'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/amazon.png" alt="amazon" class="img-fluid" /></a>
+                                 <a href=" https://www.amazon.es/s?k=GesPetFood&i=pets&rh=p_6%3AAGU4JNL7MI9BE&s=date-desc-rank&dc&qid=1589916349&rnid=831275031&ref=sr_nr_p_6_1" target="_blank" title="<?php _e('Visita nuestra tienda en Amazon.com', 'gespetfood'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/amazon.png" alt="amazon" class="img-fluid" /></a>
                             </div>
                         </div>
                     </div>

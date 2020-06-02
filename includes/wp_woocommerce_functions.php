@@ -59,10 +59,11 @@ add_action('woocommerce_single_product_summary', 'woocommerce_custom_rating_hand
 add_action('woocommerce_single_product_summary', 'woocommerce_custom_shipping_button', 40);
 
 function woocommerce_custom_shipping_button() {
+    global $woocommerce;
+    $checkout_url = $woocommerce->cart->get_checkout_url();
     $shop_id = get_option( 'woocommerce_shop_page_id' );
-    $shipping_btn_url = get_post_meta($shop_id, 'gpf_shop_shipping', true); 
 ?>
-<a href="<?php echo $shipping_btn_url; ?>" class="btn btn-md btn-shipping"><?php _e('Costos de Envios', 'gespetfood'); ?></a>
+<a href="<?php echo $checkout_url; ?>" class="btn btn-md btn-back-shop"><?php _e('Finalizar Compra', 'gespetfood'); ?></a>
 <a href="<?php echo get_permalink($shop_id); ?>" class="btn btn-md btn-back-shop"><?php _e('Volver a Tienda', 'gespetfood'); ?></a>
 <?php 
 }
@@ -84,13 +85,12 @@ function custom_woocommerce_single_info() {
     <?php $awards_group = get_post_meta($shop_id, 'gpf_shop_logo1_list', true); ?>
     <?php if ((!empty($awards_group)) || ($awards_group != '')) { ?>
     <?php foreach ( $awards_group as $test_item ) { ?>
-    <?php $url = $test_item['url']; ?>
-    <a <?php if ($url != '') { ?> href="<?php echo $test_item['url']; ?>" target="_blank" <?php } ?>><img src="<?php echo $test_item['bg_image']; ?>" alt=""></a>
+    <img src="<?php echo $test_item['bg_image']; ?>" alt="" class="">
     <?php } ?>
     <?php } ?>
 </section>
 <div class="shop-ifs-container col-12">
-    <?php $shop_info = get_post_meta($shop_id, 'gpf_shop_info', true); ?>
+    <?php $shop_info = get_post_meta($shop_id, 'gpf_shop_ind_info', true); ?>
     <?php echo apply_filters('the_content', $shop_info); ?>
 </div>
 <?php 

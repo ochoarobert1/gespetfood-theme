@@ -165,6 +165,17 @@ function gespetfood_register_custom_metabox() {
             'teeny' => false
         )
     ) ); 
+    
+       $cmb_product_slider->add_field( array(
+        'id'         => $prefix . 'shop_ind_info',
+        'name'       => esc_html__( 'Tienda: Información Adicional', 'gespetfood' ),
+        'desc'       => esc_html__( 'Ingrese aqui la información que va justo arriba de la tienda', 'gespetfood' ),
+        'type'    => 'wysiwyg',
+        'options' => array(
+            'textarea_rows' => get_option('default_post_edit_rows', 4),
+            'teeny' => false
+        )
+    ) ); 
 
     $group_field_id = $cmb_product_slider->add_field( array(
         'id'          => $prefix . 'shop_logo1_list',

@@ -120,12 +120,11 @@ get_header( 'shop' );
                         <?php $awards_group = get_post_meta($shop_id, 'gpf_shop_logo1_list', true); ?>
                         <?php if ((!empty($awards_group)) || ($awards_group != '')) { ?>
                         <?php foreach ( $awards_group as $test_item ) { ?>
-                        <?php $url = $test_item['url']; ?>
-                        <a <?php if ($url != '') { ?> href="<?php echo $test_item['url']; ?>" target="_blank" <?php } ?>><img src="<?php echo $test_item['bg_image']; ?>" alt=""></a>
+                        <img src="<?php echo $test_item['bg_image']; ?>" alt="" class="">
                         <?php } ?>
                         <?php } ?>
                     </section>
-                    <section class="shop-logo-second col-xl-10 offset-xl-1 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <section class="shop-logo-second col-xl-8 offset-xl-2 col-lg-8 offset-lg-2 col-md-12 col-sm-12 col-12">
                         <?php $awards_group = get_post_meta($shop_id, 'gpf_shop_logo2_list', true); ?>
                         <?php if ((!empty($awards_group)) || ($awards_group != '')) { ?>
                         <?php foreach ( (array) $awards_group as $attachment_id => $attachment_url ) { ?>
