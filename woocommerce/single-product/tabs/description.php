@@ -40,7 +40,8 @@ $heading = apply_filters( 'woocommerce_product_description_heading', __( 'Descri
                 <?php $awards_group = get_post_meta($shop_id, 'gpf_shop_logo2_list', true); ?>
                 <?php if ((!empty($awards_group)) || ($awards_group != '')) { ?>
                 <?php foreach ( (array) $awards_group as $attachment_id => $attachment_url ) { ?>
-                <?php echo wp_get_attachment_image( $attachment_id, 'medium', array('class' => 'img-fluid') ); ?>
+                <?php $image = wp_get_attachment_image_src( $attachment_id, 'custom_logos' ); ?>
+                <img itemprop="logo" content="<?php echo $image[0];?>" src="<?php echo $image[0];?>" title="<?php echo get_post_meta( $attachment_id, '_wp_attachment_image_alt', true ); ?>" alt="<?php echo get_post_meta( $attachment_id, '_wp_attachment_image_alt', true ); ?>" class="img-fluid" width="<?php echo $image[1]; ?>" height="<?php echo $image[2]; ?>" />
                 <?php } ?>
                 <?php } ?>
             </section>

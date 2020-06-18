@@ -19,7 +19,7 @@ add_action('woocommerce_before_main_content', 'my_theme_wrapper_start', 10);
 add_action('woocommerce_after_main_content', 'my_theme_wrapper_end', 10);
 
 function my_theme_wrapper_start() {
-    echo '<section id="main" class="container-fluid"><div class="row"><div class="woocustom-main-container col-12">';
+    echo '<section id="main" class="container-fluid"><div class="row"><div class="woocustom-main-container col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">';
 }
 
 function my_theme_wrapper_end() {
@@ -45,7 +45,7 @@ function woocommerce_custom_rating_handler() {
     <i class="fa fa-star"></i>
     <i class="fa fa-star"></i>
 </div>
-<?php 
+<?php
     $content = ob_get_clean();
     echo $content;
 }
@@ -60,12 +60,12 @@ add_action('woocommerce_single_product_summary', 'woocommerce_custom_shipping_bu
 
 function woocommerce_custom_shipping_button() {
     global $woocommerce;
-    $checkout_url = $woocommerce->cart->get_checkout_url();
+    $checkout_url = wc_get_checkout_url();
     $shop_id = get_option( 'woocommerce_shop_page_id' );
 ?>
 <a href="<?php echo $checkout_url; ?>" class="btn btn-md btn-back-shop"><?php _e('Finalizar Compra', 'gespetfood'); ?></a>
 <a href="<?php echo get_permalink($shop_id); ?>" class="btn btn-md btn-back-shop"><?php _e('Volver a Tienda', 'gespetfood'); ?></a>
-<?php 
+<?php
 }
 
 add_action('woocommerce_cart_coupon', 'themeprefix_back_to_store');
@@ -85,7 +85,8 @@ function custom_woocommerce_single_info() {
     <?php $awards_group = get_post_meta($shop_id, 'gpf_shop_logo1_list', true); ?>
     <?php if ((!empty($awards_group)) || ($awards_group != '')) { ?>
     <?php foreach ( $awards_group as $test_item ) { ?>
-    <img src="<?php echo $test_item['bg_image']; ?>" alt="" class="">
+    <?php $image = wp_get_attachment_image_src( $test_item['bg_image_id'], 'logo_size' ); ?>
+    <img itemprop="logo" content="<?php echo $image[0];?>" src="<?php echo $image[0];?>" title="<?php echo get_post_meta( $test_item['bg_image_id'], '_wp_attachment_image_alt', true ); ?>" alt="<?php echo get_post_meta( $test_item['bg_image_id'], '_wp_attachment_image_alt', true ); ?>" class="img-fluid" width="<?php echo $image[1]; ?>" height="<?php echo $image[2]; ?>" />
     <?php } ?>
     <?php } ?>
 </section>
@@ -93,5 +94,39 @@ function custom_woocommerce_single_info() {
     <?php $shop_info = get_post_meta($shop_id, 'gpf_shop_ind_info', true); ?>
     <?php echo apply_filters('the_content', $shop_info); ?>
 </div>
-<?php 
+<?php
+}
+
+/**
+ * Set a minimum order amount for checkout
+ */
+add_action( 'woocommerce_checkout_process', 'wc_minimum_order_amount' );
+add_action( 'woocommerce_before_cart' , 'wc_minimum_order_amount' );
+
+function wc_minimum_order_amount() {
+    // Set this variable to specify a minimum order value
+    $minimum = 10;
+
+    if ( WC()->cart->total < $minimum ) {
+
+        if( is_cart() ) {
+
+            wc_print_notice(
+                sprintf( 'El total de tu orden actual es %s — debes tener una orden con un mínimo de %s para poder procesar tu compra ' ,
+                        wc_price( WC()->cart->total ),
+                        wc_price( $minimum )
+                       ), 'error'
+            );
+
+        } else {
+
+            wc_add_notice(
+                sprintf( 'El total de tu orden actual es %s — debes tener una orden con un mínimo de %s para poder procesar tu compra ' ,
+                        wc_price( WC()->cart->total ),
+                        wc_price( $minimum )
+                       ), 'error'
+            );
+
+        }
+    }
 }

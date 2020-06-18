@@ -1,3 +1,4 @@
+// compress: true, strictMath: true, javascriptEnabled: true
 /* --------------------------------------------------------------
 MEDIAQUERIES LG/MD - LAYOUTS BIGGER THAN 992px
 -------------------------------------------------------------- */
@@ -11,7 +12,12 @@ MEDIAQUERIES LG/MD - LAYOUTS BIGGER THAN 992px
     }
 }
 
-@media (max-width: 1440px) {}
+@media (max-width: 1440px) {
+    #redsysForm {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
 
 @media (max-width: 1366px) {
     .gpf-privacy-policy-accept {
@@ -19,7 +25,12 @@ MEDIAQUERIES LG/MD - LAYOUTS BIGGER THAN 992px
     }
 }
 
-@media (max-width: 1280px) {}
+@media (max-width: 1280px) {
+    #redsysForm {
+        flex: 0 0 70%;
+        max-width: 70%;
+    }
+}
 
 @media (max-width: 1170px) {
     .the-about .about-info {
@@ -117,6 +128,16 @@ MEDIAQUERIES SM - LAYOUTS BIGGER THAN 768px
         min-height: 330px;
         padding: 1.5rem .5rem;
     }
+
+    .woocommerce-checkout .order_details li {
+        border-right: 1px dashed #d3ced2 !important;
+    }
+
+    #redsysForm {
+        padding: 1rem 0;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 800px) {
@@ -138,6 +159,12 @@ MEDIAQUERIES SM - LAYOUTS BIGGER THAN 768px
     .gpf-privacy-policy-accept {
         font-size: 1.1rem;
         line-height: 1.7rem;
+    }
+
+    .woocommerce-checkout .order_details li {
+        border-right: 0 !important;
+        flex: 0 0 50%;
+        margin-bottom: 2.5rem !important;
     }
 }
 

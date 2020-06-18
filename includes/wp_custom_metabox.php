@@ -80,7 +80,7 @@ function gespetfood_register_custom_metabox() {
         'id'            => $prefix . 'home_slider',
         'title'         => esc_html__( 'Home: Slider Revolution', 'gespetfood' ),
         'object_types'  => array( 'page' ), // Post type
-        'show_on' => array( 'key' => 'front-page', 'value' => '' ),
+        'show_on'      => array( 'key' => 'page-template', 'value' => 'templates/templates-promociones.php' ),
         'context'    => 'normal',
         'priority'   => 'high',
         'show_names' => true, // Show field names on the left
@@ -102,7 +102,7 @@ function gespetfood_register_custom_metabox() {
         'id'            => $prefix . 'home_logos',
         'title'         => esc_html__( 'Home: Logos del Home', 'gespetfood' ),
         'object_types'  => array( 'page' ), // Post type
-        'show_on' => array( 'key' => 'front-page', 'value' => '' ),
+        'show_on'      => array( 'key' => 'page-template', 'value' => 'templates/templates-promociones.php' ),
         'context'    => 'normal',
         'priority'   => 'high',
         'show_names' => true, // Show field names on the left
@@ -146,7 +146,7 @@ function gespetfood_register_custom_metabox() {
         'show_option_none' => true,
         'default'          => '',
         'options'          => $array_sliders
-    ) );    
+    ) );
 
     $cmb_product_slider->add_field( array(
         'id'   => $prefix . 'shop_shipping',
@@ -164,8 +164,8 @@ function gespetfood_register_custom_metabox() {
             'textarea_rows' => get_option('default_post_edit_rows', 4),
             'teeny' => false
         )
-    ) ); 
-    
+    ) );
+
        $cmb_product_slider->add_field( array(
         'id'         => $prefix . 'shop_ind_info',
         'name'       => esc_html__( 'Tienda: Información Adicional', 'gespetfood' ),
@@ -175,7 +175,7 @@ function gespetfood_register_custom_metabox() {
             'textarea_rows' => get_option('default_post_edit_rows', 4),
             'teeny' => false
         )
-    ) ); 
+    ) );
 
     $group_field_id = $cmb_product_slider->add_field( array(
         'id'          => $prefix . 'shop_logo1_list',
@@ -257,7 +257,7 @@ function gespetfood_register_custom_metabox() {
             'textarea_rows' => get_option('default_post_edit_rows', 4),
             'teeny' => false
         )
-    ) );    
+    ) );
 
     $cmb_product_info->add_field( array(
         'id'         => $prefix . 'product_table2',
@@ -268,6 +268,5 @@ function gespetfood_register_custom_metabox() {
             'textarea_rows' => get_option('default_post_edit_rows', 4),
             'teeny' => false
         )
-    ) );    
-
+    ) );
 }

@@ -1,5 +1,4 @@
 <?php
-
 /* --------------------------------------------------------------
     ENQUEUE AND REGISTER CSS
 -------------------------------------------------------------- */
@@ -12,21 +11,24 @@ require_once('includes/wp_enqueue_styles.php');
 
 if (!is_admin()) add_action('wp_enqueue_scripts', 'my_jquery_enqueue');
 function my_jquery_enqueue() {
-    wp_deregister_script('jquery');
-    wp_deregister_script('jquery-migrate');
-    if ($_SERVER['REMOTE_ADDR'] == '::1') {
-        /*- JQUERY ON LOCAL  -*/
-        wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery.min.js', false, '3.4.1', false);
-        /*- JQUERY MIGRATE ON LOCAL  -*/
-        wp_register_script( 'jquery-migrate', get_template_directory_uri() . '/js/jquery-migrate.min.js',  array('jquery'), '3.0.1', false);
-    } else {
-        /*- JQUERY ON WEB  -*/
-        wp_register_script( 'jquery', 'https://code.jquery.com/jquery-3.4.1.min.js', false, '3.4.1', false);
-        /*- JQUERY MIGRATE ON WEB  -*/
-        wp_register_script( 'jquery-migrate', 'https://code.jquery.com/jquery-migrate-3.0.1.min.js', array('jquery'), '3.0.1', true);
+    if (!is_page('finalizar-compra')) {
+        wp_deregister_script('jquery');
+        wp_deregister_script('jquery-migrate');
+
+        if ($_SERVER['REMOTE_ADDR'] == '::1') {
+            /*- JQUERY ON LOCAL  -*/
+            wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery.min.js', false, '3.4.1', false);
+            /*- JQUERY MIGRATE ON LOCAL  -*/
+            wp_register_script( 'jquery-migrate', get_template_directory_uri() . '/js/jquery-migrate.min.js',  array('jquery'), '3.0.1', false);
+        } else {
+            /*- JQUERY ON WEB  -*/
+            wp_register_script( 'jquery', 'https://code.jquery.com/jquery-3.4.1.min.js', false, '3.4.1', false);
+            /*- JQUERY MIGRATE ON WEB  -*/
+            wp_register_script( 'jquery-migrate', 'https://code.jquery.com/jquery-migrate-3.0.1.min.js', array('jquery'), '3.0.1', true);
+        }
+        wp_enqueue_script('jquery');
+        wp_enqueue_script('jquery-migrate');
     }
-    wp_enqueue_script('jquery');
-    wp_enqueue_script('jquery-migrate');
 }
 
 /* NOW ALL THE JS FILES */
@@ -187,8 +189,9 @@ if ( function_exists('add_theme_support') ) {
 }
 if ( function_exists('add_image_size') ) {
     add_image_size('avatar', 100, 100, true);
-    add_image_size('blog_img', 276, 217, true);
-    add_image_size('single_img', 636, 297, true );
+    add_image_size('logo_size', 9999, 100, false);
+    add_image_size('custom_logos', 130, 130, true);
+
 }
 
 add_filter( 'big_image_size_threshold', '__return_false' );

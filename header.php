@@ -62,6 +62,8 @@
                             <div class="top-header-left col-6">
                                 <a href="mailto:<?php echo $header_options['email_address']; ?>" title="<?php _e('Haz clic aquí para dejar tu mensaje en nuestro correo electrónico', 'gespetfood'); ?>"><?php echo $header_options['email_address']; ?></a>
                                 <a href="<?php echo $header_options['formatted_phone_number']; ?>" title="<?php _e('Haz clic aquí para llamar directamente a nuestro Master', 'gespetfood'); ?>"><?php echo $header_options['phone_number']; ?></a>
+                                <a href="<?php echo $social_options['facebook']; ?>" title="<?php _e('Haz clic aquí para visitar nuestro perfil', 'gespetfood'); ?>" target="_blank"><i class="fa fa-facebook"></i></a>
+                                <a href="<?php echo $social_options['twitter']; ?>" title="<?php _e('Haz clic aquí para visitar nuestro perfil', 'gespetfood'); ?>" target="_blank"><i class="fa fa-twitter"></i></a>
                                 <a href="<?php echo $social_options['instagram']; ?>" title="<?php _e('Haz clic aquí para visitar nuestro perfil', 'gespetfood'); ?>" target="_blank"><i class="fa fa-instagram"></i></a>
                                 <a href="<?php echo $social_options['linkedin']; ?>" title="<?php _e('Haz clic aquí para visitar nuestro perfil', 'gespetfood'); ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
                             </div>
@@ -70,6 +72,7 @@
                                 <?php if ( $myaccount_page_id ) { $myaccount_page_url = get_permalink( $myaccount_page_id ); } ?>
                                 <a href="<?php echo $myaccount_page_url; ?>" title="<?php _e('Ingresar a su cuenta', 'gespetood'); ?>"><i class="fa fa-user-o"></i> <?php _e('Iniciar Sesión', 'gespetfood'); ?></a>
                                 <?php global $woocommerce; ?>
+
                                 <?php $cart_url = wc_get_cart_url(); ?>
                                 <?php $amount = $woocommerce->cart->get_cart_total(); ?>
                                 <a href="<?php echo $cart_url; ?>" title="<?php _e('Ver Carrito de Compras', 'gespetfood'); ?>"><i class="fa fa-shopping-cart"></i>  <?php echo $amount; ?></a>
@@ -139,6 +142,8 @@
                                     <div class="navbar-mobile-info navbar-mobile-first-info col-12 d-xl-block d-lg-block d-md-block d-sm-none d-none">
                                         <a href="mailto:<?php echo $header_options['email_address']; ?>" title="<?php _e('Haz clic aquí para dejar tu mensaje en nuestro correo electrónico', 'gespetfood'); ?>"><?php echo $header_options['email_address']; ?></a>
                                         <a href="<?php echo $header_options['formatted_phone_number']; ?>" title="<?php _e('Haz clic aquí para llamar directamente a nuestro Master', 'gespetfood'); ?>"><?php echo $header_options['phone_number']; ?></a>
+                                        <a href="<?php echo $social_options['facebook']; ?>" title="<?php _e('Haz clic aquí para visitar nuestro perfil', 'gespetfood'); ?>" target="_blank"><i class="fa fa-facebook"></i></a>
+                                        <a href="<?php echo $social_options['twitter']; ?>" title="<?php _e('Haz clic aquí para visitar nuestro perfil', 'gespetfood'); ?>" target="_blank"><i class="fa fa-twitter"></i></a>
                                         <a href="<?php echo $social_options['instagram']; ?>" title="<?php _e('Haz clic aquí para visitar nuestro perfil', 'gespetfood'); ?>" target="_blank"><i class="fa fa-instagram"></i></a>
                                         <a href="<?php echo $social_options['linkedin']; ?>" title="<?php _e('Haz clic aquí para visitar nuestro perfil', 'gespetfood'); ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
                                     </div>

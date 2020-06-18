@@ -41,6 +41,8 @@
                     <div class="contact-extra-info-content col-xl-10 col-lg-10 col-md-12 col-sm-12 col-12">
                         <div class="row align-items-center justify-content-center">
                             <div class="contact-extra-info-item contact-extra-social-info col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                                <a href="<?php echo $social_options['facebook']; ?>" title="<?php _e('Haz clic aquí para visitar nuestro perfil', 'gespetfood'); ?>" target="_blank"><i class="fa fa-facebook"></i></a>
+                                <a href="<?php echo $social_options['twitter']; ?>" title="<?php _e('Haz clic aquí para visitar nuestro perfil', 'gespetfood'); ?>" target="_blank"><i class="fa fa-twitter"></i></a>
                                 <a href="<?php echo $social_options['instagram']; ?>" title="<?php _e('Haz clic aquí para visitar nuestro perfil', 'gespetfood'); ?>" target="_blank"><i class="fa fa-instagram"></i></a>
                                 <a href="<?php echo $social_options['linkedin']; ?>" title="<?php _e('Haz clic aquí para visitar nuestro perfil', 'gespetfood'); ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
                             </div>
@@ -49,7 +51,7 @@
                                 <a href="<?php echo $header_options['formatted_phone_number']; ?>" title="<?php _e('Haz clic aquí para llamar directamente a nuestro Master', 'gespetfood'); ?>"><?php echo $header_options['phone_number']; ?></a>
                             </div>
                             <div class="contact-extra-info-item col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
-                                 <a href=" https://www.amazon.es/s?k=GesPetFood&i=pets&rh=p_6%3AAGU4JNL7MI9BE&s=date-desc-rank&dc&qid=1589916349&rnid=831275031&ref=sr_nr_p_6_1" target="_blank" title="<?php _e('Visita nuestra tienda en Amazon.com', 'gespetfood'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/amazon.png" alt="amazon" class="img-fluid" /></a>
+                                <a href=" https://www.amazon.es/s?k=GesPetFood&i=pets&rh=p_6%3AAGU4JNL7MI9BE&s=date-desc-rank&dc&qid=1589916349&rnid=831275031&ref=sr_nr_p_6_1" target="_blank" title="<?php _e('Visita nuestra tienda en Amazon.com', 'gespetfood'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/amazon.png" alt="amazon" class="img-fluid" /></a>
                             </div>
                         </div>
                     </div>
@@ -67,7 +69,7 @@
                 </div>
             </div>
         </section>
-        
+
         <section class="contact-embed-form col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" data-aos="fade">
             <div class="container">
                 <div class="row justify-content-center">

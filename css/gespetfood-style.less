@@ -1,4 +1,4 @@
-// compress: false, strictMath: true, javascriptEnabled: true
+// compress: true, strictMath: true, javascriptEnabled: true
 /* --------------------------------------------------------------
 /* MAIN LESS MIXINS AND FUNCTIONS - LESSHAT
 -------------------------------------------------------------- */
@@ -1282,7 +1282,6 @@ a {
     & img {
         margin: 0;
         max-width: 200px;
-        max-height: 100px;
     }
 }
 
@@ -1394,4 +1393,40 @@ a {
 #calc_shipping_state_field span:first-of-type {
     display: block !important;
     width: 100% !important;
+}
+
+.woocommerce-checkout {
+    & .order_details {
+        margin: 0 0 3em;
+        margin: 0 auto;
+        text-align: center;
+        list-style: none;
+        .display(flex);
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        & li {
+            float: none !important;
+            margin: 0 auto !important;
+            text-align: center;
+            border-right: 0 !important;
+            padding: 0;
+        }
+    }
+}
+
+#redsysForm {
+    background-color: #fff;
+    color: black !important;
+    margin: 0 auto;
+    padding: 2rem 0;
+    width: auto !important;
+    flex: 0 0 35%;
+    max-width: 40%;
+    border-radius: 10px;
+}
+
+table.woocommerce-table.woocommerce-table--order-details.shop_table.order_details {
+    display: table !important;
 }
