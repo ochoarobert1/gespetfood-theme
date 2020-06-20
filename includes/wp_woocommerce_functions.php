@@ -100,6 +100,7 @@ function custom_woocommerce_single_info() {
 /**
  * Set a minimum order amount for checkout
  */
+
 add_action( 'woocommerce_checkout_process', 'wc_minimum_order_amount' );
 add_action( 'woocommerce_before_cart' , 'wc_minimum_order_amount' );
 
