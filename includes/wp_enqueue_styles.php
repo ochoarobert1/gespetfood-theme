@@ -64,7 +64,7 @@ function gespetfood_load_css() {
             //wp_enqueue_style('owltheme-css');
 
             /*- SWIPER -*/
-            wp_register_style('swiper-css', 'https://unpkg.com/swiper/css/swiper.min.css', false, '4.5.3', 'all');
+            wp_register_style('swiper-css', 'https://unpkg.com/swiper/swiper-bundle.min.css', false, '4.5.3', 'all');
             wp_enqueue_style('swiper-css');
 
             /*- AOS -*/

@@ -14,8 +14,8 @@ function gespetfood_load_js() {
                 wp_enqueue_script('bootstrap-bundle');
 
                 /*- BOOTSTRAP ON LOCAL  -*/
-                wp_register_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '4.3.1', true);
-                wp_enqueue_script('bootstrap');
+                //wp_register_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '4.3.1', true);
+                //wp_enqueue_script('bootstrap');
 
                 /*- JQUERY STICKY ON LOCAL  -*/
                 wp_register_script('sticky', get_template_directory_uri() . '/js/jquery.sticky.js', array('jquery'), '1.0.4', true);
@@ -124,7 +124,7 @@ function gespetfood_load_js() {
                 //wp_enqueue_script('owl-js');
 
                 /*- SWIPER -*/
-                wp_register_script('swiper-js', 'https://unpkg.com/swiper/js/swiper.min.js', array('jquery'), '4.5.3', true);
+                wp_register_script('swiper-js', 'https://unpkg.com/swiper/swiper-bundle.min.js', array('jquery'), '4.5.3', true);
                 wp_enqueue_script('swiper-js');
 
                 /*- WOW -*/
