@@ -10,6 +10,11 @@ MEDIAQUERIES LG/MD - LAYOUTS BIGGER THAN 992px
     .gpf-privacy-policy-accept {
         max-width: 70vw;
     }
+
+    .custom-product-wrapper .onsale {
+        bottom: 35px !important;
+        right: -50px !important;
+    }
 }
 
 @media (max-width: 1440px) {
@@ -17,11 +22,22 @@ MEDIAQUERIES LG/MD - LAYOUTS BIGGER THAN 992px
         flex: 0 0 50%;
         max-width: 50%;
     }
+
+    .custom-product-wrapper .onsale {
+        bottom: 35px !important;
+        right: -40px !important;
+    }
 }
 
 @media (max-width: 1366px) {
     .gpf-privacy-policy-accept {
         max-width: 80vw;
+    }
+
+    .custom-product-wrapper .onsale {
+        bottom: 25px !important;
+        right: -45px !important;
+        font-size: 16px !important;
     }
 }
 
@@ -29,6 +45,11 @@ MEDIAQUERIES LG/MD - LAYOUTS BIGGER THAN 992px
     #redsysForm {
         flex: 0 0 70%;
         max-width: 70%;
+    }
+
+    .custom-product-wrapper .onsale {
+        bottom: 25px !important;
+        right: -40px !important;
     }
 }
 
@@ -83,9 +104,20 @@ MEDIAQUERIES LG/MD - LAYOUTS BIGGER THAN 992px
     .gpf-privacy-policy-accept {
         max-width: 92vw;
     }
+
+    .custom-product-wrapper .onsale {
+        bottom: 15px !important;
+        right: -50px !important;
+        font-size: 10px !important;
+    }
 }
 
-@media (max-width: 1024px) {}
+@media (max-width: 1024px) {
+    .custom-product-wrapper .onsale {
+        bottom: 15px !important;
+        right: -35px !important;
+    }
+}
 
 @media (max-width: 992px) {}
 
@@ -93,6 +125,11 @@ MEDIAQUERIES LG/MD - LAYOUTS BIGGER THAN 992px
 MEDIAQUERIES SM - LAYOUTS BIGGER THAN 768px
 -------------------------------------------------------------- */
 @media (max-width: 991px) {
+    .custom-product-wrapper .onsale {
+        bottom: 10px !important;
+        right: -30px !important;
+    }
+
     .header-left {
         display: flex;
         align-items: flex-start;
@@ -166,6 +203,38 @@ MEDIAQUERIES SM - LAYOUTS BIGGER THAN 768px
         flex: 0 0 50%;
         margin-bottom: 2.5rem !important;
     }
+
+    .custom-product-wrapper .onsale {
+        bottom: 10px !important;
+        right: -30px !important;
+        width: 18vw !important;
+    }
+
+
+}
+
+@media (max-width: 767px) {
+    .the-footer .footer-item ul {
+        text-align: center;
+    }
+
+    .the-footer .footer-item {
+        margin-bottom: 1.5rem;
+    }
+
+    .the-footer .footer-item ul .nav-link {
+        padding-left: 1rem !important;
+    }
+
+    input#coupon_code {
+        width: 100% !important;
+        float: none !important;
+        margin-bottom: .5rem !important;
+    }
+
+    a.button.wc-backward {
+        text-align: center;
+    }
 }
 
 /* --------------------------------------------------------------
@@ -228,7 +297,7 @@ MEDIAQUERIES XS - LAYOUTS LESS THAN 768px
 
     .woocommerce ul.products[class*=columns-] li.product,
     .woocommerce-page ul.products[class*=columns-] li.product {
-        width: 100% !important;
+        width: 48% !important;
     }
 
     .woocommerce .col2-set .col-1,
@@ -255,6 +324,19 @@ MEDIAQUERIES XS - LAYOUTS LESS THAN 768px
         margin: 0;
         max-width: 200px;
         max-height: 50px;
+    }
+
+    .main-shop-container {
+        margin-top: 0;
+        padding-top: 0rem;
+    }
+
+    .woocommerce-custom-shop-container {
+        padding: 2rem 1rem;
+    }
+
+    .custom-product-wrapper .onsale {
+        position: inherit !important;
     }
 }
 
@@ -283,6 +365,24 @@ MEDIAQUERIES XS - LAYOUTS LESS THAN 768px
         max-width: 100%;
         max-height: 90px;
         display: block;
+    }
+
+    .custom-star-container {
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+    }
+
+    .woocommerce-loop-product__title {
+        font-size: 0.9rem !important;
+        line-height: 0.8rem;
+    }
+
+    .title-extra-info {
+        font-size: 0.8rem !important;
+    }
+
+    .custom-product-wrapper .price {
+        font-size: 0.8rem !important;
     }
 }
 

@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gespetfood\n"
-"POT-Creation-Date: 2020-05-31 21:38-0400\n"
-"PO-Revision-Date: 2020-05-31 21:39-0400\n"
+"POT-Creation-Date: 2020-09-15 11:57-0400\n"
+"PO-Revision-Date: 2020-09-15 11:57-0400\n"
 "Last-Translator: Robert Ochoa <ochoa.robert1@gmail.com>\n"
 "Language-Team: Robert Ochoa <contacto@robertochoa.com.ve>\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 2.4.1\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -26,8 +26,8 @@ msgid "No podemos encontrar la página que buscas. Dirígete nuevamente al"
 msgstr ""
 "Sorry, but we can't seem to find the page you are looking for. Go back to"
 
-#: 404.php:14 archive.php:53 author.php:52 category.php:53 header.php:91
-#: header.php:95 header.php:100 index.php:53 search.php:73 tag.php:53
+#: 404.php:14 archive.php:53 author.php:52 category.php:53 header.php:94
+#: header.php:98 header.php:103 index.php:53 search.php:73 tag.php:53
 msgid "Volver al Inicio"
 msgstr "Back to Home"
 
@@ -58,13 +58,13 @@ msgstr "Go back to"
 msgid "Todos los derechos reservados"
 msgstr "All rights reserved"
 
-#: footer.php:42 header.php:63 header.php:140
-#: templates/templates-contact.php:48
+#: footer.php:42 header.php:63 header.php:143
+#: templates/templates-contact.php:50
 msgid "Haz clic aquí para dejar tu mensaje en nuestro correo electrónico"
 msgstr "Click here to leave your message in our email"
 
-#: footer.php:42 header.php:64 header.php:141
-#: templates/templates-contact.php:49
+#: footer.php:42 header.php:64 header.php:144
+#: templates/templates-contact.php:51
 msgid "Haz clic aquí para llamar directamente a nuestro Master"
 msgstr "Click here to call our Master directly"
 
@@ -76,69 +76,71 @@ msgstr "here"
 msgid "Acepto"
 msgstr "Agree"
 
-#: functions.php:110
+#: functions.php:112
 msgid "Menu Header - Principal"
 msgstr "Menu Header - Main"
 
-#: functions.php:111
+#: functions.php:113
 msgid "Menu Footer - Principal"
 msgstr "Menu Footer - Main"
 
-#: functions.php:121
+#: functions.php:123
 msgid "Sidebar Principal"
 msgstr "Main Sidebar"
 
-#: functions.php:123
+#: functions.php:125
 msgid "Estos widgets seran vistos en las entradas y páginas del sitio"
 msgstr "These widgets will be seen on posts and pages on site"
 
-#: functions.php:131
+#: functions.php:133
 #, php-format
 msgid "Footer Section %d"
 msgstr "Footer Section %d"
 
-#: functions.php:133
+#: functions.php:135
 msgid "Footer Section"
 msgstr "Footer Section"
 
-#: functions.php:156
+#: functions.php:158
 msgid "Gracias por crear con "
 msgstr "Thank you for creating with "
 
-#: functions.php:158
+#: functions.php:160
 msgid "Tema desarrollado por "
 msgstr "Theme Developed By "
 
-#: header.php:65 header.php:66 header.php:142 header.php:143
+#: header.php:65 header.php:66 header.php:67 header.php:68 header.php:145
+#: header.php:146 header.php:147 header.php:148
 #: templates/templates-contact.php:44 templates/templates-contact.php:45
+#: templates/templates-contact.php:46 templates/templates-contact.php:47
 msgid "Haz clic aquí para visitar nuestro perfil"
 msgstr "Click here to visit our profile"
 
-#: header.php:71
+#: header.php:73
 msgid "Ingresar a su cuenta"
 msgstr "Login into your account"
 
-#: header.php:71
+#: header.php:73
 msgid "Iniciar Sesión"
 msgstr "Log In"
 
-#: header.php:75
+#: header.php:78
 msgid "Ver Carrito de Compras"
 msgstr "View Cart"
 
-#: header.php:77 header.php:151 header.php:198
+#: header.php:80 header.php:156 header.php:203
 msgid "Ir al sitio en Inglés"
 msgstr "Go to English Site"
 
-#: header.php:77 header.php:151 header.php:198
+#: header.php:80 header.php:156 header.php:203
 msgid "Ir al sitio en Español"
 msgstr "Go to Spanish site"
 
-#: header.php:100 templates/templates-contact.php:52
+#: header.php:103 templates/templates-contact.php:54
 msgid "Visita nuestra tienda en Amazon.com"
 msgstr "Visit our store on Amazon.com"
 
-#: header.php:194 templates/templates-gespetfood.php:36
+#: header.php:199 templates/templates-gespetfood.php:36
 msgid "Descargar catálogo de productos"
 msgstr "Download product catalog"
 
@@ -654,51 +656,55 @@ msgstr "Texto del Cookie consent."
 msgid "Link de Cookies"
 msgstr "Link de Cookies"
 
-#: includes/wp_enqueue_scripts.php:149
+#: includes/wp_enqueue_scripts.php:150
 msgid "Error: El nombre no puede estar vacio"
 msgstr "Error: The name cannot be empty"
 
-#: includes/wp_enqueue_scripts.php:150
+#: includes/wp_enqueue_scripts.php:151
 msgid "Error: El nombre debe ser válido"
 msgstr "Error: Name must be valid"
 
-#: includes/wp_enqueue_scripts.php:151
+#: includes/wp_enqueue_scripts.php:152
 msgid "Error: El correo no puede estar vacio"
 msgstr "Error: Mail cannot be empty"
 
-#: includes/wp_enqueue_scripts.php:152
+#: includes/wp_enqueue_scripts.php:153
 msgid "Error: El correo tiene un formato inválido"
 msgstr "Error: Mail has an invalid format"
 
-#: includes/wp_enqueue_scripts.php:153
+#: includes/wp_enqueue_scripts.php:154
 msgid "Error: El asunto no puede estar vacio"
 msgstr "Error: The subject cannot be empty"
 
-#: includes/wp_enqueue_scripts.php:154
+#: includes/wp_enqueue_scripts.php:155
 msgid "Error: El asunto debe ser válido"
 msgstr "Error: Subject must be valid"
 
-#: includes/wp_enqueue_scripts.php:155
+#: includes/wp_enqueue_scripts.php:156
 msgid "Error: El mensaje no puede estar vacio"
 msgstr "Error: Message cannot be empty"
 
-#: includes/wp_enqueue_scripts.php:156
+#: includes/wp_enqueue_scripts.php:157
 msgid "Gracias por su mensaje, en breve le atenderemos."
 msgstr "Thank you for your message, we will be with you shortly."
 
-#: includes/wp_enqueue_scripts.php:157
+#: includes/wp_enqueue_scripts.php:158
 msgid "Error: Intente de nuevo mas tarde."
 msgstr "Error: Try again later."
 
-#: includes/wp_woocommerce_functions.php:66
+#: includes/wp_woocommerce_functions.php:69
+msgid "pack 1 unidad"
+msgstr "pack 1 item"
+
+#: includes/wp_woocommerce_functions.php:82
 msgid "Finalizar Compra"
 msgstr "Checkout"
 
-#: includes/wp_woocommerce_functions.php:67
+#: includes/wp_woocommerce_functions.php:83
 msgid "Volver a Tienda"
 msgstr "Back to Shop"
 
-#: includes/wp_woocommerce_functions.php:74
+#: includes/wp_woocommerce_functions.php:90
 msgid "Return to shop"
 msgstr "Return to shop"
 
@@ -758,7 +764,7 @@ msgstr "(*) Required Fields"
 msgid "Enviar"
 msgstr "Send Message"
 
-#: templates/templates-contact.php:76
+#: templates/templates-contact.php:78
 msgid "contáctanos"
 msgstr "contact us"
 
@@ -770,20 +776,12 @@ msgstr "GESPETFOOD ensures:"
 msgid "Equipo"
 msgstr "Team"
 
-#: woocommerce/single-product-reviews.php:89
-msgid "Name"
-msgstr "Name"
-
-#: woocommerce/single-product-reviews.php:95
-msgid "Email"
-msgstr "Email"
-
 #: woocommerce/single-product/add-to-cart/external.php:25
 #: woocommerce/single-product/add-to-cart/grouped.php:27
 #: woocommerce/single-product/add-to-cart/simple.php:35
 #: woocommerce/single-product/add-to-cart/variable.php:31
 msgid "Haga click aqui para ver los costes de envío."
-msgstr "Click here to see shipping costs"
+msgstr "Click here to see shipping costs."
 
 #: woocommerce/single-product/add-to-cart/variable.php:35
 msgid "This product is currently out of stock and unavailable."
@@ -792,6 +790,12 @@ msgstr "This This product is currently out of stock and unavailable."
 #: woocommerce/single-product/tabs/description.php:22
 msgid "Description"
 msgstr "Description"
+
+#~ msgid "Name"
+#~ msgstr "Name"
+
+#~ msgid "Email"
+#~ msgstr "Email"
 
 #~ msgid "To access checkout, you need first to be logged in"
 #~ msgstr "To access checkout, you need first to be logged in"

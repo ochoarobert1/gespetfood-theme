@@ -166,7 +166,7 @@ function gespetfood_register_custom_metabox() {
         )
     ) );
 
-       $cmb_product_slider->add_field( array(
+    $cmb_product_slider->add_field( array(
         'id'         => $prefix . 'shop_ind_info',
         'name'       => esc_html__( 'Tienda: Información Adicional', 'gespetfood' ),
         'desc'       => esc_html__( 'Ingrese aqui la información que va justo arriba de la tienda', 'gespetfood' ),
@@ -246,6 +246,13 @@ function gespetfood_register_custom_metabox() {
         'priority'   => 'high',
         'show_names' => true, // Show field names on the left
         'closed'     => false, // true to keep the metabox closed by default
+    ) );
+
+    $cmb_product_info->add_field( array(
+        'id'         => $prefix . 'product_extra_info_quantity',
+        'name'       => esc_html__( 'Producto: Cantidad para comprar', 'gespetfood' ),
+        'desc'       => esc_html__( 'Ingrese aqui la cantidad mínima que puede comprarse por producto', 'gespetfood' ),
+        'type'    => 'text'
     ) );
 
     $cmb_product_info->add_field( array(

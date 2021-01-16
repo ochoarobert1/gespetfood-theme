@@ -140,4 +140,4 @@ get_header( 'shop' );
     </div>
 </main>
 <?php
-get_footer( 'shop' );
+get_footer( );
