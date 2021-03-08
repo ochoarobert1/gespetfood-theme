@@ -149,6 +149,28 @@ function gespetfood_register_custom_metabox() {
     ) );
 
     $cmb_product_slider->add_field( array(
+        'id'   => $prefix . 'shop_banner',
+        'name'      => esc_html__( 'Banner Image', 'maxicon' ),
+        'desc'      => esc_html__( 'Upload a Banner', 'maxicon' ),
+        'type'    => 'file',
+
+        'options' => array(
+            'url' => false
+        ),
+        'text'    => array(
+            'add_upload_file_text' => esc_html__( 'Upload Banner', 'maxicon' ),
+        ),
+        'query_args' => array(
+            'type' => array(
+                'image/gif',
+                'image/jpeg',
+                'image/png'
+            )
+        ),
+        'preview_size' => 'medium'
+    ) );
+
+    $cmb_product_slider->add_field( array(
         'id'   => $prefix . 'shop_shipping',
         'name'      => esc_html__( 'Brochure de Precios de Transporte del Producto', 'gespetfood' ),
         'desc'      => esc_html__( 'Este pdf saldra en todos los productos', 'gespetfood' ),

@@ -1,8 +1,9 @@
 <?php
-function gespetfood_load_js() {
+function gespetfood_load_js()
+{
     $version_remove = NULL;
     if (!is_page('finalizar-compra')) {
-        if (!is_admin()){
+        if (!is_admin()) {
             if ($_SERVER['REMOTE_ADDR'] == '::1') {
 
                 /*- MODERNIZR ON LOCAL  -*/
@@ -68,7 +69,6 @@ function gespetfood_load_js() {
                 /*- AOS ON LOCAL -*/
                 wp_register_script('aos-js', get_template_directory_uri() . '/js/aos.js', array('jquery'), '3.0.0', true);
                 wp_enqueue_script('aos-js');
-
             } else {
 
                 /*- MODERNIZR -*/
@@ -134,18 +134,17 @@ function gespetfood_load_js() {
                 /*- AOS -*/
                 wp_register_script('aos-js', 'https://unpkg.com/aos@next/dist/aos.js', array('jquery'), '3.0.0', true);
                 wp_enqueue_script('aos-js');
-
             }
 
             /*- JQUERY COOKIE -*/
-            wp_enqueue_script( 'jquery-cookie', 'https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js', [ 'jquery' ], '1.0.3', true );
+            wp_enqueue_script('jquery-cookie', 'https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js', ['jquery'], '1.0.3', true);
 
             /*- MAIN FUNCTIONS -*/
             wp_register_script('main-functions', get_template_directory_uri() . '/js/functions.min.js', array('jquery'), $version_remove, true);
             wp_enqueue_script('main-functions');
 
             /* LOCALIZE MAIN SHORTCODE SCRIPT */
-            wp_localize_script( 'main-functions', 'admin_url', array(
+            wp_localize_script('main-functions', 'admin_url', array(
                 'ajax_custom_url' => admin_url('admin-ajax.php'),
                 'error_name' => __('Error: El nombre no puede estar vacio', 'gespetfood'),
                 'invalid_name' => __('Error: El nombre debe ser válido', 'gespetfood'),
@@ -159,11 +158,21 @@ function gespetfood_load_js() {
             ));
 
 
-            if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-                wp_enqueue_script( 'comment-reply' );
+            if (is_singular() && comments_open() && get_option('thread_comments')) {
+                wp_enqueue_script('comment-reply');
             }
         }
     }
 }
 
 add_action('wp_enqueue_scripts', 'gespetfood_load_js');
+
+
+add_action('admin_enqueue_scripts', 'gespetfood_admin_js', 99);
+
+function gespetfood_admin_js()
+{
+    $version_remove = NULL;
+    wp_register_script('admin-functions', get_template_directory_uri() . '/js/admin-functions.js', array('jquery'), $version_remove, true);
+    wp_enqueue_script('admin-functions');
+}

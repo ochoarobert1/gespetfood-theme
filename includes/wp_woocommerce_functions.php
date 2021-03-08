@@ -38,6 +38,24 @@ remove_action('woocommerce_after_shop_loop_item_title', 'woocommerce_template_lo
 
 add_action('woocommerce_shop_loop_item_title', 'woocommerce_custom_rating_handler', 5);
 
+add_filter('manage_product_posts_columns', 'set_custom_edit_product_columns');
+function set_custom_edit_product_columns($columns)
+{
+    $columns['gpf_product_extra_info_quantity'] = __('Presentación', 'gespetfood');
+    return $columns;
+}
+
+// Add the data to the custom columns for the product post type:
+add_action('manage_product_posts_custom_column', 'custom_product_column', 10, 2);
+function custom_product_column($column, $post_id)
+{
+    switch ($column) {
+        case 'gpf_product_extra_info_quantity':
+            echo get_post_meta($post_id, 'gpf_product_extra_info_quantity', true);
+            break;
+    }
+}
+
 function woocommerce_custom_rating_handler()
 {
     ob_start();
