@@ -39,6 +39,10 @@ MEDIAQUERIES LG/MD - LAYOUTS BIGGER THAN 992px
         right: -45px !important;
         font-size: 16px !important;
     }
+
+    .beneficios-text3 .beneficios-content {
+        margin-top: 0;
+    }
 }
 
 @media (max-width: 1280px) {
@@ -110,12 +114,41 @@ MEDIAQUERIES LG/MD - LAYOUTS BIGGER THAN 992px
         right: -50px !important;
         font-size: 10px !important;
     }
+
+    .beneficios-text2 .beneficios-picture img {
+        width: 100%;
+    }
+
+    .beneficios-text3 .beneficios-picture img {
+        width: 100%;
+    }
+
+    .beneficios-text3 {
+        padding-top: 2rem;
+        padding-bottom: 6rem;
+    }
 }
 
 @media (max-width: 1024px) {
     .custom-product-wrapper .onsale {
         bottom: 15px !important;
         right: -35px !important;
+    }
+
+    .beneficios-text1 .beneficios-content {
+        font-size: 0.9rem;
+    }
+
+    .beneficios-text2 .beneficios-content {
+        font-size: 0.9rem;
+    }
+
+    .beneficios-text3 .beneficios-content {
+        font-size: 0.9rem;
+    }
+
+    .beneficios-text3 .img-floated2 {
+        max-width: 390px !important;
     }
 }
 
@@ -174,6 +207,10 @@ MEDIAQUERIES SM - LAYOUTS BIGGER THAN 768px
         padding: 1rem 0;
         flex: 0 0 100%;
         max-width: 100%;
+    }
+
+    .beneficios-text3 .img-floated2 {
+        max-width: 300px !important;
     }
 }
 
@@ -240,6 +277,40 @@ MEDIAQUERIES SM - LAYOUTS BIGGER THAN 768px
 /* --------------------------------------------------------------
 MEDIAQUERIES XS - LAYOUTS LESS THAN 768px
 -------------------------------------------------------------- */
+@media (max-width: 767px) {
+    .beneficios-text1 .beneficios-picture img {
+        width: 40%;
+        margin-bottom: 2rem;
+    }
+
+    .beneficios-text1 .beneficios-content {
+        font-size: 0.9rem;
+        text-align: left;
+        line-height: 1.5rem;
+    }
+
+    .beneficios-text2 .img-floated {
+        display: none;
+    }
+
+    .beneficios-text2 .beneficios-picture img {
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 3rem;
+    }
+
+    .beneficios-text3 .beneficios-content {
+        font-size: .9rem;
+        line-height: 1.5rem;
+    }
+
+    .beneficios-text3 .beneficios-picture img {
+        width: 60%;
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 2rem;
+    }
+}
 @media (max-width: 600px) {
     .gpf-privacy-policy-accept {
         padding: 1rem;

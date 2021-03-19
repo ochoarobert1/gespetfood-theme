@@ -123,6 +123,9 @@ function gespetfood_register_custom_metabox() {
     /* GESPETFOOD */
     require_once('custom-metaboxes-gespetfood.php');
 
+    /* BENEFICIOS */
+    require_once('custom-metaboxes-beneficios.php');
+
     /* CONTACT US */
     require_once('custom-metaboxes-contact.php');
 

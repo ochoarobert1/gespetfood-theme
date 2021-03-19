@@ -186,7 +186,7 @@ a {
         font-size: .9rem;
 
         & img {
-            max-width: 90px;
+            max-width: 200px;
 
             &:hover {
                 opacity: .8;
@@ -1588,4 +1588,84 @@ a.qlwapp-toggle {
 .product-banner {
     padding-top: 3rem;
     text-align: center;
+}
+
+.beneficios-text {
+    position: relative;
+    padding: 0rem 1rem;
+    padding-bottom: 1rem;
+}
+
+
+.beneficios-text1 {
+    background: @body;
+    color: @white;
+
+    .beneficios-picture img {
+        width: 450px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    & .beneficios-content {
+        text-align: right;
+    }
+}
+
+.beneficios-text2 {
+    background: @body;
+    color: @white;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+
+    .beneficios-picture img {
+        width: 90%;
+        margin: 0 auto;
+        margin-right: 0;
+        display: block;
+        z-index: 9;
+    }
+
+    & .beneficios-content {
+        text-align: left;
+    }
+
+    & .img-floated {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+.beneficios-text3 {
+    padding-top: 0;
+
+    .img-floated {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    .img-floated3 {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .img-floated2 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .beneficios-picture img {
+        width: 90%;
+        margin-top: -3rem;
+        z-index: 9;
+    }
+
+    .beneficios-content {
+        text-align: right;
+        margin-top: -5rem;
+    }
 }
