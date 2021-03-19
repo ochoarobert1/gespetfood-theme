@@ -101,7 +101,7 @@
                                 <?php $custom_logo_id = get_theme_mod('custom_logo'); ?>
                                 <?php $image = wp_get_attachment_image_src($custom_logo_id, 'logo'); ?>
                                 <?php if (!empty($image)) { ?>
-                                    <img src="<?php echo $image[0]; ?>" alt="<?php _e('Volver al Inicio', 'gespetfood'); ?>" class="img-fluid img-logo" />
+                                <img src="<?php echo $image[0]; ?>" alt="<?php _e('Volver al Inicio', 'gespetfood'); ?>" class="img-fluid img-logo" />
                                 <?php } ?>
                             </a>
                         </div>
@@ -140,7 +140,7 @@
                                 <?php $custom_logo_id = get_theme_mod('custom_logo'); ?>
                                 <?php $image = wp_get_attachment_image_src($custom_logo_id, 'logo'); ?>
                                 <?php if (!empty($image)) { ?>
-                                    <img src="<?php echo $image[0]; ?>" alt="<?php echo get_bloginfo('name'); ?>" class="img-fluid img-logo" />
+                                <img src="<?php echo $image[0]; ?>" alt="<?php echo get_bloginfo('name'); ?>" class="img-fluid img-logo" />
                                 <?php } ?>
                             </a>
                         </div>
@@ -201,7 +201,7 @@
                     </div>
 
                     <div class="mobile-amazon-link">
-                        <a href=" https://www.amazon.es/s?k=GesPetFood&i=pets&rh=p_6%3AAGU4JNL7MI9BE&s=date-desc-rank&dc&qid=1589916349&rnid=831275031&ref=sr_nr_p_6_1" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/amazon.png" alt="amazon" class="img-fluid" /></a>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/new-fda-logo.png" alt="FDA" class="img-fluid" />
                     </div>
 
                     <div class="mobile-catalog-container">
