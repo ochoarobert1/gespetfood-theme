@@ -195,14 +195,3 @@ if ( function_exists('add_image_size') ) {
 }
 
 add_filter( 'big_image_size_threshold', '__return_false' );
-
-function mailtrap($phpmailer) {
-    $phpmailer->isSMTP();
-    $phpmailer->Host = 'smtp.mailtrap.io';
-    $phpmailer->SMTPAuth = true;
-    $phpmailer->Port = 2525;
-    $phpmailer->Username = '08192e382ae397';
-    $phpmailer->Password = '60c86849bcde13';
-  }
-  
-  add_action('phpmailer_init', 'mailtrap');
