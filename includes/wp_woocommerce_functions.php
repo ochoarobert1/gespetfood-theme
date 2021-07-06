@@ -56,6 +56,13 @@ function custom_product_column($column, $post_id)
     }
 }
 
+add_filter( 'loop_shop_per_page', 'bbloomer_redefine_products_per_page', 9999 );
+ 
+function bbloomer_redefine_products_per_page( $per_page ) {
+  $per_page = 150;
+  return $per_page;
+}
+
 function woocommerce_custom_rating_handler()
 {
     ob_start();
@@ -177,7 +184,7 @@ function wc_minimum_order_amount()
     }
 }
 
-add_action('woocommerce_before_shop_loop', 'custom_category_circle_links', 12);
+//add_action('woocommerce_before_shop_loop', 'custom_category_circle_links', 12);
 
 function custom_category_circle_links()
 {
@@ -198,3 +205,51 @@ function custom_category_circle_links()
     </div>
 <?php
 }
+
+// Just used for testing
+function return_custom( $id ) {
+    return __(' para perros', 'gespetfood');
+}
+
+// Customizing cart item name in cart, checkout, orders and email notifications
+add_action( 'woocommerce_before_calculate_totals', 'set_custom_cart_item_name', 10, 1 );
+function set_custom_cart_item_name( $cart ) {
+    if ( is_admin() && ! defined( 'DOING_AJAX' ) )
+        return;
+
+    // Required since Woocommerce version 3.2 for cart items properties changes
+    if ( did_action( 'woocommerce_before_calculate_totals' ) >= 2 )
+        return;
+
+    // Loop through cart items
+    foreach ( $cart->get_cart() as $cart_item ) {
+        // Get the product name and the product ID
+        $product_name = $cart_item['data']->get_name();
+        $product_id   = $cart_item['data']->get_id();
+
+        // Set the new product name
+        $cart_item['data']->set_name( $product_name . return_custom($product_id) );
+    }
+}
+
+function update_title($title, $id = null ) {
+
+    $prod=get_post($id);
+
+    if (empty($prod->ID) || strcmp($prod->post_type,'product')!=0 ) {
+        return $title;
+    }
+
+    return $title.return_custom($product_id);
+}
+
+function update_product_title($title, $product) {
+
+    $id = $product->get_id();
+
+    return $title.return_custom($product_id);
+}
+
+add_filter( 'woocommerce_product_title', 'update_product_title', 9999, 2);
+
+add_filter( 'the_title', 'update_title', 10, 2 );

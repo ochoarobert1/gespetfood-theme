@@ -216,3 +216,58 @@ $cmb_gespetfood_team->add_group_field( $group_field_id, array(
     'desc'      => esc_html__( 'Enter a descriptive title for all slides', 'maxicon' ),
     'type' => 'text_url'
 ) );
+
+/* SEGUNDO TEXTO */ 
+$cmb_beneficios_about2 = new_cmb2_box( array(
+    'id'            => $prefix . 'gespetfood_beneficios_text2_metabox',
+    'title'         => esc_html__( 'Beneficios: Texto 2', 'gespetfood' ),
+    'object_types'  => array( 'page' ), // Post type
+    'show_on'      => array( 'key' => 'page-template', 'value' => 'templates/templates-gespetfood.php' ),
+    'context'    => 'normal',
+    'priority'   => 'high',
+    'show_names' => true, // Show field names on the left
+    'closed'     => false, // true to keep the metabox closed by default
+) );
+
+$cmb_beneficios_about2->add_field( array(
+    'id'      => $prefix . 'beneficios_text_title_2',
+    'name'      => esc_html__( 'Título principal', 'gespetfood' ),
+    'desc'      => esc_html__( 'Ingrese aquí el Título del Descanso', 'gespetfood' ),
+    'type'    => 'wysiwyg',
+    'options' => array(
+        'textarea_rows' => get_option('default_post_edit_rows', 4),
+        'teeny' => false
+    )
+) );
+
+$cmb_beneficios_about2->add_field( array(
+    'id'      => $prefix . 'beneficios_text_content_2',
+    'name'      => esc_html__( 'Texto principal', 'gespetfood' ),
+    'desc'      => esc_html__( 'Ingrese aquí el texto del Descanso', 'gespetfood' ),
+    'type'    => 'wysiwyg',
+    'options' => array(
+        'textarea_rows' => get_option('default_post_edit_rows', 4),
+        'teeny' => false
+    )
+) );
+
+$cmb_beneficios_about2->add_field( array(
+    'id'      => $prefix . 'beneficios_image_content_2',
+    'name'      => esc_html__( 'Imagen de Sección', 'gespetfood' ),
+    'desc'      => esc_html__( 'Ingrese una Imagen apropiada para la sección', 'gespetfood' ),
+    'type'    => 'file',
+    'options' => array(
+        'url' => false
+    ),
+    'text'    => array(
+        'add_upload_file_text' => esc_html__( 'Cargar Imagen de Sección', 'gespetfood' ),
+    ),
+    'query_args' => array(
+        'type' => array(
+            'image/gif',
+            'image/jpeg',
+            'image/png'
+        )
+    ),
+    'preview_size' => 'medium'
+) );

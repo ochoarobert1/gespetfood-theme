@@ -32,7 +32,6 @@
             <div class="container">
                 <div class="row">
                     <div class="about-brochure col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                       <img src="<?php echo get_template_directory_uri(); ?>/images/cat-sprite.png" alt="Brochure" class="img-fluid" />
                         <a href="<?php echo get_post_meta(get_the_ID(), 'gpf_gespetfood_about_brochure', true); ?>" target="_blank"><?php _e('Descargar catálogo de productos', 'gespetfood'); ?></a>
                     </div>
                 </div>
@@ -82,6 +81,23 @@
                 </div>
             </div>
         </section>
+        <section class="beneficios-text col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="beneficios-text-title col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <?php echo apply_filters('the_content', get_post_meta(get_the_ID(), 'gpf_beneficios_text_title_2', true)); ?>
+                    </div>
+                    <div class="beneficios-content col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 order-xl-1 order-lg-1 order-md-1 order-sm-12 order-12">
+                        <?php echo apply_filters('the_content', get_post_meta(get_the_ID(), 'gpf_beneficios_text_content_2', true)); ?>
+                    </div>
+                    <picture class="beneficios-picture col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 order-xl-12 order-lg-12 order-md-12 order-sm-1 order-1">
+                        <?php $bg_banner_id = get_post_meta(get_the_ID(), 'gpf_beneficios_image_content_2_id', true); ?>
+                        <?php $bg_banner = wp_get_attachment_image_src($bg_banner_id, 'full', false); ?>
+                        <img itemprop="image" content="<?php echo $bg_banner[0]; ?>" src="<?php echo $bg_banner[0]; ?>" title="<?php echo get_post_meta($bg_banner_id, '_wp_attachment_image_alt', true); ?>" alt="<?php echo get_post_meta($bg_banner_id, '_wp_attachment_image_alt', true); ?>" class="img-fluid" width="<?php echo $bg_banner[1]; ?>" height="<?php echo $bg_banner[2]; ?>" />
+                    </picture>
+                </div>
+            </div>
+        </section>
         <section class="the-logo-about col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
             <?php $awards_group = get_post_meta(get_the_ID(), 'gpf_gespetfood_logo_list', true); ?>
             <?php if ((!empty($awards_group)) || ($awards_group != '')) { ?>
@@ -91,6 +107,7 @@
             <?php } ?>
             <?php } ?>
         </section>
+        
     </div>
 </main>
 <?php get_footer(); ?>

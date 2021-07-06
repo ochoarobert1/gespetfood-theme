@@ -1,7 +1,7 @@
-jQuery(document).ready(function ($) {
+jQuery(document).ready(function($) {
     "use strict";
 
-    jQuery('.menu-btn').on('click', function () {
+    jQuery('.menu-btn').on('click', function() {
         jQuery(this).toggleClass('menu-btn-open');
         jQuery('.navbar-mobile-content').toggleClass('navbar-hidden');
     });
@@ -11,7 +11,7 @@ jQuery(document).ready(function ($) {
         zIndex: 9999
     })
 
-    var mySwiper = new Swiper('.swiper-container', {
+    var mySwiper = new Swiper('.benefits-gallery-container', {
         // Optional parameters
         direction: 'horizontal',
         effect: 'coverflow',
@@ -69,6 +69,28 @@ jQuery(document).ready(function ($) {
         }
     });
 
+    var mySwiper2 = new Swiper('.testimonials-slider', {
+        // Optional parameters
+        direction: 'horizontal',
+        speed: 400,
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false
+        },
+        spaceBetween: 10,
+        slidesPerView: 1,
+        centeredSlides: true,
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }
+    });
+
     // below listed default settings
     AOS.init({
         disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
@@ -89,8 +111,8 @@ jQuery(document).ready(function ($) {
         anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 
     });
-    
-    jQuery(document).ready(function () {
+
+    jQuery(document).ready(function() {
         if (Cookies.get('cookie_consent') != undefined) {
             // cookie is set
             jQuery('.gpf-privacy-policy-accept').addClass('hidden-policy');
@@ -100,7 +122,7 @@ jQuery(document).ready(function ($) {
         }
     });
 
-    jQuery(document).on('touchstart click', '#privacy-policy-accept-btn', function (event) {
+    jQuery(document).on('touchstart click', '#privacy-policy-accept-btn', function(event) {
         if (event.handled === false) return
         event.stopPropagation();
         event.preventDefault();
@@ -111,4 +133,15 @@ jQuery(document).ready(function ($) {
         });
         jQuery('.gpf-privacy-policy-accept').addClass('hidden-policy');
     });
+
+    jQuery('.button-benefits-item-wrapper').on('click', function(e) {
+        e.preventDefault();
+        jQuery('.modal-body-dynamic').html('');
+        var currentID = jQuery(this).attr('id');
+        var currentHTML = jQuery('#' + currentID + ' .button-benefits-content').html();
+        jQuery('#modalBenefits').modal('toggle');
+        jQuery('.modal-body-dynamic').html(currentHTML);
+    });
+
+
 }); /* end of as page load scripts */

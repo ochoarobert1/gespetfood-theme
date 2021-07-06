@@ -191,6 +191,7 @@ if ( function_exists('add_image_size') ) {
     add_image_size('avatar', 100, 100, true);
     add_image_size('logo_size', 9999, 100, false);
     add_image_size('custom_logos', 130, 130, true);
+    add_image_size('testimonials', 500, 400, true);
 
 }
 

@@ -664,7 +664,6 @@ a {
 
         & h2 {
             text-align: center;
-            border-bottom: 2px solid @white;
             padding: 2rem 0.5rem;
             margin-bottom: 2rem;
             text-transform: uppercase;
@@ -858,7 +857,8 @@ a {
 
 
 .woocommerce-custom-shop-container {
-    padding: 3rem 1rem;
+    padding: 0rem 1rem;
+    padding-bottom: 3rem;
     color: @white;
 }
 
@@ -964,9 +964,7 @@ a {
     background: white;
     position: relative;
     margin-top: 0;
-    padding-top: 4rem;
-
-
+    padding-top: 0rem;
 }
 
 .main-shop-content {
@@ -1668,4 +1666,222 @@ a.qlwapp-toggle {
         text-align: right;
         margin-top: -5rem;
     }
+}
+
+.main-home-container {
+    padding: 2.5rem 1rem;
+
+    & .main-home-content {
+        font-size: 1.3rem;
+        line-height: 2.2rem;
+
+        & h1 {
+            color: @gray6;
+            font-weight: 600;
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.ads-banner-container {
+    padding: 2rem 1rem;
+
+    & .ads-banner-content {
+        text-align: center;
+    }
+}
+
+.main-home-categories {
+    padding: 2rem 1rem;
+
+    & .main-home-categories-content {
+        text-align: center;
+        color: @orange;
+
+        & h2 {
+            font-weight: 600;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        & .category-menu-container {
+            float: none !important;
+        }
+    }
+}
+
+.benefits-list {
+    padding: 3rem 1rem;
+    background: #191919;
+}
+
+.benefits-list-title {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.button-benefits-item-wrapper {
+    background: @orange;
+    color: @white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: 600;
+    margin: 0.8rem;
+    padding: 0.6rem;
+    font-size: 1.3rem;
+    line-height: 2.2rem;
+    margin-bottom: 1.8rem;
+    .transition(all .3s ease-in-out);
+
+    &:hover {
+        background: @gray6;
+        color: @white;
+    }
+}
+
+.modal-benefits {
+    & .modal-content {
+        background: @orange;
+        color: @white;
+        padding: 0.5rem 1rem;
+        border-radius: 70px;
+        font-size: 1.3rem;
+        line-height: 2.2rem;
+
+        & h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        & ol li {
+            margin-bottom: 1rem;
+        }
+
+
+    }
+}
+
+.beneficios-text {
+    background: #191919;
+    padding: 4rem 1rem;
+    color: #fff;
+
+    & .beneficios-text-title {
+        text-align: center;
+        padding-bottom: 3rem;
+
+        & h2 {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.blog-container {
+    background: #191919;
+}
+
+.testimonials-title h2 {
+    color: @orange;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.testimonials-slider {
+    padding-top: 2rem;
+}
+
+.testimonial-wrapper {
+    background: #F8F8F8;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 30px;
+    font-size: .9rem;
+    box-shadow: 1px 0px 16px #d8d8d8, 0px 2px 16px #d8d8dd;
+
+    & h4 {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    & .star-container {
+        font-size: 1.3rem;
+        letter-spacing: 5px;
+        margin-bottom: 1rem;
+        color: #ffa500;
+    }
+}
+
+.testimonial-image-wrapper {
+    padding: 0 1rem;
+
+    & img {
+        border-radius: 30px;
+        box-shadow: 1px 0px 16px #d8d8d8, 0px 2px 16px #d8d8dd;
+    }
+}
+
+.page-template-templates-beneficios {
+    .testimonials-container {
+        background: #191919;
+
+        & .testimonials-title h2 {
+            color: @white;
+        }
+
+        & .testimonial-wrapper {
+            box-shadow: 1px 0 16px #292929, 0 2px 16px #484848;
+        }
+
+        & .testimonial-image-wrapper {
+            & img {
+                box-shadow: 1px 0 16px #292929, 0 2px 16px #484848;
+            }
+        }
+    }
+}
+
+.blog-container .testimonials-container {
+    background: #fff;
+}
+
+.blog-intro-content {
+    margin-top: 5rem;
+    padding: 0rem 1rem;
+    position: relative;
+    background: #fff;
+}
+
+.woocommerce nav.woocommerce-pagination ul li {
+    border-right: 4px solid #fff;
+    background: white !important;
+}
+
+.page-numbers {
+    border: none !important;
+}
+
+.woocommerce-pagination .page-numbers a:link,
+.woocommerce-pagination .page-numbers a:visited {
+    display: block !important;
+    background: @orange  !important;
+    color: #363636 !important;
+    padding: 10px 14px !important;
+}
+
+.woocommerce-pagination .page-numbers a:link,
+.woocommerce-pagination .page-numbers a:hover {
+    display: block !important;
+    background: #fff !important;
+    color: #363636 !important;
+}
+
+.woocommerce-pagination .page-numbers .current,
+.woocommerce-pagination .page-numbers li a:hover {
+    padding: 10px 14px !important;
+    background: @orange  !important;
+    color: #fff !important;
 }

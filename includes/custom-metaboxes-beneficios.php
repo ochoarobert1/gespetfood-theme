@@ -65,6 +65,52 @@ $cmb_beneficios_about->add_field( array(
     'preview_size' => 'medium'
 ) );
 
+/* BENEFICIOS */
+$cmb_beneficios_list = new_cmb2_box( array(
+    'id'            => $prefix . 'beneficios_list_metabox',
+    'title'         => esc_html__( 'Beneficios: Botones de Beneficios', 'gespetfood' ),
+    'object_types'  => array( 'page' ), // Post type
+    'show_on'      => array( 'key' => 'page-template', 'value' => 'templates/templates-beneficios.php' ),
+    'context'    => 'normal',
+    'priority'   => 'high',
+    'show_names' => true, // Show field names on the left
+    'closed'     => false, // true to keep the metabox closed by default
+) );
+
+$group_field_id = $cmb_beneficios_list->add_field( array(
+    'id'          => $prefix . 'benefits_group',
+    'type'        => 'group',
+    'description' => __( 'Lista de Beneficios', 'autols' ),
+    'options'     => array(
+        'group_title'       => __( 'Beneficio {#}', 'autols' ),
+        'add_button'        => __( 'Agregar Beneficio', 'autols' ),
+        'remove_button'     => __( 'Remover Beneficio', 'autols' ),
+        'sortable'          => true,
+        'closed'         => true,
+        'remove_confirm' => esc_html__( '¿Estas seguro de eliminar este Beneficio?', 'autols' )
+    )
+) );
+
+$cmb_beneficios_list->add_group_field( $group_field_id, array(
+    'id'   => 'title',
+    'name'      => esc_html__( 'Título del Beneficio', 'gespetfood' ),
+    'desc'      => esc_html__( 'Ingrese aquí un texto que describa el Beneficio', 'gespetfood' ),
+    'type'    => 'text',
+) );
+
+$cmb_beneficios_list->add_group_field( $group_field_id, array(
+    'id'   => 'desc',
+    'name'      => esc_html__( 'Descripción del Beneficio', 'gespetfood' ),
+    'desc'      => esc_html__( 'Ingrese aquí un texto que describa el Beneficio', 'gespetfood' ),
+    'type'    => 'wysiwyg',
+    'options' => array(
+        'textarea_rows' => get_option('default_post_edit_rows', 4),
+        'teeny' => false
+    )
+) );
+
+
+
 /* SEGUNDO TEXTO */ 
 $cmb_beneficios_about2 = new_cmb2_box( array(
     'id'            => $prefix . 'beneficios_text2_metabox',
@@ -75,6 +121,17 @@ $cmb_beneficios_about2 = new_cmb2_box( array(
     'priority'   => 'high',
     'show_names' => true, // Show field names on the left
     'closed'     => false, // true to keep the metabox closed by default
+) );
+
+$cmb_beneficios_about2->add_field( array(
+    'id'      => $prefix . 'beneficios_text_title_2',
+    'name'      => esc_html__( 'Título principal', 'gespetfood' ),
+    'desc'      => esc_html__( 'Ingrese aquí el Título del Descanso', 'gespetfood' ),
+    'type'    => 'wysiwyg',
+    'options' => array(
+        'textarea_rows' => get_option('default_post_edit_rows', 4),
+        'teeny' => false
+    )
 ) );
 
 $cmb_beneficios_about2->add_field( array(

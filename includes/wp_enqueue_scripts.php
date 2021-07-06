@@ -140,7 +140,7 @@ function gespetfood_load_js()
             wp_enqueue_script('jquery-cookie', 'https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js', ['jquery'], '1.0.3', true);
 
             /*- MAIN FUNCTIONS -*/
-            wp_register_script('main-functions', get_template_directory_uri() . '/js/functions.min.js', array('jquery'), $version_remove, true);
+            wp_register_script('main-functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), $version_remove, true);
             wp_enqueue_script('main-functions');
 
             /* LOCALIZE MAIN SHORTCODE SCRIPT */
