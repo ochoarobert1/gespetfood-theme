@@ -34,23 +34,7 @@ get_header('shop');
             <img itemprop="image" content="<?php echo $bg_banner[0]; ?>" src="<?php echo $bg_banner[0]; ?>" title="<?php echo get_post_meta($bg_banner_id, '_wp_attachment_image_alt', true); ?>" alt="<?php echo get_post_meta($bg_banner_id, '_wp_attachment_image_alt', true); ?>" class="img-fluid" width="<?php echo $bg_banner[1]; ?>" height="<?php echo $bg_banner[2]; ?>" />
         </section>
         <?php } ?>
-        <section class="main-home-container col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="main-home-content col-xl-7 col-lg-7 col-md-6 col-sm-12 col-12">
-                        <?php $shop_page = get_post($shop_id); ?>
-                        <?php echo apply_filters('the_content', $shop_page->post_content); ?>
-                    </div>
-                    <div class="main-home-picture col-xl-5 col-lg-5 col-md-6 col-sm-12 col-12">
-                        <?php $bg_banner_id = get_post_meta($shop_id, 'gpf_shop_featured_image_id', true); ?>
-                        <?php if ($bg_banner_id != '') { ?>
-                        <?php $bg_banner = wp_get_attachment_image_src($bg_banner_id, 'full', false); ?>
-                        <img itemprop="image" content="<?php echo $bg_banner[0]; ?>" src="<?php echo $bg_banner[0]; ?>" title="<?php echo get_post_meta($bg_banner_id, '_wp_attachment_image_alt', true); ?>" alt="<?php echo get_post_meta($bg_banner_id, '_wp_attachment_image_alt', true); ?>" class="img-fluid" width="<?php echo $bg_banner[1]; ?>" height="<?php echo $bg_banner[2]; ?>" />
-                        <?php } ?>
-                    </div>
-                </div>
-            </div>
-        </section>
+       
         <section class="main-home-categories col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
             <div class="container">
                 <div class="row">

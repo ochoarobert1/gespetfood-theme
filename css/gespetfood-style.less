@@ -1600,13 +1600,18 @@ a.qlwapp-toggle {
     color: @white;
 
     .beneficios-picture img {
-        width: 450px;
+        width: 350px;
         margin: 0 auto;
         display: block;
     }
 
     & .beneficios-content {
         text-align: right;
+
+        & h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
     }
 }
 
@@ -1669,16 +1674,18 @@ a.qlwapp-toggle {
 }
 
 .main-home-container {
-    padding: 2.5rem 1rem;
+    padding: 1.5rem 1rem;
 
     & .main-home-content {
-        font-size: 1.3rem;
+        font-size: 1rem;
         line-height: 2.2rem;
 
         & h1 {
             color: @gray6;
             font-weight: 600;
-            font-size: 1.8rem;
+            font-size: 1.7rem;
+            line-height: 2.4rem;
+            margin-bottom: 1.5rem;
         }
     }
 }
@@ -1711,7 +1718,7 @@ a.qlwapp-toggle {
 }
 
 .benefits-list {
-    padding: 3rem 1rem;
+    padding: 1.5rem 1rem;
     background: #191919;
 }
 
@@ -1729,8 +1736,8 @@ a.qlwapp-toggle {
     border-radius: 10px;
     font-weight: 600;
     margin: 0.8rem;
-    padding: 0.6rem;
-    font-size: 1.3rem;
+    padding: 1rem;
+    font-size: 1.1rem;
     line-height: 2.2rem;
     margin-bottom: 1.8rem;
     .transition(all .3s ease-in-out);
@@ -1765,7 +1772,7 @@ a.qlwapp-toggle {
 
 .beneficios-text {
     background: #191919;
-    padding: 4rem 1rem;
+    padding: 1.5rem 1rem;
     color: #fff;
 
     & .beneficios-text-title {
@@ -1785,7 +1792,7 @@ a.qlwapp-toggle {
 .testimonials-title h2 {
     color: @orange;
     text-align: center;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 2rem;
     font-size: 1.8rem;
 }
@@ -1845,14 +1852,58 @@ a.qlwapp-toggle {
 }
 
 .blog-container .testimonials-container {
-    background: #fff;
+    background: #fff url(../images/bg-separator.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-top: 15rem;
 }
 
 .blog-intro-content {
-    margin-top: 5rem;
-    padding: 0rem 1rem;
+    background: #FFF;
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    margin-top: 3rem;
+    padding: 1.5rem 1rem;
     position: relative;
-    background: #fff;
+
+    & .img-blog-1 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    & .img-blog-2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    & .img-blog-4 {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    & .img-blog-3 {
+        position: absolute;
+        bottom: -15%;
+        left: 0;
+        max-width: 200px;
+        -webkit-transform: scaleY(-1);
+        transform: scaleY(-1);
+    }
+
+    & .beneficios-content {
+        text-align: right;
+        line-height: 2.2rem;
+
+        & h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+    }
 }
 
 .woocommerce nav.woocommerce-pagination ul li {
@@ -1884,4 +1935,42 @@ a.qlwapp-toggle {
     padding: 10px 14px !important;
     background: @orange  !important;
     color: #fff !important;
+}
+
+.main-home-shop-content {
+    padding: 0 1.5rem;
+}
+
+.blog-item {
+    padding: 4rem 1rem;
+    padding-bottom: 1rem;
+
+    & .blog-item-image {
+        & img {
+            max-width: 230px;
+            margin: 0 auto;
+            display: block;
+            border-radius: 30px;
+        }
+    }
+
+    & .blog-item-content {
+        color: @white;
+        line-height: 2.2rem;
+        word-break: break-word;
+
+        & .blog-item-link {
+            a {
+                color: @orange;
+                font-style: italic;
+            }
+        }
+
+        & h2 {
+            margin-bottom: 2rem;
+            font-weight: 500;
+            font-size: 1.6rem;
+        }
+
+    }
 }

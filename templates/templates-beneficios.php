@@ -40,7 +40,7 @@
                     <?php if (!empty($arr_group)) { ?>
                     <?php $i = 1; ?>
                     <?php foreach ($arr_group as $item) { ?>
-                    <div class="button-benefits-item col-4">
+                    <div class="button-benefits-item col-xl-4 col-lg-5 col-md-6 col-sm-12 col-12">
                         <div id="benefits-<?php echo $i; ?>" class="button-benefits-item-wrapper">
                             <?php echo $item['title']; ?>
                             <div class="button-benefits-content d-none">
