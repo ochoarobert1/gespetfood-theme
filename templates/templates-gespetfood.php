@@ -44,7 +44,7 @@
                         <h2><?php _e('GESPETFOOD asegura:', 'gespetfood'); ?></h2>
                     </div>
                     <div class="benefits-slider col-xl-8 col-lg-10 col-md-12 col-sm-12 col-12">
-                        <div class="benefits-gallery-container swiper-container">
+                        <div class="benefits-gallery-container swiper-container col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <?php $benefits_group = get_post_meta(get_the_ID(), 'gpf_benefits_group', true); ?>
                             <?php if (!empty($benefits_group)) { ?>
                             <div class="swiper-wrapper">
@@ -52,7 +52,8 @@
                                 <?php foreach ($benefits_group as $benefits_item) { ?>
                                 <div class="swiper-slide">
                                     <div class="benefits-item-wrapper">
-                                        <img src="<?php echo $benefits_item['icon']; ?>" alt="Brands" class="img-fluid" />
+                                        <?php $image = wp_get_attachment_image_src($benefits_item['icon_id'], 'full'); ?>
+                                        <img itemprop="logo" content="<?php echo $image[0]; ?>" src="<?php echo $image[0]; ?>" title="<?php echo get_post_meta($benefits_item['icon_id'], '_wp_attachment_image_alt', true); ?>" alt="<?php echo get_post_meta($benefits_item['icon_id'], '_wp_attachment_image_alt', true); ?>" class="img-fluid" width="<?php echo $image[1]; ?>" height="<?php echo $image[2]; ?>" />
                                         <p><?php echo $benefits_item['desc']; ?></p>
                                     </div>
                                 </div>
@@ -81,6 +82,15 @@
                 </div>
             </div>
         </section>
+        <section class="the-logo-about col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <?php $awards_group = get_post_meta(get_the_ID(), 'gpf_gespetfood_logo_list', true); ?>
+            <?php if ((!empty($awards_group)) || ($awards_group != '')) { ?>
+            <?php foreach ($awards_group as $test_item) { ?>
+
+            <img src="<?php echo $test_item['bg_image']; ?>" alt="" class="" s>
+            <?php } ?>
+            <?php } ?>
+        </section>
         <section class="beneficios-text col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
             <div class="container">
                 <div class="row align-items-center">
@@ -98,16 +108,6 @@
                 </div>
             </div>
         </section>
-        <section class="the-logo-about col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-            <?php $awards_group = get_post_meta(get_the_ID(), 'gpf_gespetfood_logo_list', true); ?>
-            <?php if ((!empty($awards_group)) || ($awards_group != '')) { ?>
-            <?php foreach ( $awards_group as $test_item ) { ?>
-            
-            <img src="<?php echo $test_item['bg_image']; ?>" alt="" class=""s>
-            <?php } ?>
-            <?php } ?>
-        </section>
-        
     </div>
 </main>
 <?php get_footer(); ?>

@@ -596,7 +596,9 @@ a {
 /* --------------------------------------------------------------
 3.- HOME
 -------------------------------------------------------------- */
-.the-slider {}
+.the-slider {
+    overflow: hidden;
+}
 
 .the-about {
     background-size: contain !important;
@@ -672,7 +674,8 @@ a {
     }
 
     & .swiper-container {
-        height: 390px;
+        height: 480px;
+        padding: 4rem 0;
     }
 
     & .benefits-item-wrapper {
@@ -684,6 +687,7 @@ a {
         border-radius: 30px;
         text-align: center;
         padding: 1.5rem;
+        font-size: 0.9rem;
         background: @orange;
         color: @white;
         .transition(all .3s ease-in-out);
@@ -691,6 +695,7 @@ a {
         & img {
             width: auto;
             height: 100%;
+            max-width: 77px;
             margin-bottom: 2rem;
         }
     }
@@ -1759,7 +1764,8 @@ a.qlwapp-toggle {
 
         & h2 {
             font-size: 1.8rem;
-            font-weight: 600;
+            margin-bottom: 2rem;
+            font-weight: 500;
         }
 
         & ol li {
@@ -1798,7 +1804,7 @@ a.qlwapp-toggle {
 }
 
 .testimonials-slider {
-    padding-top: 2rem;
+    padding-top: 2rem !important;
 }
 
 .testimonial-wrapper {
@@ -1864,7 +1870,7 @@ a.qlwapp-toggle {
     background-position: top center;
     background-repeat: no-repeat;
     margin-top: 3rem;
-    padding: 1.5rem 1rem;
+    padding: 0 1rem;
     position: relative;
 
     & .img-blog-1 {
@@ -1972,5 +1978,45 @@ a.qlwapp-toggle {
             font-size: 1.6rem;
         }
 
+    }
+}
+
+.the-single {
+    margin: 3rem 0;
+
+    & img {
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    & h1 {
+        font-weight: 500;
+        font-size: 1.6rem;
+        margin-bottom: 1.4rem;
+    }
+
+    & .post-content {
+        font-size: 1rem;
+        line-height: 2rem;
+
+        & a {
+            color: @orange;
+        }
+
+        & h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 500;
+            font-size: 1.6rem;
+        }
+    }
+
+    & .post-thumbnail {
+        max-width: 60%;
+        margin: 0 auto;
+        display: block;
     }
 }

@@ -45,7 +45,7 @@ $cmb_shop_metaboxes = new_cmb2_box( array(
     'id'            => $prefix . 'product_slider',
     'title'         => esc_html__( 'Tienda: Slider Revolution', 'gespetfood' ),
     'object_types'  => array( 'page' ), // Post type
-    'show_on'      => array( 'key' => 'slug', 'value' => array( 'shop', 'tienda', 'products', 'productos' ) ),
+    'show_on'      => array( 'key' => 'slug', 'value' => array( 'shop', 'tienda', 'tienda-perro', 'products', 'productos' ) ),
     'context'    => 'normal',
     'priority'   => 'high',
     'show_names' => true, // Show field names on the left
@@ -198,7 +198,7 @@ $cmb_shop_testimonials = new_cmb2_box( array(
     'id'            => $prefix . 'shop_testimonials',
     'title'         => esc_html__( 'Tienda: Testimonios', 'gespetfood' ),
     'object_types'  => array( 'page' ), // Post type
-    'show_on'      => array( 'key' => 'slug', 'value' => array( 'shop', 'tienda', 'products', 'productos' ) ),
+    'show_on'      => array( 'key' => 'slug', 'value' => array( 'shop', 'tienda', 'tienda-perro', 'products', 'productos' ) ),
     'context'    => 'normal',
     'priority'   => 'high',
     'show_names' => true, // Show field names on the left

@@ -8,7 +8,7 @@
             <?php $slider_content = get_post_meta($shop_id, 'gpf_shop_testimonials_list', true); ?>
             <?php if (!empty($slider_content)) { ?>
             <div class="testimonials-content col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                <div class="testimonials-slider swiper-container">
+                <div class="testimonials-slider swiper-container col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="swiper-wrapper">
                         <?php foreach ($slider_content as $item) { ?>
                         <div class="swiper-slide">

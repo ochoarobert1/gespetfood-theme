@@ -192,6 +192,7 @@ if ( function_exists('add_image_size') ) {
     add_image_size('logo_size', 9999, 100, false);
     add_image_size('custom_logos', 130, 130, true);
     add_image_size('blog_img', 300, 470, array('center', 'center'));
+    add_image_size('single_img', 1300, 763, array('center', 'center'));
     add_image_size('testimonials', 500, 400, true);
 
 }

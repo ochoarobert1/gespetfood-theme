@@ -42,12 +42,13 @@
                     <div class="blog-item col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="container">
                             <div class="row align-items-center">
-                                <div class="blog-item-image col-3">
+                                <div class="blog-item-image col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12">
                                     <a href="<?php the_permalink(); ?>" title="<?php _e('Leer Más', 'gespetfood'); ?>">
-                                        <?php the_post_thumbnail( 'blog_img', array('class' => 'img-fluid') )?>
+                                        <?php the_post_thumbnail( 'blog_img', array('class' => 'img-fluid d-xl-block d-lg-block d-md-block d-sm-none d-none') )?>
+                                        <?php the_post_thumbnail( 'large', array('class' => 'img-fluid img-blog-item d-xl-none d-lg-none d-md-none d-sm-block d-block') )?>
                                     </a>
                                 </div>
-                                <div class="blog-item-content col-9">
+                                <div class="blog-item-content col-xl-9 col-lg-9 col-md-8 col-sm-12 col-12">
                                     <h2><?php the_title(); ?></h2>
                                     <?php the_excerpt(); ?>
                                     <div class="blog-item-link">
