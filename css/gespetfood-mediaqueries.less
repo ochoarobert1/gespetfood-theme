@@ -187,6 +187,12 @@ MEDIAQUERIES SM - LAYOUTS BIGGER THAN 768px
         right: -30px !important;
     }
 
+    .modal-dialog {
+        max-width: 90%;
+    }
+
+    
+
     .blog-intro-content .img-blog-1 {
         display: none;
     }
@@ -208,10 +214,14 @@ MEDIAQUERIES SM - LAYOUTS BIGGER THAN 768px
         padding-bottom: 0;
     }
 
+    .modal {
+        z-index: 999999;
+    }
+
     .modal-benefits .modal-content {
-        padding: 1.5rem 1rem;
-        font-size: 1rem;
-        line-height: 1.8rem;
+        padding: 1.5rem 0.5rem;
+        font-size: 0.9rem;
+        line-height: 1.6rem;
     }
 
     .woocommerce ul.products li.product,
@@ -332,6 +342,14 @@ MEDIAQUERIES SM - LAYOUTS BIGGER THAN 768px
 @media (max-width: 767px) {
     .the-footer .footer-item ul {
         text-align: center;
+    }
+
+    .modal-dialog {
+        max-width: 96%;
+    }
+
+    .modal-body-dynamic ol {
+        padding-left: 1rem;
     }
 
     .blog-container .testimonials-container {
