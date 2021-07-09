@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gespetfood\n"
-"POT-Creation-Date: 2021-07-05 02:32-0400\n"
-"PO-Revision-Date: 2021-07-05 02:33-0400\n"
+"POT-Creation-Date: 2021-07-09 12:34-0400\n"
+"PO-Revision-Date: 2021-07-09 12:34-0400\n"
 "Last-Translator: Robert Ochoa <ochoa.robert1@gmail.com>\n"
 "Language-Team: Robert Ochoa <contacto@robertochoa.com.ve>\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 3.0\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -47,7 +47,7 @@ msgstr "Go back to"
 msgid "Publicado por:"
 msgstr "Published by:"
 
-#: category.php:37 tag.php:37
+#: category.php:37 index.php:46 index.php:55 tag.php:37
 msgid "Leer Más"
 msgstr "Read More"
 
@@ -442,24 +442,44 @@ msgid "Beneficios"
 msgstr "Beneficios"
 
 #: includes/custom-metaboxes-gespetfood.php:180
-#: includes/wp_custom_metabox.php:239
+#: includes/custom-metaboxes-shop.php:141
 msgid "Slides inside this Slider"
 msgstr "Slides inside this Slider"
 
 #: includes/custom-metaboxes-gespetfood.php:182
-#: includes/wp_custom_metabox.php:241
+#: includes/custom-metaboxes-shop.php:143
 msgid "Logo {#}"
 msgstr "Logo {#}"
 
 #: includes/custom-metaboxes-gespetfood.php:183
-#: includes/wp_custom_metabox.php:242
+#: includes/custom-metaboxes-shop.php:144
 msgid "Add other Logo"
 msgstr "Add other Logo"
 
 #: includes/custom-metaboxes-gespetfood.php:184
-#: includes/wp_custom_metabox.php:243
+#: includes/custom-metaboxes-shop.php:145
 msgid "Remove Logo"
 msgstr "Remove Logo"
+
+#: includes/custom-metaboxes-shop.php:211
+#, fuzzy
+msgid "Testimonials inside this page"
+msgstr "Testimonials inside this page"
+
+#: includes/custom-metaboxes-shop.php:213
+#, fuzzy
+msgid "Testimonial Block {#}"
+msgstr "Testimonial Block {#}"
+
+#: includes/custom-metaboxes-shop.php:214
+#, fuzzy
+msgid "Add other Testimonial Block"
+msgstr "Add other Testimonial Block"
+
+#: includes/custom-metaboxes-shop.php:215
+#, fuzzy
+msgid "Remove Testimonial Block"
+msgstr "Remove Testimonial Block"
 
 #: includes/wp_custom_post_type.php:6
 msgctxt "Post Type General Name"
@@ -696,27 +716,27 @@ msgstr "Error: Try again later."
 msgid "Presentación"
 msgstr "Presentation"
 
-#: includes/wp_woocommerce_functions.php:92
+#: includes/wp_woocommerce_functions.php:99
 msgid "pack 1 unidad"
 msgstr "pack 1 item"
 
-#: includes/wp_woocommerce_functions.php:106
+#: includes/wp_woocommerce_functions.php:113
 msgid "Finalizar Compra"
 msgstr "Checkout"
 
-#: includes/wp_woocommerce_functions.php:107
+#: includes/wp_woocommerce_functions.php:114
 msgid "Volver a Tienda"
 msgstr "Back to Shop"
 
-#: includes/wp_woocommerce_functions.php:115
+#: includes/wp_woocommerce_functions.php:122
 msgid "Return to shop"
 msgstr "Return to shop"
 
-#: includes/wp_woocommerce_functions.php:192
+#: includes/wp_woocommerce_functions.php:199
 msgid "Haga click para ver esta categoría"
 msgstr "Click to see this category"
 
-#: includes/wp_woocommerce_functions.php:204
+#: includes/wp_woocommerce_functions.php:211
 msgid " para perros"
 msgstr " for dogs"
 
@@ -772,13 +792,14 @@ msgstr "(*) Required Fields"
 msgid "Enviar"
 msgstr "Send Message"
 
-#: templates/page-home.php:47 woocommerce/archive-product.php:60
+#: templates/page-home.php:53 woocommerce/archive-product.php:42
+#: woocommerce/taxonomy-product_cat.php:35
 msgid "¿Cuál es el premio favorito de tu perro?"
 msgstr "What is your dog's favorite treat?"
 
-#: templates/page-home.php:77
-msgid "Clientes Felices"
-msgstr "Happy Customers"
+#: templates/template-part-testimonials.php:5
+msgid "¡Clientes Felices!"
+msgstr "Happy Customers!"
 
 #: templates/templates-beneficios.php:37
 msgid "Te explicamos más sobre ello:"
@@ -796,7 +817,7 @@ msgstr "contact us"
 msgid "GESPETFOOD asegura:"
 msgstr "GESPETFOOD ensures:"
 
-#: templates/templates-gespetfood.php:77
+#: templates/templates-gespetfood.php:78
 msgid "Equipo"
 msgstr "Team"
 
