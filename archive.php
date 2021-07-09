@@ -4,7 +4,7 @@
 <main class="container-fluid p-0" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
     <div class="row no-gutters">
         <section class="the-slider col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-            <?php $slider_alias = get_post_meta($blogpage_id->post_id;, 'gpf_slider_rev', true); ?>
+            <?php $slider_alias = get_post_meta($blogpage_id->post_id, 'gpf_slider_rev', true); ?>
             <?php add_revslider($slider_alias); ?>
         </section>
         <section class="blog-content col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
