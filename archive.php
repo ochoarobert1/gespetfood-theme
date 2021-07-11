@@ -11,12 +11,12 @@
             <div class="container">
                 <div class="row align-items-center">
                     <picture class="beneficios-picture col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <?php $bg_banner_id = get_post_meta($blogpage_id->post_id;, 'gpf_beneficios_image_content_1_id', true); ?>
+                        <?php $bg_banner_id = get_post_meta($blogpage_id->post_id, 'gpf_beneficios_image_content_1_id', true); ?>
                         <?php $bg_banner = wp_get_attachment_image_src($bg_banner_id, 'full', false); ?>
                         <img itemprop="image" content="<?php echo $bg_banner[0]; ?>" src="<?php echo $bg_banner[0]; ?>" title="<?php echo get_post_meta($bg_banner_id, '_wp_attachment_image_alt', true); ?>" alt="<?php echo get_post_meta($bg_banner_id, '_wp_attachment_image_alt', true); ?>" class="img-fluid" width="<?php echo $bg_banner[1]; ?>" height="<?php echo $bg_banner[2]; ?>" />
                     </picture>
                     <div class="beneficios-content col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <?php echo apply_filters('the_content', get_post_meta($blogpage_id->post_id;, 'gpf_beneficios_text_content_1', true)); ?>
+                        <?php echo apply_filters('the_content', get_post_meta($blogpage_id->post_id, 'gpf_beneficios_text_content_1', true)); ?>
                     </div>
                 </div>
             </div>
@@ -28,7 +28,6 @@
             <img itemprop="image" content="<?php echo $bg_banner[0]; ?>" src="<?php echo $bg_banner[0]; ?>" title="<?php echo get_post_meta($bg_banner_id, '_wp_attachment_image_alt', true); ?>" alt="<?php echo get_post_meta($bg_banner_id, '_wp_attachment_image_alt', true); ?>" class="img-fluid" width="<?php echo $bg_banner[1]; ?>" height="<?php echo $bg_banner[2]; ?>" />
         </section>
         <?php } ?>
-
     </div>
 </main>
 <?php get_footer(); ?>
