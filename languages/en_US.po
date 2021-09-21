@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gespetfood\n"
-"POT-Creation-Date: 2021-07-09 12:34-0400\n"
-"PO-Revision-Date: 2021-07-09 12:34-0400\n"
+"POT-Creation-Date: 2021-09-21 13:08-0400\n"
+"PO-Revision-Date: 2021-09-21 13:08-0400\n"
 "Last-Translator: Robert Ochoa <ochoa.robert1@gmail.com>\n"
 "Language-Team: Robert Ochoa <contacto@robertochoa.com.ve>\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 2.4.2\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -462,22 +462,18 @@ msgid "Remove Logo"
 msgstr "Remove Logo"
 
 #: includes/custom-metaboxes-shop.php:211
-#, fuzzy
 msgid "Testimonials inside this page"
 msgstr "Testimonials inside this page"
 
 #: includes/custom-metaboxes-shop.php:213
-#, fuzzy
 msgid "Testimonial Block {#}"
 msgstr "Testimonial Block {#}"
 
 #: includes/custom-metaboxes-shop.php:214
-#, fuzzy
 msgid "Add other Testimonial Block"
 msgstr "Add other Testimonial Block"
 
 #: includes/custom-metaboxes-shop.php:215
-#, fuzzy
 msgid "Remove Testimonial Block"
 msgstr "Remove Testimonial Block"
 
@@ -716,27 +712,31 @@ msgstr "Error: Try again later."
 msgid "Presentación"
 msgstr "Presentation"
 
-#: includes/wp_woocommerce_functions.php:99
+#: includes/wp_woocommerce_functions.php:100
 msgid "pack 1 unidad"
 msgstr "pack 1 item"
 
-#: includes/wp_woocommerce_functions.php:113
+#: includes/wp_woocommerce_functions.php:108
+msgid "(IVA incluido)"
+msgstr "(VAT included)"
+
+#: includes/wp_woocommerce_functions.php:121
 msgid "Finalizar Compra"
 msgstr "Checkout"
 
-#: includes/wp_woocommerce_functions.php:114
+#: includes/wp_woocommerce_functions.php:122
 msgid "Volver a Tienda"
 msgstr "Back to Shop"
 
-#: includes/wp_woocommerce_functions.php:122
+#: includes/wp_woocommerce_functions.php:130
 msgid "Return to shop"
 msgstr "Return to shop"
 
-#: includes/wp_woocommerce_functions.php:199
+#: includes/wp_woocommerce_functions.php:201
 msgid "Haga click para ver esta categoría"
 msgstr "Click to see this category"
 
-#: includes/wp_woocommerce_functions.php:211
+#: includes/wp_woocommerce_functions.php:213
 msgid " para perros"
 msgstr " for dogs"
 
