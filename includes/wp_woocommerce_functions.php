@@ -56,17 +56,17 @@ function custom_product_column($column, $post_id)
     }
 }
 
-add_filter( 'loop_shop_per_page', 'bbloomer_redefine_products_per_page', 9999 );
+add_filter('loop_shop_per_page', 'bbloomer_redefine_products_per_page', 9999);
  
-function bbloomer_redefine_products_per_page( $per_page ) {
-  $per_page = 150;
-  return $per_page;
+function bbloomer_redefine_products_per_page($per_page)
+{
+    $per_page = 150;
+    return $per_page;
 }
 
 function woocommerce_custom_rating_handler()
 {
-    ob_start();
-?>
+    ob_start(); ?>
     <div class="custom-star-container">
         <i class="fa fa-star"></i>
         <i class="fa fa-star"></i>
@@ -93,12 +93,21 @@ function woocommerce_template_single_extra_title()
 {
     $quantity = get_post_meta(get_the_ID(), 'gpf_product_extra_info_quantity', true);
     if ($quantity != '') {
-    ?>
+        ?>
         <h3 class="title-extra-info"><?php echo $quantity; ?></h3>
-    <?php } else { ?>
+    <?php
+    } else { ?>
         <h3 class="title-extra-info"><?php _e('pack 1 unidad', 'gespetfood'); ?></h3>
     <?php }
 }
+
+add_filter('woocommerce_get_price_html', 'custom_suffix_text_after_price');
+
+function custom_suffix_text_after_price($price)
+{
+    return $price . '<span class="price-suffix">' . __('(IVA incluido)', 'gespetfood') . '</span>' ;
+}
+
 
 
 
@@ -108,8 +117,7 @@ function woocommerce_custom_shipping_button()
 {
     global $woocommerce;
     $checkout_url = wc_get_checkout_url();
-    $shop_id = get_option('woocommerce_shop_page_id');
-    ?>
+    $shop_id = get_option('woocommerce_shop_page_id'); ?>
     <a href="<?php echo $checkout_url; ?>" class="btn btn-md btn-back-shop"><?php _e('Finalizar Compra', 'gespetfood'); ?></a>
     <a href="<?php echo get_permalink($shop_id); ?>" class="btn btn-md btn-back-shop"><?php _e('Volver a Tienda', 'gespetfood'); ?></a>
 <?php
@@ -127,8 +135,7 @@ add_action('woocommerce_after_single_product_summary', 'custom_woocommerce_singl
 
 function custom_woocommerce_single_info()
 {
-    $shop_id = get_option('woocommerce_shop_page_id');
-?>
+    $shop_id = get_option('woocommerce_shop_page_id'); ?>
 
     <section class="shop-logo-first col-xl-10 offset-xl-1 col-lg-12 col-md-12 col-sm-12 col-12">
         <?php $awards_group = get_post_meta($shop_id, 'gpf_shop_logo1_list', true); ?>
@@ -159,9 +166,7 @@ function wc_minimum_order_amount()
     $minimum = 0;
 
     if (WC()->cart->total < $minimum) {
-
         if (is_cart()) {
-
             wc_print_notice(
                 sprintf(
                     'El total de tu orden actual es %s — debes tener una orden con un mínimo de %s para poder procesar tu compra ',
@@ -171,7 +176,6 @@ function wc_minimum_order_amount()
                 'error'
             );
         } else {
-
             wc_add_notice(
                 sprintf(
                     'El total de tu orden actual es %s — debes tener una orden con un mínimo de %s para poder procesar tu compra ',
@@ -188,68 +192,69 @@ function wc_minimum_order_amount()
 
 function custom_category_circle_links()
 {
-    $arr_categories = get_terms(array('taxonomy' => 'product_cat', 'hide_empty' => true, 'order' => 'asc', 'orderby' => 'menu_order'));
-?>
+    $arr_categories = get_terms(array('taxonomy' => 'product_cat', 'hide_empty' => true, 'order' => 'asc', 'orderby' => 'menu_order')); ?>
     <div class="category-menu-container">
         <?php
         foreach ($arr_categories as $term) {
             $thumbnail_id = get_term_meta($term->term_id, 'thumbnail_id', true);
-            $image = wp_get_attachment_image_src($thumbnail_id, 'avatar', false);
-        ?>
+            $image = wp_get_attachment_image_src($thumbnail_id, 'avatar', false); ?>
             <a href="<?php echo get_term_link($term); ?>" title="<?php _e('Haga click para ver esta categoría', 'gespetfood'); ?>">
                 <img src="<?php echo $image[0]; ?>" alt="<?php echo $term->name; ?>" class="img-fluid" />
             </a>
         <?php
-        }
-        ?>
+        } ?>
     </div>
 <?php
 }
 
 // Just used for testing
-function return_custom( $id ) {
+function return_custom($id)
+{
     return __(' para perros', 'gespetfood');
 }
 
 // Customizing cart item name in cart, checkout, orders and email notifications
-add_action( 'woocommerce_before_calculate_totals', 'set_custom_cart_item_name', 10, 1 );
-function set_custom_cart_item_name( $cart ) {
-    if ( is_admin() && ! defined( 'DOING_AJAX' ) )
+add_action('woocommerce_before_calculate_totals', 'set_custom_cart_item_name', 10, 1);
+function set_custom_cart_item_name($cart)
+{
+    if (is_admin() && ! defined('DOING_AJAX')) {
         return;
+    }
 
     // Required since Woocommerce version 3.2 for cart items properties changes
-    if ( did_action( 'woocommerce_before_calculate_totals' ) >= 2 )
+    if (did_action('woocommerce_before_calculate_totals') >= 2) {
         return;
+    }
 
     // Loop through cart items
-    foreach ( $cart->get_cart() as $cart_item ) {
+    foreach ($cart->get_cart() as $cart_item) {
         // Get the product name and the product ID
         $product_name = $cart_item['data']->get_name();
         $product_id   = $cart_item['data']->get_id();
 
         // Set the new product name
-        $cart_item['data']->set_name( $product_name . return_custom($product_id) );
+        $cart_item['data']->set_name($product_name . return_custom($product_id));
     }
 }
 
-function update_title($title, $id = null ) {
-
+function update_title($title, $id = null)
+{
     $prod=get_post($id);
 
-    if (empty($prod->ID) || strcmp($prod->post_type,'product')!=0 ) {
+    if (empty($prod->ID) || strcmp($prod->post_type, 'product')!=0) {
         return $title;
     }
 
     return $title.return_custom($product_id);
 }
 
-function update_product_title($title, $product) {
-
+function update_product_title($title, $product)
+{
     $id = $product->get_id();
 
     return $title.return_custom($product_id);
 }
 
-add_filter( 'woocommerce_product_title', 'update_product_title', 9999, 2);
+add_filter('woocommerce_product_title', 'update_product_title', 9999, 2);
 
-add_filter( 'the_title', 'update_title', 10, 2 );
+add_filter('the_title', 'update_title', 10, 2);
