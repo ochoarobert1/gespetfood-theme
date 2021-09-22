@@ -131,7 +131,9 @@ get_header('shop');
                             ?>
                         </div>
                     </div>
-                    <?php echo get_template_part('templates/template-part-testimonials'); ?>
+                    <div class="shop-testimonials">
+                        <?php echo get_template_part('templates/template-part-testimonials'); ?>
+                    </div>
                     <div class="shop-ifs-container col-12">
                         <?php $shop_info = get_post_meta($shop_id, 'gpf_shop_info', true); ?>
                         <?php echo apply_filters('the_content', $shop_info); ?>

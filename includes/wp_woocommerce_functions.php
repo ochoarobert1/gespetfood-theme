@@ -105,7 +105,11 @@ add_filter('woocommerce_get_price_html', 'custom_suffix_text_after_price');
 
 function custom_suffix_text_after_price($price)
 {
-    return $price . '<span class="price-suffix">' . __('(IVA incluido)', 'gespetfood') . '</span>' ;
+    if (!is_admin()) {
+        return $price . '<span class="price-suffix">' . __('(IVA incluido)', 'gespetfood') . '</span>' ;
+    } else {
+        return $price;
+    }
 }
 
 
