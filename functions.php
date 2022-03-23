@@ -199,7 +199,11 @@ if ( function_exists('add_image_size') ) {
 
 add_filter( 'big_image_size_threshold', '__return_false' );
 
+<<<<<<< HEAD
 /*
+=======
+
+>>>>>>> 53ccff438ea99f54ea83c05fbd2669f781e71d38
 add_action('woocommerce_proceed_to_checkout', 'custom_cart_message', 15);
 add_action('woocommerce_review_order_before_submit', 'custom_cart_message', 10);
 add_action('woocommerce_thankyou_cod', 'custom_cart_message', 15);
@@ -209,6 +213,7 @@ function custom_cart_message() {
 	$message = esc_html__('Entrega de pedidos a partir del 02 de enero', 'gespetfood');
 	echo '<div class="custom-cart-message">' . $message . '</div>';
 }
+<<<<<<< HEAD
 */
 
 function show_category_posts( $query ) {
@@ -220,3 +225,5 @@ function show_category_posts( $query ) {
     }
 }
 add_action( 'pre_get_posts', 'show_category_posts' );
+=======
+>>>>>>> 53ccff438ea99f54ea83c05fbd2669f781e71d38
