@@ -198,3 +198,25 @@ if ( function_exists('add_image_size') ) {
 }
 
 add_filter( 'big_image_size_threshold', '__return_false' );
+
+/*
+add_action('woocommerce_proceed_to_checkout', 'custom_cart_message', 15);
+add_action('woocommerce_review_order_before_submit', 'custom_cart_message', 10);
+add_action('woocommerce_thankyou_cod', 'custom_cart_message', 15);
+add_action('woocommerce_email_after_order_table', 'custom_cart_message', 10);
+
+function custom_cart_message() {
+	$message = esc_html__('Entrega de pedidos a partir del 02 de enero', 'gespetfood');
+	echo '<div class="custom-cart-message">' . $message . '</div>';
+}
+*/
+
+function show_category_posts( $query ) {
+    if (!is_admin()) {
+        if ($query->is_home() && $query->is_main_query()) {
+            $query->set('order', 'DESC');
+            $query->set('orderby', 'date');
+        }
+    }
+}
+add_action( 'pre_get_posts', 'show_category_posts' );

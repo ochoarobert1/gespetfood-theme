@@ -98,6 +98,13 @@
                         <?php echo apply_filters('the_content', get_post_meta(get_the_ID(), 'gpf_beneficios_text_title_2', true)); ?>
                     </div>
                     <div class="beneficios-content col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 order-xl-1 order-lg-1 order-md-1 order-sm-12 order-12">
+                        <div class="embed-responsive embed-responsive-21by9 mb-1">
+                            <video class="embed-responsive-item" autoplay loop muted>
+                                <source src="https://gespetfood.com/wp-content/uploads/2022/03/video.mp4" type="video/mp4">
+                                <source src="https://gespetfood.com/wp-content/uploads/2022/03/video.webm" type="video/webm">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
                         <?php echo apply_filters('the_content', get_post_meta(get_the_ID(), 'gpf_beneficios_text_content_2', true)); ?>
                     </div>
                     <picture class="beneficios-picture col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 order-xl-12 order-lg-12 order-md-12 order-sm-1 order-1">
