@@ -32,15 +32,17 @@
     <meta name="geo.placename" content="Sauce #2, 28970 Humanes de Madrid (Madrid), España" />
     <meta name="keywords" content="Perro, Comida mascota, Premio perro, Hueso, Hueso de jamón, Tienda de mascotas, Mascotas, Perro amazon, dog snacks, dog shop, Snacks shop, Dog food, Dog store, Ham bone, dog store" />
     <meta name="DC.title" content="<?php if (is_home()) {
-                                        echo get_bloginfo('name') . ' | ' . get_bloginfo('description');
-                                    } else {
-                                        echo get_the_title() . ' | ' . get_bloginfo('name');
-                                    } ?>" />
+        echo get_bloginfo('name') . ' | ' . get_bloginfo('description');
+    } else {
+        echo get_the_title() . ' | ' . get_bloginfo('name');
+    } ?>" />
     <?php /* MAIN TITLE - CALL HEADER MAIN FUNCTIONS */ ?>
     <?php wp_title('|', false, 'right'); ?>
     <?php wp_head() ?>
     <?php /* OPEN GRAPHS INFO - COMMENTS SCRIPTS */ ?>
-    <?php if (is_singular() && get_option('thread_comments')) wp_enqueue_script('comment-reply'); ?>
+    <?php if (is_singular() && get_option('thread_comments')) {
+        wp_enqueue_script('comment-reply');
+    } ?>
     <?php /* IE COMPATIBILITIES */ ?>
     <!--[if lt IE 7]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7" /><![endif]-->
     <!--[if (IE 7)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8" /><![endif]-->
@@ -64,12 +66,16 @@
                 <div class="container">
                     <div class="row align-items-center justify-content-between">
                         <div class="top-header-left col-6">
+                            <?php if (!empty($header_options)) { ?>
                             <a href="mailto:<?php echo $header_options['email_address']; ?>" title="<?php _e('Haz clic aquí para dejar tu mensaje en nuestro correo electrónico', 'gespetfood'); ?>"><?php echo $header_options['email_address']; ?></a>
                             <a href="<?php echo $header_options['formatted_phone_number']; ?>" title="<?php _e('Haz clic aquí para llamar directamente a nuestro Master', 'gespetfood'); ?>"><?php echo $header_options['phone_number']; ?></a>
+                            <?php } ?>
+                            <?php if (!empty($social_options)) { ?>
                             <a href="<?php echo $social_options['facebook']; ?>" title="<?php _e('Haz clic aquí para visitar nuestro perfil', 'gespetfood'); ?>" target="_blank"><i class="fa fa-facebook"></i></a>
                             <a href="<?php echo $social_options['twitter']; ?>" title="<?php _e('Haz clic aquí para visitar nuestro perfil', 'gespetfood'); ?>" target="_blank"><i class="fa fa-twitter"></i></a>
                             <a href="<?php echo $social_options['instagram']; ?>" title="<?php _e('Haz clic aquí para visitar nuestro perfil', 'gespetfood'); ?>" target="_blank"><i class="fa fa-instagram"></i></a>
                             <a href="<?php echo $social_options['linkedin']; ?>" title="<?php _e('Haz clic aquí para visitar nuestro perfil', 'gespetfood'); ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
+                            <?php } ?>
                         </div>
                         <div class="top-header-right col-6">
                             <?php $myaccount_page_id = get_option('woocommerce_myaccount_page_id'); ?>
@@ -119,17 +125,17 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <?php
-                    wp_nav_menu(array(
-                        'theme_location'    => 'header_menu',
-                        'depth'             => 1, // 1 = with dropdowns, 0 = no dropdowns.
-                        'container'         => 'div',
-                        'container_class'   => 'collapse navbar-collapse',
-                        'container_id'      => 'bs-example-navbar-collapse-1',
-                        'menu_class'        => 'navbar-nav mr-auto ml-auto',
-                        'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-                        'walker'            => new WP_Bootstrap_Navwalker()
-                    ));
-                    ?>
+                                                wp_nav_menu(array(
+                                                    'theme_location'    => 'header_menu',
+                                                    'depth'             => 1, // 1 = with dropdowns, 0 = no dropdowns.
+                                                    'container'         => 'div',
+                                                    'container_class'   => 'collapse navbar-collapse',
+                                                    'container_id'      => 'bs-example-navbar-collapse-1',
+                                                    'menu_class'        => 'navbar-nav mr-auto ml-auto',
+                                                    'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                                                    'walker'            => new WP_Bootstrap_Navwalker()
+                                                ));
+?>
                 </nav>
             </div>
             <div id="stickerMobile" class="navbar-mobile col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 d-xl-none d-lg-none d-md-none d-sm-block d-block">
@@ -188,13 +194,13 @@
                 </div>
                 <div class="navbar-mobile-content navbar-hidden col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 d-xl-none d-lg-none d-md-none d-sm-block d-block">
                     <?php
-                    wp_nav_menu(array(
-                        'theme_location'    => 'header_menu',
-                        'depth'             => 1, // 1 = with dropdowns, 0 = no dropdowns.
-                        'container'         => 'div',
-                        'menu_class'        => 'navbar-nav'
-                    ));
-                    ?>
+                                            wp_nav_menu(array(
+                                                'theme_location'    => 'header_menu',
+                                                'depth'             => 1, // 1 = with dropdowns, 0 = no dropdowns.
+                                                'container'         => 'div',
+                                                'menu_class'        => 'navbar-nav'
+                                            ));
+?>
 
                     <div class="search-cart-elements">
                         <?php get_search_form(); ?>

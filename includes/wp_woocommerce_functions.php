@@ -249,12 +249,12 @@ function update_title($title, $id = null)
         return $title;
     }
 
-    return $title.return_custom($product_id);
+    return $title.return_custom($prod->ID);
 }
 
 function update_product_title($title, $product)
 {
-    $id = $product->get_id();
+    $product_id = $product->get_id();
 
     return $title.return_custom($product_id);
 }
