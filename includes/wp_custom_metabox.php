@@ -137,4 +137,7 @@ function gespetfood_register_custom_metabox() {
 
     /* SHOP */
     require_once('custom-metaboxes-shop.php');
+
+    /* MAYORISTAS */
+    require_once('custom-metaboxes-mayoristas.php');
 }
