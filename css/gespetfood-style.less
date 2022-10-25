@@ -2041,8 +2041,10 @@ a.qlwapp-toggle {
 }
 
 .shop-testimonials {
-    & .swiper-button-next:after, .swiper-button-prev:after {
-        color: @orange !important;
+
+    & .swiper-button-next:after,
+    .swiper-button-prev:after {
+        color: @orange  !important;
     }
 }
 
@@ -2054,13 +2056,47 @@ a.qlwapp-toggle {
     padding: 0;
 }
 
-.wholesale {
-    color: #FFF;
-}
-
 .wholesale-embed-form {
     background: #191919;
     padding: 3rem 1rem;
     color: #FFF;
     text-align: center;
+}
+
+section.wholesale {
+    color: #FFF;
+    background-size: contain !important;
+    background-position: right center !important;
+    background-repeat: no-repeat !important;
+}
+
+.container-wholesale .row {
+    min-height: 50vh;
+}
+
+.wholesale-info {
+    font-size: 1rem;
+    line-height: 2.2rem;
+
+    & h2 {
+        font-size: 2.3rem;
+        font-weight: 700;
+    }
+}
+
+.wholesale-catalog-container {
+    text-align: center;
+    padding: 3rem;
+    background: #191919;
+    color: #FFF;
+
+    & .btn-wholesale {
+        background: #e49e42;
+        color: #FFF;
+        margin-top: 2rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+        padding: 1rem 4rem;
+        border-radius: 30px;
+    }
 }
