@@ -18,7 +18,7 @@
         <?php $bg_banner_id = get_post_meta(get_the_ID(), 'gpf_gespetfood_about_img_id', true); ?>
         <?php // $bg_banner = wp_get_attachment_image_src($bg_banner_id, 'full', false);?>
         <?php $bg_banner = get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>
-        <section class="wholesale col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="background: #191919 url(<?php echo $bg_banner;?>);" data-aos="fade">
+        <section class="wholesale col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="background: #191919 url(<?php echo $bg_banner;?>);">
             <div class="container container-wholesale">
                 <div class="row no-gutters align-items-center">
                     <div class="wholesale-info col-xl-8 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -28,7 +28,7 @@
                 </div>
             </div>
         </section>
-        <section class="wholesale-embed-form col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" data-aos="fade">
+        <section class="wholesale-embed-form col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="contact-form-content col-xl-10 col-lg-10 col-md-12 col-sm-12 col-12">
