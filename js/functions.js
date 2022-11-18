@@ -1,7 +1,13 @@
-jQuery(document).ready(function($) {
+function isValidEmailAddress(emailAddress) {
+    'use strict';
+    var pattern = /^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i;
+    return pattern.test(emailAddress);
+}
+
+jQuery(document).ready(function ($) {
     "use strict";
 
-    jQuery('.menu-btn').on('click', function() {
+    jQuery('.menu-btn').on('click', function () {
         jQuery(this).toggleClass('menu-btn-open');
         jQuery('.navbar-mobile-content').toggleClass('navbar-hidden');
     });
@@ -112,7 +118,7 @@ jQuery(document).ready(function($) {
 
     });
 
-    jQuery(document).ready(function() {
+    jQuery(document).ready(function () {
         if (Cookies.get('cookie_consent') != undefined) {
             // cookie is set
             jQuery('.gpf-privacy-policy-accept').addClass('hidden-policy');
@@ -122,7 +128,7 @@ jQuery(document).ready(function($) {
         }
     });
 
-    jQuery(document).on('touchstart click', '#privacy-policy-accept-btn', function(event) {
+    jQuery(document).on('touchstart click', '#privacy-policy-accept-btn', function (event) {
         if (event.handled === false) return
         event.stopPropagation();
         event.preventDefault();
@@ -134,13 +140,203 @@ jQuery(document).ready(function($) {
         jQuery('.gpf-privacy-policy-accept').addClass('hidden-policy');
     });
 
-    jQuery('.button-benefits-item-wrapper').on('click', function(e) {
+    jQuery('.button-benefits-item-wrapper').on('click', function (e) {
         e.preventDefault();
         jQuery('.modal-body-dynamic').html('');
         var currentID = jQuery(this).attr('id');
         var currentHTML = jQuery('#' + currentID + ' .button-benefits-content').html();
         jQuery('#modalBenefits').modal('toggle');
         jQuery('.modal-body-dynamic').html(currentHTML);
+    });
+
+    jQuery('.btn-contact').on('click', (e) => {
+        e.preventDefault();
+        var passd = true;
+
+        var formElements = jQuery('.contact-form-container :input');
+        for (let index = 0; index < formElements.length; index++) {
+
+            var element = formElements[index],
+                errorName = element.name,
+                errorInput = 'error-' + errorName;
+            switch (element.name) {
+                case 'firstname':
+                    if (element.value == '') {
+                        passd = false;
+                        document.getElementsByClassName(errorInput)[0].innerHTML = admin_url.error_name;
+                    } else {
+                        if (element.value.length < 2) {
+                            passd = false;
+                            document.getElementsByClassName(errorInput)[0].innerHTML = admin_url.invalid_name;
+                        } else {
+                            document.getElementsByClassName(errorInput)[0].innerHTML = '';
+                        }
+                    }
+                    break;
+                case 'lastname':
+                    if (element.value == '') {
+                        passd = false;
+                        document.getElementsByClassName(errorInput)[0].innerHTML = admin_url.error_last;
+                    } else {
+                        if (element.value.length < 2) {
+                            passd = false;
+                            document.getElementsByClassName(errorInput)[0].innerHTML = admin_url.invalid_last;
+                        } else {
+                            document.getElementsByClassName(errorInput)[0].innerHTML = '';
+                        }
+                    }
+                    break;
+                case 'email':
+                    if (element.value == '') {
+                        passd = false;
+                        document.getElementsByClassName(errorInput)[0].innerHTML = admin_url.error_email;
+                    } else {
+                        if (isValidEmailAddress(element.value) == false) {
+                            passd = false;
+                            document.getElementsByClassName(errorInput)[0].innerHTML = admin_url.invalid_email;
+                        } else {
+                            document.getElementsByClassName(errorInput)[0].innerHTML = '';
+                        }
+                    }
+                    break;
+                case 'country':
+                    if (element.value == '') {
+                        passd = false;
+                        document.getElementsByClassName(errorInput)[0].innerHTML = admin_url.error_country;
+                    } else {
+                        document.getElementsByClassName(errorInput)[0].innerHTML = '';
+                    }
+                    break;
+                case 'message':
+                    if (element.value == '') {
+                        passd = false;
+                        document.getElementsByClassName(errorInput)[0].innerHTML = admin_url.error_message;
+                    } else {
+                        document.getElementsByClassName(errorInput)[0].innerHTML = '';
+                    }
+                    break;
+
+                default:
+                    break;
+            }
+        }
+
+        if (passd == true) {
+            jQuery.ajax({
+                method: 'POST',
+                url: admin_url.ajax_custom_url,
+                data: {
+                    action: 'custom_contact_form',
+                    info: jQuery('.contact-form-container').serialize()
+                },
+                beforeSend: function () {
+                    jQuery('.contact-form-loader').html('<div class="lds-dual-ring"></div>');
+                },
+                success: function (response) {
+                    jQuery('.contact-form-loader').html('');
+                    jQuery('.contact-form-response').html(response.data);
+                }
+            });
+        }
+    });
+
+    jQuery('.btn-mayorista').on('click', (e) => {
+        e.preventDefault();
+        var passd = true;
+
+        var formElements = jQuery('.mayorista-form-container :input');
+        for (let index = 0; index < formElements.length; index++) {
+
+            var element = formElements[index],
+                errorName = element.name,
+                errorInput = 'error-' + errorName;
+            switch (element.name) {
+                case 'firstname':
+                    if (element.value == '') {
+                        passd = false;
+                        document.getElementsByClassName(errorInput)[0].innerHTML = admin_url.error_name;
+                    } else {
+                        if (element.value.length < 2) {
+                            passd = false;
+                            document.getElementsByClassName(errorInput)[0].innerHTML = admin_url.invalid_name;
+                        } else {
+                            document.getElementsByClassName(errorInput)[0].innerHTML = '';
+                        }
+                    }
+                    break;
+                case 'lastname':
+                    if (element.value == '') {
+                        passd = false;
+                        document.getElementsByClassName(errorInput)[0].innerHTML = admin_url.error_last;
+                    } else {
+                        if (element.value.length < 2) {
+                            passd = false;
+                            document.getElementsByClassName(errorInput)[0].innerHTML = admin_url.invalid_last;
+                        } else {
+                            document.getElementsByClassName(errorInput)[0].innerHTML = '';
+                        }
+                    }
+                    break;
+                case 'email':
+                    if (element.value == '') {
+                        passd = false;
+                        document.getElementsByClassName(errorInput)[0].innerHTML = admin_url.error_email;
+                    } else {
+                        if (isValidEmailAddress(element.value) == false) {
+                            passd = false;
+                            document.getElementsByClassName(errorInput)[0].innerHTML = admin_url.invalid_email;
+                        } else {
+                            document.getElementsByClassName(errorInput)[0].innerHTML = '';
+                        }
+                    }
+                    break;
+                case 'company':
+                    if (element.value == '') {
+                        passd = false;
+                        document.getElementsByClassName(errorInput)[0].innerHTML = admin_url.error_company;
+                    } else {
+                        document.getElementsByClassName(errorInput)[0].innerHTML = '';
+                    }
+                    break;
+                case 'country':
+                    if (element.value == '') {
+                        passd = false;
+                        document.getElementsByClassName(errorInput)[0].innerHTML = admin_url.error_country;
+                    } else {
+                        document.getElementsByClassName(errorInput)[0].innerHTML = '';
+                    }
+                    break;
+                case 'message':
+                    if (element.value == '') {
+                        passd = false;
+                        document.getElementsByClassName(errorInput)[0].innerHTML = admin_url.error_message;
+                    } else {
+                        document.getElementsByClassName(errorInput)[0].innerHTML = '';
+                    }
+                    break;
+
+                default:
+                    break;
+            }
+        }
+
+        if (passd == true) {
+            jQuery.ajax({
+                method: 'POST',
+                url: admin_url.ajax_custom_url,
+                data: {
+                    action: 'custom_mayorista_form',
+                    info: jQuery('.mayorista-form-container').serialize()
+                },
+                beforeSend: function () {
+                    jQuery('.contact-form-loader').html('<div class="lds-dual-ring"></div>');
+                },
+                success: function (response) {
+                    jQuery('.contact-form-loader').html('');
+                    jQuery('.contact-form-response').html(response.data);
+                }
+            });
+        }
     });
 
 

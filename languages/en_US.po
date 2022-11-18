@@ -1,17 +1,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gespetfood\n"
-"POT-Creation-Date: 2021-09-21 13:08-0400\n"
-"PO-Revision-Date: 2021-09-21 13:08-0400\n"
+"POT-Creation-Date: 2022-11-17 20:09-0400\n"
+"PO-Revision-Date: 2022-11-17 20:09-0400\n"
 "Last-Translator: Robert Ochoa <ochoa.robert1@gmail.com>\n"
 "Language-Team: Robert Ochoa <contacto@robertochoa.com.ve>\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
-"X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1.1\n"
+"X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_x:2c,1;_ex:2c,1\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -26,7 +26,7 @@ msgid "No podemos encontrar la página que buscas. Dirígete nuevamente al"
 msgstr ""
 "Sorry, but we can't seem to find the page you are looking for. Go back to"
 
-#: 404.php:14 author.php:52 category.php:53 header.php:100 header.php:104
+#: 404.php:14 author.php:52 category.php:53 header.php:106 header.php:110
 #: search.php:73 tag.php:53
 msgid "Volver al Inicio"
 msgstr "Back to Home"
@@ -47,7 +47,7 @@ msgstr "Go back to"
 msgid "Publicado por:"
 msgstr "Published by:"
 
-#: category.php:37 index.php:46 index.php:55 tag.php:37
+#: category.php:37 index.php:48 index.php:55 tag.php:37
 msgid "Leer Más"
 msgstr "Read More"
 
@@ -55,12 +55,12 @@ msgstr "Read More"
 msgid "Todos los derechos reservados"
 msgstr "All rights reserved"
 
-#: footer.php:42 header.php:67 header.php:150
+#: footer.php:42 header.php:70 header.php:156
 #: templates/templates-contact.php:50
 msgid "Haz clic aquí para dejar tu mensaje en nuestro correo electrónico"
 msgstr "Click here to leave your message in our email"
 
-#: footer.php:42 header.php:68 header.php:151
+#: footer.php:42 header.php:71 header.php:157
 #: templates/templates-contact.php:51
 msgid "Haz clic aquí para llamar directamente a nuestro Master"
 msgstr "Click here to call our Master directly"
@@ -73,120 +73,120 @@ msgstr "here"
 msgid "Acepto"
 msgstr "Agree"
 
-#: functions.php:112
+#: functions.php:116
 msgid "Menu Header - Principal"
 msgstr "Menu Header - Main"
 
-#: functions.php:113
+#: functions.php:117
 msgid "Menu Footer - Principal"
 msgstr "Menu Footer - Main"
 
-#: functions.php:123
+#: functions.php:128
 msgid "Sidebar Principal"
 msgstr "Main Sidebar"
 
-#: functions.php:125
+#: functions.php:130
 msgid "Estos widgets seran vistos en las entradas y páginas del sitio"
 msgstr "These widgets will be seen on posts and pages on site"
 
-#: functions.php:133
+#: functions.php:138
 #, php-format
 msgid "Footer Section %d"
 msgstr "Footer Section %d"
 
-#: functions.php:135
+#: functions.php:140
 msgid "Footer Section"
 msgstr "Footer Section"
 
-#: functions.php:158
+#: functions.php:165
 msgid "Gracias por crear con "
 msgstr "Thank you for creating with "
 
-#: functions.php:160
+#: functions.php:167
 msgid "Tema desarrollado por "
 msgstr "Theme Developed By "
 
-#: header.php:69 header.php:70 header.php:71 header.php:72 header.php:152
-#: header.php:153 header.php:154 header.php:155
+#: header.php:74 header.php:75 header.php:76 header.php:77 header.php:158
+#: header.php:159 header.php:160 header.php:161
 #: templates/templates-contact.php:44 templates/templates-contact.php:45
 #: templates/templates-contact.php:46 templates/templates-contact.php:47
 msgid "Haz clic aquí para visitar nuestro perfil"
 msgstr "Click here to visit our profile"
 
-#: header.php:79
+#: header.php:85
 msgid "Ingresar a su cuenta"
 msgstr "Login into your account"
 
-#: header.php:79
+#: header.php:85
 msgid "Iniciar Sesión"
 msgstr "Log In"
 
-#: header.php:84
+#: header.php:90
 msgid "Ver Carrito de Compras"
 msgstr "View Cart"
 
-#: header.php:86 header.php:163 header.php:212
+#: header.php:92 header.php:169 header.php:218
 msgid "Ir al sitio en Inglés"
 msgstr "Go to English Site"
 
-#: header.php:86 header.php:163 header.php:212
+#: header.php:92 header.php:169 header.php:218
 msgid "Ir al sitio en Español"
 msgstr "Go to Spanish site"
 
-#: header.php:208 templates/templates-gespetfood.php:35
+#: header.php:214 templates/templates-gespetfood.php:35
 msgid "Descargar catálogo de productos"
 msgstr "Download product catalog"
 
-#: includes/class-required-plugins.php:76
+#: includes/class-required-plugins.php:70
 #: includes/class-tgm-plugin-activation.php:334
 msgid "Install Required Plugins"
 msgstr "Install Required Plugins"
 
-#: includes/class-required-plugins.php:77
+#: includes/class-required-plugins.php:71
 #: includes/class-tgm-plugin-activation.php:335
 msgid "Install Plugins"
 msgstr "Install Plugins"
 
-#: includes/class-required-plugins.php:78
+#: includes/class-required-plugins.php:72
 #: includes/class-tgm-plugin-activation.php:337
 #, php-format
 msgid "Installing Plugin: %s"
 msgstr "Installing Plugin: %s"
 
-#: includes/class-required-plugins.php:79
+#: includes/class-required-plugins.php:73
 #: includes/class-tgm-plugin-activation.php:339
 #, php-format
 msgid "Updating Plugin: %s"
 msgstr "Updating Plugin: %s"
 
-#: includes/class-required-plugins.php:80
+#: includes/class-required-plugins.php:74
 #: includes/class-tgm-plugin-activation.php:340
 msgid "Something went wrong with the plugin API."
 msgstr "Something went wrong with the plugin API."
 
-#: includes/class-required-plugins.php:126
+#: includes/class-required-plugins.php:120
 #: includes/class-tgm-plugin-activation.php:392
 msgid "Return to Required Plugins Installer"
 msgstr "Return to Required Plugins Installer"
 
-#: includes/class-required-plugins.php:127
+#: includes/class-required-plugins.php:121
 #: includes/class-tgm-plugin-activation.php:394
 #: includes/class-tgm-plugin-activation.php:3252
 msgid "Plugin activated successfully."
 msgstr "Plugin activated successfully."
 
-#: includes/class-required-plugins.php:128
+#: includes/class-required-plugins.php:122
 #: includes/class-tgm-plugin-activation.php:395
 msgid "The following plugin was activated successfully:"
 msgstr "The following plugin was activated successfully:"
 
-#: includes/class-required-plugins.php:129
+#: includes/class-required-plugins.php:123
 #: includes/class-tgm-plugin-activation.php:397
 #, php-format
 msgid "No action taken. Plugin %1$s was already active."
 msgstr "No action taken. Plugin %1$s was already active."
 
-#: includes/class-required-plugins.php:130
+#: includes/class-required-plugins.php:124
 #: includes/class-tgm-plugin-activation.php:399
 #, php-format
 msgid ""
@@ -196,18 +196,18 @@ msgstr ""
 "Plugin not activated. A higher version of %s is needed for this theme. "
 "Please update the plugin."
 
-#: includes/class-required-plugins.php:131
+#: includes/class-required-plugins.php:125
 #: includes/class-tgm-plugin-activation.php:401
 #, php-format
 msgid "All plugins installed and activated successfully. %1$s"
 msgstr "All plugins installed and activated successfully. %1$s"
 
-#: includes/class-required-plugins.php:132
+#: includes/class-required-plugins.php:126
 #: includes/class-tgm-plugin-activation.php:402
 msgid "Dismiss this notice"
 msgstr "Dismiss this notice"
 
-#: includes/class-required-plugins.php:133
+#: includes/class-required-plugins.php:127
 #: includes/class-tgm-plugin-activation.php:403
 msgid ""
 "There are one or more required or recommended plugins to install, update or "
@@ -216,7 +216,7 @@ msgstr ""
 "There are one or more required or recommended plugins to install, update or "
 "activate."
 
-#: includes/class-required-plugins.php:134
+#: includes/class-required-plugins.php:128
 #: includes/class-tgm-plugin-activation.php:404
 msgid "Please contact the administrator of this site for help."
 msgstr "Please contact the administrator of this site for help."
@@ -442,38 +442,38 @@ msgid "Beneficios"
 msgstr "Beneficios"
 
 #: includes/custom-metaboxes-gespetfood.php:180
-#: includes/custom-metaboxes-shop.php:141
+#: includes/custom-metaboxes-shop.php:163
 msgid "Slides inside this Slider"
 msgstr "Slides inside this Slider"
 
 #: includes/custom-metaboxes-gespetfood.php:182
-#: includes/custom-metaboxes-shop.php:143
+#: includes/custom-metaboxes-shop.php:165
 msgid "Logo {#}"
 msgstr "Logo {#}"
 
 #: includes/custom-metaboxes-gespetfood.php:183
-#: includes/custom-metaboxes-shop.php:144
+#: includes/custom-metaboxes-shop.php:166
 msgid "Add other Logo"
 msgstr "Add other Logo"
 
 #: includes/custom-metaboxes-gespetfood.php:184
-#: includes/custom-metaboxes-shop.php:145
+#: includes/custom-metaboxes-shop.php:167
 msgid "Remove Logo"
 msgstr "Remove Logo"
 
-#: includes/custom-metaboxes-shop.php:211
+#: includes/custom-metaboxes-shop.php:233
 msgid "Testimonials inside this page"
 msgstr "Testimonials inside this page"
 
-#: includes/custom-metaboxes-shop.php:213
+#: includes/custom-metaboxes-shop.php:235
 msgid "Testimonial Block {#}"
 msgstr "Testimonial Block {#}"
 
-#: includes/custom-metaboxes-shop.php:214
+#: includes/custom-metaboxes-shop.php:236
 msgid "Add other Testimonial Block"
 msgstr "Add other Testimonial Block"
 
-#: includes/custom-metaboxes-shop.php:215
+#: includes/custom-metaboxes-shop.php:237
 msgid "Remove Testimonial Block"
 msgstr "Remove Testimonial Block"
 
@@ -681,30 +681,46 @@ msgid "Error: El nombre debe ser válido"
 msgstr "Error: Name must be valid"
 
 #: includes/wp_enqueue_scripts.php:151
+msgid "Error: El apellido no puede estar vacio"
+msgstr "Error: Last name cannot be empty"
+
+#: includes/wp_enqueue_scripts.php:152
+msgid "Error: El apellido debe ser válido"
+msgstr "Error: Last name must be valid"
+
+#: includes/wp_enqueue_scripts.php:153
 msgid "Error: El correo no puede estar vacio"
 msgstr "Error: Mail cannot be empty"
 
-#: includes/wp_enqueue_scripts.php:152
+#: includes/wp_enqueue_scripts.php:154
 msgid "Error: El correo tiene un formato inválido"
 msgstr "Error: Mail has an invalid format"
 
-#: includes/wp_enqueue_scripts.php:153
+#: includes/wp_enqueue_scripts.php:155
+msgid "Error: La compañia no puede estar vacio"
+msgstr "Error: Company cannot be empty"
+
+#: includes/wp_enqueue_scripts.php:156
 msgid "Error: El asunto no puede estar vacio"
 msgstr "Error: The subject cannot be empty"
 
-#: includes/wp_enqueue_scripts.php:154
+#: includes/wp_enqueue_scripts.php:157
 msgid "Error: El asunto debe ser válido"
 msgstr "Error: Subject must be valid"
 
-#: includes/wp_enqueue_scripts.php:155
+#: includes/wp_enqueue_scripts.php:158
+msgid "Error: El país debe ser válido"
+msgstr "Error: Country must be valid"
+
+#: includes/wp_enqueue_scripts.php:159
 msgid "Error: El mensaje no puede estar vacio"
 msgstr "Error: Message cannot be empty"
 
-#: includes/wp_enqueue_scripts.php:156
+#: includes/wp_enqueue_scripts.php:160
 msgid "Gracias por su mensaje, en breve le atenderemos."
 msgstr "Thank you for your message, we will be with you shortly."
 
-#: includes/wp_enqueue_scripts.php:157
+#: includes/wp_enqueue_scripts.php:161
 msgid "Error: Intente de nuevo mas tarde."
 msgstr "Error: Try again later."
 
@@ -716,27 +732,27 @@ msgstr "Presentation"
 msgid "pack 1 unidad"
 msgstr "pack 1 item"
 
-#: includes/wp_woocommerce_functions.php:108
+#: includes/wp_woocommerce_functions.php:109
 msgid "(IVA incluido)"
 msgstr "(VAT included)"
 
-#: includes/wp_woocommerce_functions.php:121
+#: includes/wp_woocommerce_functions.php:125
 msgid "Finalizar Compra"
 msgstr "Checkout"
 
-#: includes/wp_woocommerce_functions.php:122
+#: includes/wp_woocommerce_functions.php:126
 msgid "Volver a Tienda"
 msgstr "Back to Shop"
 
-#: includes/wp_woocommerce_functions.php:130
+#: includes/wp_woocommerce_functions.php:134
 msgid "Return to shop"
 msgstr "Return to shop"
 
-#: includes/wp_woocommerce_functions.php:201
+#: includes/wp_woocommerce_functions.php:205
 msgid "Haga click para ver esta categoría"
 msgstr "Click to see this category"
 
-#: includes/wp_woocommerce_functions.php:213
+#: includes/wp_woocommerce_functions.php:217
 msgid " para perros"
 msgstr " for dogs"
 
@@ -760,37 +776,37 @@ msgstr "Pages:"
 msgid "Buscar Productos:"
 msgstr "Search Products:"
 
-#: templates/contact-form.php:5
-msgid "E-mail (*)"
-msgstr "E-mail (*)"
-
-#: templates/contact-form.php:9
+#: templates/contact-form.php:5 templates/mayorista-form.php:9
 msgid "Nombre (*)"
 msgstr "Name (*)"
 
-#: templates/contact-form.php:13
+#: templates/contact-form.php:9 templates/mayorista-form.php:13
 msgid "Apellido (*)"
 msgstr "Last Name (*)"
 
-#: templates/contact-form.php:17
-msgid "Compañía"
-msgstr "Company"
+#: templates/contact-form.php:13 templates/mayorista-form.php:5
+msgid "E-mail (*)"
+msgstr "E-mail (*)"
 
-#: templates/contact-form.php:21
+#: templates/contact-form.php:17 templates/mayorista-form.php:21
 msgid "Pais (*)"
 msgstr "Country (*)"
 
-#: templates/contact-form.php:25
+#: templates/contact-form.php:21 templates/mayorista-form.php:25
 msgid "Mensaje (*)"
 msgstr "Message (*)"
 
-#: templates/contact-form.php:29
+#: templates/contact-form.php:25 templates/mayorista-form.php:29
 msgid "(*) Campos Obligatorios"
 msgstr "(*) Required Fields"
 
-#: templates/contact-form.php:32
+#: templates/contact-form.php:28 templates/mayorista-form.php:32
 msgid "Enviar"
 msgstr "Send Message"
+
+#: templates/mayorista-form.php:17
+msgid "Compañía"
+msgstr "Company"
 
 #: templates/page-home.php:53 woocommerce/archive-product.php:42
 #: woocommerce/taxonomy-product_cat.php:35
@@ -809,7 +825,7 @@ msgstr "Here's more about it:"
 msgid "Visita nuestra tienda en Amazon.com"
 msgstr "Visit our store on Amazon.com"
 
-#: templates/templates-contact.php:78
+#: templates/templates-contact.php:78 templates/templates-mayoristas.php:36
 msgid "contáctanos"
 msgstr "contact us"
 
@@ -820,6 +836,20 @@ msgstr "GESPETFOOD ensures:"
 #: templates/templates-gespetfood.php:78
 msgid "Equipo"
 msgstr "Team"
+
+#: templates/templates-mayoristas.php:44
+msgid "¿Quieres más información?"
+msgstr "Do you want more information?"
+
+#: templates/templates-mayoristas.php:45
+#, fuzzy
+#| msgid "Descargar catálogo de productos"
+msgid "Descarga el catálogo"
+msgstr "Download product catalog"
+
+#: woocommerce/checkout/form-checkout.php:26
+msgid "You must be logged in to checkout."
+msgstr "You must be logged in to checkout."
 
 #: woocommerce/emails/email-order-details.php:34
 #, php-format

@@ -41,6 +41,35 @@ a {
     }
 }
 
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
 
 .page-container {
     min-height: 85vh;
@@ -84,7 +113,7 @@ a {
         & .btn-privacy {
             cursor: pointer;
             background: @orange;
-            color: @white  !important;
+            color: @white !important;
             padding: 0.6rem 2.5rem;
             text-transform: uppercase;
             font-size: 0.9rem;
@@ -108,7 +137,7 @@ a {
             & .btn-multiple {
                 border-radius: 0;
                 background: #939393;
-                color: @white  !important;
+                color: @white !important;
             }
         }
     }
@@ -848,8 +877,8 @@ a {
 }
 
 .btn-submit {
-    background: @orange  !important;
-    color: @white  !important;
+    background: @orange !important;
+    color: @white !important;
     border-radius: 0;
     padding: 0.9rem 2rem;
     text-transform: uppercase;
@@ -897,7 +926,7 @@ a {
     }
 
     & .price {
-        color: @orange  !important;
+        color: @orange !important;
         font-weight: 500 !important;
         font-size: 1rem !important;
     }
@@ -1227,7 +1256,7 @@ a {
     border: 0 !important;
     background: #1d1d1d;
     color: @white;
-    border-bottom: 1px solid @white  !important;
+    border-bottom: 1px solid @white !important;
     .placeholder(@white);
 }
 
@@ -1924,7 +1953,7 @@ a.qlwapp-toggle {
 .woocommerce-pagination .page-numbers a:link,
 .woocommerce-pagination .page-numbers a:visited {
     display: block !important;
-    background: @orange  !important;
+    background: @orange !important;
     color: #363636 !important;
     padding: 10px 14px !important;
 }
@@ -1939,7 +1968,7 @@ a.qlwapp-toggle {
 .woocommerce-pagination .page-numbers .current,
 .woocommerce-pagination .page-numbers li a:hover {
     padding: 10px 14px !important;
-    background: @orange  !important;
+    background: @orange !important;
     color: #fff !important;
 }
 
@@ -2044,7 +2073,7 @@ a.qlwapp-toggle {
 
     & .swiper-button-next:after,
     .swiper-button-prev:after {
-        color: @orange  !important;
+        color: @orange !important;
     }
 }
 

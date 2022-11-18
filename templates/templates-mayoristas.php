@@ -35,7 +35,7 @@
                         <div class="col-12">
                             <h2><?php _e('contáctanos', 'gespetfood'); ?></h2>
                         </div>
-                        <?php echo get_template_part('templates/contact-form'); ?>
+                        <?php echo get_template_part('templates/mayorista-form'); ?>
                     </div>
                 </div>
             </div>
