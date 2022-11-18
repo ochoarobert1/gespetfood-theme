@@ -264,8 +264,7 @@ function custom_contact_form_handler()
             $logo
         ], $body);
 
-    //$to = 'info@gespetfood.com';
-    $to = 'ochoa.robert1@gmail.com';
+    $to = 'info@gespetfood.com';
 
     $emailsCC = array();
     $emailsBCC = array();
@@ -325,8 +324,7 @@ function custom_mayorista_form_handler()
             $logo
         ], $body);
 
-    //$to = 'info@gespetfood.com';
-    $to = 'ochoa.robert1@gmail.com';
+    $to = 'info@gespetfood.com';
 
     $emailsCC = array();
     $emailsBCC = array();
