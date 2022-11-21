@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Gespetfood\n"
 "POT-Creation-Date: 2022-11-17 20:09-0400\n"
-"PO-Revision-Date: 2022-11-17 20:09-0400\n"
+"PO-Revision-Date: 2022-11-21 12:12-0400\n"
 "Last-Translator: Robert Ochoa <ochoa.robert1@gmail.com>\n"
 "Language-Team: Robert Ochoa <contacto@robertochoa.com.ve>\n"
 "Language: en_US\n"
@@ -842,8 +842,6 @@ msgid "¿Quieres más información?"
 msgstr "Do you want more information?"
 
 #: templates/templates-mayoristas.php:45
-#, fuzzy
-#| msgid "Descargar catálogo de productos"
 msgid "Descarga el catálogo"
 msgstr "Download product catalog"
 
