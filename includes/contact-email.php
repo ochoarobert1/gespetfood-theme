@@ -196,10 +196,10 @@ The email background color (#222222) is defined in three places:
 3. mso conditional: For Windows 10 Mail
 -->
 
-<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #e2e2e2;">
-    <center role="article" aria-roledescription="email" lang="en" style="width: 100%; background-color: #e2e2e2;">
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #191919;">
+    <center role="article" aria-roledescription="email" lang="en" style="width: 100%; background-color: #191919;">
         <!--[if mso | IE]>
-<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #e2e2e2;">
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #191919;">
 <tr>
 <td>
 <![endif]-->

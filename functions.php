@@ -244,7 +244,7 @@ function custom_contact_form_handler()
     }
 
     parse_str($_POST['info'], $info);
-    $logo = get_template_directory_uri() . '/images/logo-black-small.png';
+    $logo = get_template_directory_uri() . '/images/logo.png';
     ob_start();
     require_once get_theme_file_path('/includes/contact-email.php');
     $body = ob_get_clean();
@@ -302,7 +302,7 @@ function custom_mayorista_form_handler()
     }
 
     parse_str($_POST['info'], $info);
-    $logo = get_template_directory_uri() . '/images/logo-black-small.png';
+    $logo = get_template_directory_uri() . '/images/logo.png';
     ob_start();
     require_once get_theme_file_path('/includes/mayorista-email.php');
     $body = ob_get_clean();
